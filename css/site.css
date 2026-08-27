@@ -306,6 +306,14 @@ a:focus-visible {
 .list .fa-cell { color: var(--navy); }
 .list small { display: block; font-weight: 400; color: var(--muted); }
 
+.list .refuse td {
+  background: var(--navy);
+  color: var(--gold);
+  font-weight: 700;
+  border-inline-start: var(--stub) solid var(--gold);
+  padding: 12px 14px;
+}
+
 .svc {
   display: grid;
   gap: 0;
