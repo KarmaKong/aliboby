@@ -233,6 +233,9 @@ a:focus-visible {
 
 .way-head h3 { font-size: 1.15rem; }
 
+.way-head h3 a { color: inherit; text-decoration: none; }
+.way-head h3 a:hover { color: var(--gold); }
+
 .way-days { color: var(--gold); font-size: 1.05rem; white-space: nowrap; }
 
 .way-sub {
@@ -407,6 +410,19 @@ a:focus-visible {
   max-width: 40em;
 }
 .post li { margin-bottom: 6px; }
+.post h2 {
+  font-size: 1.12rem;
+  margin: 22px 0 10px;
+  padding-inline-start: 12px;
+  border-inline-start: var(--stub) solid var(--gold);
+  line-height: 1.4;
+}
+.post time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
 .post .hero-photo { margin: 22px 0; }
 .post-back { margin-top: 28px; }
 .post-back a { color: var(--navy); font-weight: 700; }
