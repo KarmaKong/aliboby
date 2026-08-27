@@ -407,6 +407,19 @@ a:focus-visible {
   max-width: 40em;
 }
 .post li { margin-bottom: 6px; }
+.post h2 {
+  font-size: 1.12rem;
+  margin: 22px 0 10px;
+  padding-inline-start: 12px;
+  border-inline-start: var(--stub) solid var(--gold);
+  line-height: 1.4;
+}
+.post time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
 .post .hero-photo { margin: 22px 0; }
 .post-back { margin-top: 28px; }
 .post-back a { color: var(--navy); font-weight: 700; }
