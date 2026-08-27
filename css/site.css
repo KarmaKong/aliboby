@@ -189,7 +189,7 @@ body.fa .home-hero {
   max-width: 34rem;
 }
 
-body.zh .home-hero .kicker { color: var(--navy); }
+body.zh .home-hero .kicker,
 body.fa .home-hero .kicker { color: var(--gold); }
 
 .home-hero h1 {
@@ -197,6 +197,8 @@ body.fa .home-hero .kicker { color: var(--gold); }
   font-weight: 700;
   line-height: 1.28;
   margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--paper-2);
 }
 
 .home-hero .hero-stat {
@@ -221,7 +223,7 @@ body.fa .home-hero .kicker { color: var(--gold); }
 .home-hero .hero-sub {
   font-size: 1.05rem;
   margin-bottom: 14px;
-  color: var(--navy);
+  color: var(--muted);
 }
 
 .hero-exits {
