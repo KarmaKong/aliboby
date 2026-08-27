@@ -50,7 +50,8 @@ a { color: inherit; }
 .chip,
 .kicker,
 .btn,
-.sec-label {
+.sec-label,
+.code {
   font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   font-weight: 700;
 }
@@ -358,6 +359,58 @@ a:focus-visible {
 .page-404 h1 { margin: 12px 0 20px; }
 .page-404 .kicker { color: var(--gold); }
 
+/* Articles — waybill list, not a merch grid */
+.way-row {
+  display: grid;
+  grid-template-columns: 5.6rem 72px 1fr;
+  gap: 14px;
+  align-items: center;
+  text-decoration: none;
+  border: var(--rule);
+  border-inline-start: var(--stub) solid var(--gold);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background: var(--paper);
+}
+.way-row .code {
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+}
+.way-row img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border: var(--rule);
+}
+.way-row .ttl { font-weight: 700; line-height: 1.45; }
+.way-row:hover { background: #fffdf8; }
+
+.post { padding: 36px 0 56px; }
+.post-kicker {
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.post h1 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin-bottom: 18px;
+  padding-inline-start: 12px;
+  border-inline-start: var(--stub) solid var(--gold);
+  line-height: 1.35;
+}
+.post p { margin-bottom: 14px; max-width: 40em; }
+.post ol, .post ul {
+  margin: 0 0 16px;
+  padding-inline-start: 1.3em;
+  max-width: 40em;
+}
+.post li { margin-bottom: 6px; }
+.post .hero-photo { margin: 22px 0; }
+.post-back { margin-top: 28px; }
+.post-back a { color: var(--navy); font-weight: 700; }
+
 @media (max-width: 640px) {
   .wrap { width: min(var(--max), calc(100% - 28px)); }
   body.fa .site-header .wrap {
@@ -366,4 +419,6 @@ a:focus-visible {
   }
   .hero-photo img { height: 200px; }
   .hero-stat { font-size: 3rem; }
+  .way-row { grid-template-columns: 4.4rem 1fr; }
+  .way-row img { display: none; }
 }
