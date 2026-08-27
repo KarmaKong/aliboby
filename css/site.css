@@ -229,6 +229,7 @@ body.fa .home-hero .kicker { color: var(--gold); }
   margin-bottom: 22px;
   font-size: 1.02rem;
 }
+.hero-exits .pair { unicode-bidi: isolate; }
 
 .hero-obj {
   display: flex;
