@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://karmakong.github.io/aliboby/sitemap.xml
+Sitemap: https://chinairantrucks.com/sitemap.xml
