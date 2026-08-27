@@ -233,6 +233,9 @@ a:focus-visible {
 
 .way-head h3 { font-size: 1.15rem; }
 
+.way-head h3 a { color: inherit; text-decoration: none; }
+.way-head h3 a:hover { color: var(--gold); }
+
 .way-days { color: var(--gold); font-size: 1.05rem; white-space: nowrap; }
 
 .way-sub {
