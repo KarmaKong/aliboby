@@ -1,0 +1,14 @@
+:root {
+  --navy: #0b1f3a;
+  --navy-hex: #0b1f3a;
+  --navy-deep: #071526;
+  --paper: #f5f2eb;
+  --paper-2: #e8e2d6;
+  --gold: #c4a35a;
+  --ink: #0b1f3a;
+  --muted: #4d5d73;
+  --cream: #f5f2eb;
+  --stub: 6px;
+  --max: 1100px;
+  --rule: 1px solid var(--navy);
+}
