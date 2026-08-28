@@ -11,4 +11,5 @@
   --stub: 6px;
   --max: 1100px;
   --rule: 1px solid var(--navy);
+  --font-la: "Outfit", "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
 }
