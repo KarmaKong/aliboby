@@ -242,13 +242,12 @@ body.fa .home-hero .kicker { color: var(--gold); }
 }
 
 .hero-obj img {
-  width: min(100%, 680px);
+  width: min(100%, 580px);
+  max-height: min(70vh, 620px);
   height: auto;
+  object-fit: contain;
+  object-position: center bottom;
   filter: drop-shadow(0 18px 28px rgba(7, 21, 38, 0.38));
-}
-
-@media (min-width: 861px) {
-  body.fa .hero-obj img { transform: scaleX(-1); }
 }
 
 .btn {
