@@ -88,15 +88,15 @@ body.fa.home .site-header .wrap {
   justify-content: space-between;
 }
 
-/* G lockup PNG; HTML text stays for a11y, visually hidden */
+/* chinairantrucks lockup PNG (~4.6:1); HTML text stays for a11y, visually hidden */
 .wordmark {
   display: inline-block;
   direction: ltr;
   unicode-bidi: isolate;
   flex: none;
-  width: 220px;
-  height: 48px;
-  padding: 6px 10px;
+  width: 208px;
+  height: 46px;
+  padding: 2px 4px;
   box-sizing: border-box;
   overflow: hidden;
   font-size: 0;
@@ -706,7 +706,7 @@ body:has(.home-hero) .site-footer .wordmark {
 }
 
 @media (max-width: 720px) {
-  .wordmark { width: 168px; height: 40px; padding: 4px 6px; }
+  .wordmark { width: 176px; height: 38px; padding: 2px 4px; }
   body:has(.hero-cut) .header a,
   body:has(.hero-cut) .site-header a {
     color: var(--ink, #0B1F3A);
