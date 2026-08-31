@@ -128,7 +128,9 @@ html[dir="rtl"] .site-header .wordmark {
   transform: none;
 }
 
-/* Homes: navy slab gone — paper + navy diagonal run under the nav */
+/* Homes: navy slab gone — paper + navy diagonal run under the nav.
+   Wordmark keeps the cream plate (base .wordmark) so it stays legible
+   whichever side it sits on — FA left / ZH right both cross the navy diagonal. */
 body:has(.hero-cut) .header,
 body:has(.hero-cut) .site-header,
 body:has(.home-hero) .header,
@@ -138,18 +140,6 @@ body:has(.home-hero) .site-header {
   inset-inline: 0;
   top: 0;
   z-index: 20;
-}
-body:has(.hero-cut) .wordmark,
-body:has(.hero-cut) .header a.wordmark,
-body:has(.hero-cut) .header a.wordmark:hover,
-body:has(.hero-cut) .site-header a.wordmark,
-body:has(.hero-cut) .site-header a.wordmark:hover,
-body:has(.hero-cut) .wordmark:hover,
-body:has(.home-hero) .wordmark,
-body:has(.home-hero) .header a.wordmark,
-body:has(.home-hero) .site-header a.wordmark,
-body:has(.home-hero) .wordmark:hover {
-  background-color: transparent;
 }
 body:has(.hero-cut) .hero-cut .hero-copy,
 body:has(.hero-cut) .home-hero .hero-copy,
