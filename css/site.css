@@ -88,15 +88,15 @@ body.fa.home .site-header .wrap {
   justify-content: space-between;
 }
 
-/* G lockup PNG; HTML text stays for a11y, visually hidden */
+/* chinairantrucks lockup PNG (~4.6:1); HTML text stays for a11y, visually hidden */
 .wordmark {
   display: inline-block;
   direction: ltr;
   unicode-bidi: isolate;
   flex: none;
-  width: 220px;
-  height: 48px;
-  padding: 6px 10px;
+  width: 208px;
+  height: 46px;
+  padding: 2px 4px;
   box-sizing: border-box;
   overflow: hidden;
   font-size: 0;
@@ -183,6 +183,28 @@ body:has(.home-hero) .hero-copy {
 
 .header-nav .contact,
 .nav .tg { color: var(--gold); font-weight: 700; }
+
+/* Article pages: header takes the paper body colour so the wordmark plate
+   (which is --cream == --paper) blends in instead of reading as a light box
+   on the navy slab. Nav flips to ink; gold accents stay. */
+body:has(main.post) .site-header,
+body:has(main.post) .header {
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--paper-2);
+}
+body:has(main.post) .header-nav a,
+body:has(main.post) .nav a {
+  color: var(--ink);
+}
+body:has(main.post) .header-nav a:hover,
+body:has(main.post) .header-nav a[aria-current="page"],
+body:has(main.post) .nav a:hover,
+body:has(main.post) .nav a[aria-current="page"],
+body:has(main.post) .header-nav .contact,
+body:has(main.post) .nav .tg {
+  color: var(--gold);
+}
 
 /* 404 / generic type hero */
 .hero {
@@ -706,7 +728,7 @@ body:has(.home-hero) .site-footer .wordmark {
 }
 
 @media (max-width: 720px) {
-  .wordmark { width: 168px; height: 40px; padding: 4px 6px; }
+  .wordmark { width: 176px; height: 38px; padding: 2px 4px; }
   body:has(.hero-cut) .header a,
   body:has(.hero-cut) .site-header a {
     color: var(--ink, #0B1F3A);
