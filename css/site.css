@@ -184,6 +184,28 @@ body:has(.home-hero) .hero-copy {
 .header-nav .contact,
 .nav .tg { color: var(--gold); font-weight: 700; }
 
+/* Article pages: header takes the paper body colour so the wordmark plate
+   (which is --cream == --paper) blends in instead of reading as a light box
+   on the navy slab. Nav flips to ink; gold accents stay. */
+body:has(main.post) .site-header,
+body:has(main.post) .header {
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--paper-2);
+}
+body:has(main.post) .header-nav a,
+body:has(main.post) .nav a {
+  color: var(--ink);
+}
+body:has(main.post) .header-nav a:hover,
+body:has(main.post) .header-nav a[aria-current="page"],
+body:has(main.post) .nav a:hover,
+body:has(main.post) .nav a[aria-current="page"],
+body:has(main.post) .header-nav .contact,
+body:has(main.post) .nav .tg {
+  color: var(--gold);
+}
+
 /* 404 / generic type hero */
 .hero {
   background: var(--paper);
