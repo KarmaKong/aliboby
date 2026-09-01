@@ -627,7 +627,15 @@ body:has(.home-hero) .site-footer .wordmark {
   margin-bottom: 16px;
 }
 .post .hero-photo { margin: 22px 0; }
-.post-back { margin-top: 28px; }
+.post-links {
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid var(--paper-2);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.post-links a { color: var(--navy); font-weight: 700; }
+.post-back { margin-top: 20px; }
 .post-back a { color: var(--navy); font-weight: 700; }
 
 /* Home corridors */
