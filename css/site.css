@@ -627,6 +627,30 @@ body:has(.home-hero) .site-footer .wordmark {
   margin-bottom: 16px;
 }
 .post .hero-photo { margin: 22px 0; }
+.post-facts {
+  margin: 6px 0 22px;
+  padding: 14px 16px;
+  background: var(--paper-2);
+  border-inline-start: var(--stub) solid var(--gold);
+  list-style: none;
+  max-width: 40em;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.post-facts li {
+  margin: 0 0 6px;
+  padding-inline-start: 15px;
+  position: relative;
+}
+.post-facts li::before {
+  content: "·";
+  position: absolute;
+  inset-inline-start: 2px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.post-facts li:last-child { margin-bottom: 0; }
+
 .post-links {
   margin-top: 26px;
   padding-top: 14px;
