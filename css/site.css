@@ -28,6 +28,7 @@ body {
 }
 
 body.fa { font-family: Tahoma, "Segoe UI", system-ui, sans-serif; }
+body.en { font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; }
 body.zh {
   font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
 }
