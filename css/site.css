@@ -254,7 +254,8 @@ body:has(main.post) .nav .tg {
   color: var(--navy);
 }
 
-body.zh .home-hero {
+body.zh .home-hero,
+body.en .home-hero {
   background: linear-gradient(
     118deg,
     var(--paper) 0 46.4%,
@@ -288,6 +289,7 @@ body.fa .home-hero {
 }
 
 body.zh .home-hero .kicker,
+body.en .home-hero .kicker,
 body.fa .home-hero .kicker { color: var(--gold); }
 
 .home-hero h1 {
@@ -722,6 +724,7 @@ body:has(.home-hero) .site-footer .wordmark {
 
 @media (max-width: 860px) {
   body.zh .home-hero,
+  body.en .home-hero,
   body.fa .home-hero {
     background: linear-gradient(
       180deg,
