@@ -39,7 +39,8 @@ jobs:
             BEFORE="$(git rev-list --max-parents=0 HEAD | tail -1)"
           fi
 
-          CHANGED="$(git diff --name-only "$BEFORE" "${{ github.sha }}" -- '*.html' | grep -v '^404\.html$' || true)"
+          CHANGED="$(git diff --name-only "$BEFORE" "${{ github.sha }}" -- '*.html' \
+            | grep -Ev '^404\.html$|(^|/)_post\.html$|^google[0-9a-f]+\.html$' || true)"
           if [ -z "$CHANGED" ]; then
             echo "No indexable HTML changed; nothing to submit."
             exit 0
@@ -48,6 +49,9 @@ jobs:
           URLS=""
           while IFS= read -r f; do
             [ -n "$f" ] || continue
+            [ -f "$f" ] || continue                               # skip deleted files
+            grep -q 'http-equiv="refresh"' "$f" && continue        # skip redirect stubs
+            grep -qi '<meta[^>]*name="robots"[^>]*noindex' "$f" && continue
             case "$f" in
               index.html)   u="https://$HOST/" ;;
               */index.html) u="https://$HOST/${f%index.html}" ;;
