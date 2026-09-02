@@ -41,7 +41,8 @@ Cross-page consistency of these facts is a search-ranking and AI-citation signal
 - **The 0.4%:** applies **only on the Wuqia route** (crossing Kyrgyzstan). It is **0.4% of the goods' invoice value**, a **tax, not freight**, billed as a separate line item. **Khorgos does not add it.**
 - **Transit time:** **about 22 days to the Tehran terminal (德黑兰场站 / پایانهٔ تهران)** — NOT door-to-door, NOT DDP, NOT by sea. **Mashhad (马什哈德) and Sarakhs (萨拉赫斯) get no day count — quote only.**
 - **Destination cities:** Mashhad / Tehran / Sarakhs.
-- **Cargo classes:** auto parts 汽配 · electronics 电子 · machinery 机械 · building materials 建材.
+- **Cargo the operator carries (standard FTL/LTL general cargo):** auto parts 汽配 · electronics 电子 · machinery 机械 · building materials 建材.
+- **Corridor context (homepage `cargo-line` only, sourced):** the Wuqia and Khorgos crossings also move complete vehicles, EVs, heavy/construction machinery and consumer goods — Khorgos is China's largest road port for vehicle exports. On-site this is framed as what the *corridor* carries; complete vehicles / EVs / heavy machinery are "quoted separately / 另询", not part of the standard service. Do not present them as a routine offering without operator confirmation.
 - **Services:** FTL / LTL (整车 / 零担) · terminal delivery (场站交货) · pay in RMB or offshore.
 - **TIR:** customs seal at origin + one carnet; fewer openings and truck changes — "**fewer, not zero**". TIR does **not** fix the transit time or the freight.
 - **Pricing:** **no published rates.** Always "quote on request" / 运费单询 / کرایه استعلام.
