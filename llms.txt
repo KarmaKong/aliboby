@@ -1,23 +1,28 @@
 # chinairantrucks
 
-> 中国到伊朗公路货运（卡车 / 卡航）。从新疆出，两条走廊：乌恰 Wuqia / Irkeshtam（过吉尔吉斯）与 霍尔果斯 Khorgos（过哈萨克）。到德黑兰场站约 22 天。运费单询。
-> China–Iran overland trucking. Two exits from Xinjiang: Wuqia (via Kyrgyzstan, +0.4% invoice-value tax) and Khorgos (via Kazakhstan, no 0.4%). About 22 days to the Tehran terminal, not to the door. Freight quoted on request. Contact exim@isacogroup.com or Telegram t.me/Aliboby88.
+> 中国到伊朗 TIR 公路卡航干线庄家。国内集货仓（义乌 / 深圳平湖 / 广州白云 / 上海）→ 德黑兰西关（Gomrok Gharb）/ 阿普林陆港 / 沙赫里亚尔海关。经霍尔果斯口岸出境、萨拉赫斯口岸入境，14–18 天直达海关保税库。仓到关（CPT / DAP），不做门到门。运价单询。
+> First-hand China–Iran cross-border TIR road-freight carrier. Consolidation hubs in China (Yiwu, Shenzhen/Pinghu, Guangzhou, Shanghai) → Tehran West Customs (Gomrok Gharb), Aprin Dry Port, or Shahriyar Customs. Exit China at Khorgos, enter Iran at Sarakhs; 14–18 days to the bonded customs warehouse. Hub-to-customs (CPT / DAP), not door-to-door. Freight quoted on request. Contact exim@isacogroup.com or WhatsApp +86 132 3740 1856 (wa.me/8613237401856).
 
 ## 核心事实 / Key facts
 
-- 走廊 / Corridors: 新疆 — 吉尔吉斯 或 哈萨克 — 乌兹别克 — 土库曼 — 伊朗
-- 0.4%: 仅乌恰这条（过吉尔吉斯），是货物发票价值的 0.4% 税，不是运费；霍尔果斯不加 / only on the Wuqia route, a 0.4% tax on invoice value, not freight; Khorgos does not add it
-- 时效 / Transit: 到德黑兰场站约 22 天，不是到门；马什哈德、萨拉赫斯不套 22 天，单询 / ~22 days to the Tehran terminal, not door-to-door
-- 目的城 / Destinations: 马什哈德 Mashhad / 德黑兰 Tehran / 萨拉赫斯 Sarakhs
-- 货类 / Cargo: 汽配 / 电子 / 机械 / 建材 (auto parts, electronics, machinery, building materials)
-- 装法 / Modes: 整车 FTL / 零担 LTL；场站交货；结算人民币或境外
-- TIR: 始发地铅封，沿途少开箱、少换车；不定天数、不定运费 / sealed at origin, fewer openings and truck changes; does not fix transit time or freight
-- 询价四样 / To get a quote, provide: 货名 item; 件数/重量 qty & weight; 目的城 destination city; 乌恰或霍尔果斯 Wuqia or Khorgos
-- 不做 / Not offered: 网页挂运价 no published rates; 海运/铁运报价（中吉乌铁路在建未通）sea/rail quotes (the China–Kyrgyzstan–Uzbekistan railway is under construction, not open)
-- 联系 / Contact: exim@isacogroup.com · https://t.me/Aliboby88
+- 模式 / Model: 仓到关 / 站到关，不做门到门、不做 DDP；CPT / DAP 德黑兰海关交货，由收货人清关行清关缴税提货 / hub-to-customs, not door-to-door / DDP; CPT / DAP Tehran Customs, consignee's broker clears
+- 集货仓 / Origin hubs: 义乌苏溪、深圳平湖、广州白云、上海；也可交到霍尔果斯监管区 / Yiwu (Suxi), Shenzhen (Pinghu), Guangzhou (Baiyun), Shanghai
+- 路线 / Route: 霍尔果斯 — 哈萨克斯坦(阿拉木图–奇姆肯特) — 土库曼斯坦(法拉普–马雷) — 萨拉赫斯 — 德黑兰西关 / Khorgos — Kazakhstan — Turkmenistan — Sarakhs — Tehran West Customs
+- 口岸 / Gateways: 出境 霍尔果斯(主) / 伊尔克什坦(次)；入境 萨拉赫斯(主) / 因切布伦(次) / exit Khorgos (primary) / Irkeshtam; enter Sarakhs (primary) / Incheboron
+- 时效 / Transit: 14–18 个自然日,国内集货仓至德黑兰西关保税库;马什哈德海关单询 / 14–18 calendar days, hub to Tehran West Customs bonded warehouse
+- 目的海关 / Destination customs: 德黑兰西关 Gomrok Gharb / گمرک غرب تهران、沙赫里亚尔 Shahriyar、阿普林陆港 Aprin Dry Port、马什哈德 Mashhad
+- 交割凭证 / Handover: 海关入库单 Ghabz-e Anbar / قبض انبار;伊朗海关系统 ASYCUDA / warehouse entry receipt; Iran customs system ASYCUDA
+- 货类 / Cargo: 普货(汽配/电子/机械/建材) + 9类锂电 UN3480/3481、光伏与储能 BESS、超限大件机械、化工原料(附 MSDS);整车/新能源车/成套项目另询 / general cargo + Class 9 lithium (UN3480/3481), solar & BESS, out-of-gauge machinery, chemicals with MSDS; complete vehicles quoted separately
+- 装法与起运 / Modes: 整车 FTL(13.6m 帘布车 / 17.5m 低平板) 与拼箱 LCL,1 CBM 或 100 KG 起;每周二、周五发车 / FTL and LCL from 1 CBM or 100 kg; weekly Tuesday & Friday departures
+- 车队与保障 / Fleet: 45+ 台斯堪尼亚/沃尔沃 480–540HP + Krone/Schmitz 帘布挂车;北斗三号+GPS 双模定位、门磁电子封签;CMR 一切险每车最高 25 万美元;TIR 国际道路运输经营资质,霍尔果斯与德黑兰派驻调度 / 45+ Scania/Volvo tractors, Beidou-3+GPS, electronic seals, CMR insurance up to USD 250,000 per load, registered TIR operator
+- 0.4%: 仅伊尔克什坦(过吉尔吉斯)次要路径有,是货值发票 0.4% 税、不是运费;霍尔果斯–哈萨克斯坦走廊不加 / only on the Irkeshtam (Kyrgyzstan) secondary routing, a 0.4% invoice-value tax, not freight
+- 询价三样 / To get a quote: 始发仓 origin hub;目的海关 destination customs;货物数据(HS 编码、总重 KG、体积 CBM) cargo data
+- 不做 / Not offered: 网页挂运价 no published rates;伊朗清关 Iran customs clearance;海运/铁运报价(中吉乌铁路在建未通) sea/rail quotes (CKU railway not open)
+- 联系 / Contact: exim@isacogroup.com · WhatsApp https://wa.me/8613237401856 · Telegram https://t.me/Aliboby88
 
 ## 文章 · 中文 / Articles (Chinese)
 
+- [中国到伊朗汽运干线:TIR 卡航 14–18 天直达德黑兰海关（总览）](https://chinairantrucks.com/zh/articles/china-to-iran-tir-trucking/)
 - [22天是德黑兰场站，不是到门](https://chinairantrucks.com/zh/articles/22-days/)
 - [中国汽配卡车发伊朗｜乌恰卡航 / 霍尔果斯｜德黑兰场站22天](https://chinairantrucks.com/zh/articles/auto-parts/)
 - [建材卡车发伊朗｜乌恰 / 霍尔果斯｜德黑兰场站22天](https://chinairantrucks.com/zh/articles/building-materials/)
@@ -43,6 +48,7 @@
 
 ## مقالات · فارسی / Articles (Persian)
 
+- [حمل جاده‌ای چین به ایران: ترانزیت تیر به گمرک تهران در ۱۴ تا ۱۸ روز（مرجع）](https://chinairantrucks.com/articles/china-to-iran-tir-trucking/)
 - [۲۲ روز تا ترمینال تهران | نه درب مقصد](https://chinairantrucks.com/articles/22-days/)
 - [قطعات یدکی خودرو با کامیون از چین به ایران｜ووچیا / خورگوس](https://chinairantrucks.com/articles/auto-parts/)
 - [حمل مصالح ساختمانی با کامیون به ایران｜ووچیا / خورگوس](https://chinairantrucks.com/articles/building-materials/)
@@ -68,6 +74,7 @@
 
 ## Articles (English)
 
+- [China to Iran by road: TIR trucking to Tehran Customs in 14–18 days (pillar)](https://chinairantrucks.com/en/articles/china-to-iran-tir-trucking/)
 - [22 days is the Tehran terminal, not your door](https://chinairantrucks.com/en/articles/22-days/)
 - [Shipping building materials by truck from China to Iran](https://chinairantrucks.com/en/articles/building-materials/)
 - [Central Asia transit: trucking from Xinjiang to Iran](https://chinairantrucks.com/en/articles/central-asia-transit/)
