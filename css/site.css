@@ -841,11 +841,29 @@ body:has(.home-hero) .site-footer .wordmark {
 
 @media (max-width: 640px) {
   .wrap { width: min(var(--max), calc(100% - 28px)); }
-  body.fa .header .wrap,
-  body.fa .site-header .wrap {
-    display: flex;
+
+  /* Header stacks on small screens: wordmark on its own row, full-width nav
+     below it. With EN added the nav is 5 items and no longer fits beside the
+     logo in any language. */
+  .header .wrap,
+  .site-header .wrap {
     flex-wrap: wrap;
+    row-gap: 10px;
+    min-height: 0;
+    padding-block: 14px;
   }
+  .header .wrap > .wordmark,
+  .site-header .wrap > .wordmark { order: 0; }
+  .header .wrap > .header-nav,
+  .header .wrap > .nav,
+  .site-header .wrap > .header-nav,
+  .site-header .wrap > .nav {
+    order: 1;
+    width: 100%;
+    gap: 6px 14px;
+    font-size: 0.84rem;
+  }
+
   .hero-photo img { height: 200px; }
   .hero-stat { font-size: 3rem; }
   .way-row { grid-template-columns: 4.4rem 1fr; }
