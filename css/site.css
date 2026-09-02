@@ -257,7 +257,7 @@ body:has(main.post) .nav .tg {
 body.zh .home-hero,
 body.en .home-hero {
   background: linear-gradient(
-    118deg,
+    104deg,
     var(--paper) 0 46.4%,
     var(--gold) 46.4% 47.35%,
     var(--navy) 47.35% 100%
@@ -266,7 +266,7 @@ body.en .home-hero {
 
 body.fa .home-hero {
   background: linear-gradient(
-    118deg,
+    104deg,
     var(--navy) 0 46.4%,
     var(--gold) 46.4% 47.35%,
     var(--paper) 47.35% 100%
@@ -293,10 +293,10 @@ body.en .home-hero .kicker,
 body.fa .home-hero .kicker { color: var(--gold); }
 
 .home-hero h1 {
-  font-size: clamp(1.7rem, 3.4vw, 2.45rem);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
   font-weight: 700;
-  line-height: 1.28;
-  margin-bottom: 18px;
+  line-height: 1.3;
+  margin-bottom: 16px;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--paper-2);
 }
@@ -782,7 +782,7 @@ body:has(.home-hero) .site-footer .wordmark {
   .cargo-photos { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1180px) {
   body.zh .home-hero,
   body.en .home-hero,
   body.fa .home-hero {
@@ -793,7 +793,8 @@ body:has(.home-hero) .site-footer .wordmark {
       var(--navy) 57% 100%
     );
   }
-  .hero-inner {
+  .hero-inner,
+  .home-hero .hero-inner {
     grid-template-columns: 1fr;
     min-height: 0;
   }
@@ -875,22 +876,22 @@ body:has(.home-hero) .site-footer .wordmark {
    TIR homepage — hub-to-customs rewrite components
    ============================================================ */
 
-/* Narrower copy column so the hero text column ends well left of the
-   diagonal at every viewport width. */
-.home-hero .hero-inner {
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
-}
-.home-hero .hero-copy { max-width: 100%; }
+/* The 2-column diagonal hero only runs at >=1180px (below that the hero
+   stacks — see the max-width:1180px block above). At >=1180px the copy
+   column is capped tight so the H1's first line always clears the pinched
+   top of the paper wedge; the full paragraph lives in .lead-brief below. */
+.home-hero .hero-copy { max-width: 22rem; }
+/* Persian sets wider text — its copy sits on the roomy side of the wedge. */
+body.fa .home-hero .hero-copy { max-width: 30rem; }
+.home-hero h1 { text-wrap: balance; }
 
-/* One-line positioning tag under the H1 (the diagonal hero has no room for
-   a full paragraph — that lives in .lead-brief just below). */
+/* One-line positioning tag under the H1. */
 .hero-tag {
   font-weight: 700;
   color: var(--navy);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: 22px;
-  max-width: 22rem;
+  margin-bottom: 20px;
 }
 
 /* Full-width intro paragraph directly below the hero, on flat paper. */
@@ -903,45 +904,56 @@ body:has(.home-hero) .site-footer .wordmark {
 }
 .lead-brief strong { font-weight: 700; }
 
-@media (max-width: 860px) {
-  .home-hero .hero-inner { grid-template-columns: 1fr; }
-  .hero-tag { max-width: none; }
+@media (max-width: 1180px) {
+  .home-hero .hero-copy { max-width: none; }
 }
 
 /* 3.2 — decision comparison matrix */
 .compare-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  border: 1px solid rgba(11, 31, 58, 0.16);
   border-inline-start: var(--stub) solid var(--gold);
 }
 .compare {
   width: 100%;
-  min-width: 660px;
+  min-width: 680px;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 0.9rem;
 }
+.compare th:first-child,
+.compare td:first-child { width: 25%; }
 .compare th,
 .compare td {
   text-align: start;
-  padding: 11px 13px;
-  border-bottom: 1px solid var(--paper-2);
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(11, 31, 58, 0.12);
+  border-inline-end: 1px solid rgba(11, 31, 58, 0.12);
   vertical-align: top;
-  line-height: 1.5;
+  line-height: 1.55;
+  overflow-wrap: break-word;
 }
+.compare th:last-child,
+.compare td:last-child { border-inline-end: none; }
+.compare tbody tr:last-child td { border-bottom: none; }
 .compare thead th {
   background: var(--navy);
   color: var(--cream);
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
   border-bottom: none;
+  border-inline-end-color: rgba(255, 255, 255, 0.15);
 }
 .compare tbody td:first-child {
   font-weight: 700;
   color: var(--navy);
-  width: 22%;
+  background: rgba(11, 31, 58, 0.035);
 }
-.compare tbody td:nth-child(2) { background: rgba(196, 163, 90, 0.14); }
+.compare tbody td:nth-child(2) { background: rgba(196, 163, 90, 0.16); }
 .compare tbody tr:hover td { background: #fffdf8; }
+.compare tbody tr:hover td:nth-child(2) { background: rgba(196, 163, 90, 0.22); }
 
 /* 3.3 — route timeline */
 .timeline {
