@@ -870,3 +870,191 @@ body:has(.home-hero) .site-footer .wordmark {
   .way-row img { display: none; }
   .cities { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   TIR homepage — hub-to-customs rewrite components
+   ============================================================ */
+
+/* Narrower copy column so the hero text column ends well left of the
+   diagonal at every viewport width. */
+.home-hero .hero-inner {
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+}
+.home-hero .hero-copy { max-width: 100%; }
+
+/* One-line positioning tag under the H1 (the diagonal hero has no room for
+   a full paragraph — that lives in .lead-brief just below). */
+.hero-tag {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin-bottom: 22px;
+  max-width: 22rem;
+}
+
+/* Full-width intro paragraph directly below the hero, on flat paper. */
+.lead-brief {
+  max-width: 60em;
+  font-size: 1.04rem;
+  line-height: 1.7;
+  color: var(--navy);
+  margin-bottom: 26px;
+}
+.lead-brief strong { font-weight: 700; }
+
+@media (max-width: 860px) {
+  .home-hero .hero-inner { grid-template-columns: 1fr; }
+  .hero-tag { max-width: none; }
+}
+
+/* 3.2 — decision comparison matrix */
+.compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-inline-start: var(--stub) solid var(--gold);
+}
+.compare {
+  width: 100%;
+  min-width: 660px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.compare th,
+.compare td {
+  text-align: start;
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--paper-2);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.compare thead th {
+  background: var(--navy);
+  color: var(--cream);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  border-bottom: none;
+}
+.compare tbody td:first-child {
+  font-weight: 700;
+  color: var(--navy);
+  width: 22%;
+}
+.compare tbody td:nth-child(2) { background: rgba(196, 163, 90, 0.14); }
+.compare tbody tr:hover td { background: #fffdf8; }
+
+/* 3.3 — route timeline */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: tl;
+}
+.timeline li {
+  position: relative;
+  padding: 0;
+  padding-inline-start: 28px;
+  padding-block-end: 22px;
+  border-inline-start: 2px solid var(--paper-2);
+  margin-inline-start: 7px;
+}
+.timeline li:last-child {
+  border-inline-start-color: transparent;
+  padding-block-end: 0;
+}
+.timeline li::before {
+  counter-increment: tl;
+  content: counter(tl);
+  position: absolute;
+  inset-inline-start: -13px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: var(--font-la);
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: grid;
+  place-items: center;
+}
+.timeline .tl-day {
+  display: block;
+  font-family: var(--font-la);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+.timeline h3 {
+  font-size: 1.02rem;
+  margin-bottom: 5px;
+  color: var(--navy);
+}
+.timeline p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  max-width: 54em;
+}
+
+/* 3.4 — cargo capability cards */
+.caps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.caps li {
+  background: var(--paper);
+  border: var(--rule);
+  border-inline-start: var(--stub) solid var(--gold);
+  padding: 16px 16px 14px;
+}
+.caps h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--navy);
+}
+.caps p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* 3.5 — carrier / fleet verification list */
+.trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+.trust li {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--paper-2);
+  border-inline-start: var(--stub) solid var(--gold);
+  padding-inline-start: 14px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+/* quote strip — enquiry checklist on navy */
+.quote-items {
+  margin: 0 0 18px;
+  padding-inline-start: 20px;
+  color: var(--cream);
+  opacity: 0.92;
+}
+.quote-items li {
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .caps { grid-template-columns: 1fr; }
+}
