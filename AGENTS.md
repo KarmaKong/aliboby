@@ -6,8 +6,8 @@ Operating manual for anyone (human or AI) editing this site. Read before changin
 
 ## 1. What this is
 
-Static marketing site for a **China → Iran overland trucking (freight forwarding)** service.
-Trilingual. Audience: Iranian importers (Persian, the buyer side) and Chinese exporters (Chinese). English is the third track, mainly so global AI assistants (ChatGPT / Claude / Gemini) can cite the brand.
+Static marketing site for a **China → Iran overland TIR trucking (freight-forwarding) linehaul** service — first-hand carrier running sealed trailers from Chinese consolidation hubs to Tehran West Customs, hub-to-customs (not door-to-door).
+Trilingual. Audience: Iranian importers and their customs brokers (Persian, the buyer side) and Chinese exporters / factories / forwarders (Chinese). English is the third track, mainly so global AI assistants (ChatGPT / Claude / Gemini) can cite the brand.
 
 - **Stack:** hand-written static HTML + one CSS file. No framework, no build step, no JS app. `.nojekyll` is present so files starting with `_` are served.
 - **Host:** GitHub Pages, "deploy from branch", source = `main` / root. `CNAME` = `chinairantrucks.com` (apex, no `www` — `www` 301s to apex).
@@ -28,6 +28,7 @@ Trilingual. Audience: Iranian importers (Persian, the buyer side) and Chinese ex
 - `<body>` class carries the language: `fa` / `zh` / `en`, plus `home` on the three homepages.
 - Redirect stubs (old slugs) exist under `zh/articles/` (`first-central-asia`, `lcl-traps`, `uzbekistan-quote`) and `zh/index.html`. They use `<meta http-equiv="refresh">` + a real `<a>`. Leave them; do not add new ones — pick the final slug the first time.
 - `x-default` hreflang points to the **Persian** version site-wide (matches the homepage).
+- The 2026-09 copywriting guide proposed moving to `/zh/` and `/fa/` directories (Apple/Canva pattern). **Deferred** — 40+ file moves, no real 301s on GitHub Pages, ~2 weeks of lost fresh-index equity. Revisit only on an explicit decision; if done, `x-default` also moves to `/en/` per that guide.
 
 ---
 
@@ -35,19 +36,26 @@ Trilingual. Audience: Iranian importers (Persian, the buyer side) and Chinese ex
 
 Cross-page consistency of these facts is a search-ranking and AI-citation signal. Never contradict them, never "improve" the numbers, never invent new ones.
 
-- **Two corridors out of Xinjiang (新疆 / سین‌کیانگ):**
-  - **Wuqia 乌恰 / Irkeshtam 伊尔克什坦 / ووچیا** — via **Kyrgyzstan**. Chain: Xinjiang — Kyrgyzstan — Uzbekistan — Turkmenistan — Iran.
-  - **Khorgos 霍尔果斯 / خورگوس** — via **Kazakhstan**. Chain: Xinjiang — Kazakhstan — Uzbekistan — Turkmenistan — Iran.
-- **The 0.4%:** applies **only on the Wuqia route** (crossing Kyrgyzstan). It is **0.4% of the goods' invoice value**, a **tax, not freight**, billed as a separate line item. **Khorgos does not add it.**
-- **Transit time:** **about 22 days to the Tehran terminal (德黑兰场站 / پایانهٔ تهران)** — NOT door-to-door, NOT DDP, NOT by sea. **Mashhad (马什哈德) and Sarakhs (萨拉赫斯) get no day count — quote only.**
-- **Destination cities:** Mashhad / Tehran / Sarakhs.
-- **Cargo the operator carries (standard FTL/LTL general cargo):** auto parts 汽配 · electronics 电子 · machinery 机械 · building materials 建材.
-- **Corridor context (homepage `cargo-line` only, sourced):** the Wuqia and Khorgos crossings also move complete vehicles, EVs, heavy/construction machinery and consumer goods — Khorgos is China's largest road port for vehicle exports. On-site this is framed as what the *corridor* carries; complete vehicles / EVs / heavy machinery are "quoted separately / 另询", not part of the standard service. Do not present them as a routine offering without operator confirmation.
-- **Services:** FTL / LTL (整车 / 零担) · terminal delivery (场站交货) · pay in RMB or offshore.
-- **TIR:** customs seal at origin + one carnet; fewer openings and truck changes — "**fewer, not zero**". TIR does **not** fix the transit time or the freight.
-- **Pricing:** **no published rates.** Always "quote on request" / 运费单询 / کرایه استعلام.
-- **To get a quote, four things:** item name; quantity or weight; destination city; Wuqia or Khorgos. (On the Wuqia route also give the invoice value, for the 0.4%.)
-- **Clearance:** buyer's, at destination. This company does **not** do Iran customs clearance.
+> **2026-09 rewrite:** the site was repositioned from "≈22 days to a Tehran terminal, departs Xinjiang, vehicles quoted separately" to the **hub-to-customs TIR linehaul** canon below. The homepages (`index.html`, `zh.html`, `en/index.html`) and their schema already reflect it. The ~44 existing articles are being reconciled separately — if an article still says "22 天 / 约22天", "从新疆出", "两条走廊", headline "0.4%", treat the article as stale, not the canon.
+
+- **Business model:** **hub-to-customs / warehouse-to-customs (仓到关 / 站到关 / انبار به گمرک).** NOT door-to-door, NOT DDP, NOT by sea. Trade terms **CPT / DAP Tehran Customs**; the consignee's licensed broker pays duty and releases the cargo.
+- **Origin consolidation hubs:** Yiwu 义乌（苏溪）· Shenzhen 深圳（平湖）· Guangzhou 广州（白云）· Shanghai 上海. Cargo can also be handed over at the Khorgos supervised zone (CY / CFS).
+- **Exit gateway:** **Khorgos 霍尔果斯 / خورگوس** (primary). Chain: Khorgos — Kazakhstan (Almaty–Shymkent) — Turkmenistan (Farap–Mary) — **Sarakhs** — Tehran West Customs. **Irkeshtam 伊尔克什坦** is the secondary gateway (via Kyrgyzstan / Uzbekistan).
+- **Iran entry:** **Sarakhs 萨拉赫斯 / سرخس** (primary) · Incheboron 因切布伦 / اینچه‌برون (secondary).
+- **Transit time:** **14–18 calendar days**, origin hub → **Tehran West Customs bonded warehouse**. Mashhad Customs (马什哈德) gets no day count — quote only.
+- **Destination customs / entities:** **Tehran West Customs / Gomrok Gharb / گمرک غرب تهران** (primary) · Shahriyar Customs (شهریار) · Aprin Dry Port (بندر خشک آپرین) · Mashhad Customs. On arrival the goods enter the bonded warehouse and a **warehouse entry receipt — Ghabz-e Anbar / قبض انبار / 海关入库单** — is issued to the consignee's broker. Iran customs system: **ASYCUDA**.
+- **Departures:** weekly, **Tuesday & Friday**, from the Yiwu and Shenzhen (Pinghu) facilities.
+- **LCL:** consolidation from **1 CBM or 100 kg**.
+- **Fleet (operator-asserted, 2026-09):** 45+ owned / contracted **Scania & Volvo 480–540 HP** tractors with **Krone / Schmitz curtainsider trailers** to IRU transit spec; 17.5 m step-frame low-beds for OOG. Do not inflate these numbers.
+- **Telematics:** Beidou-3 + GPS dual-mode, hourly position logs; door **e-lock (electronic seal)** open/close status.
+- **Licensing / presence:** TIR international road-transport operator; own dispatch teams stationed at **Khorgos** and **Tehran**; no subcontracting layer.
+- **Insurance:** CMR transit insurance, liability cover **up to USD 250,000 per trailer load**, origin loading → Tehran Customs unloading.
+- **Cargo — core services now:** general FTL / LCL cargo **plus** Class 9 lithium batteries (**UN3480 / UN3481**, incl. BESS / LiFePO4), solar PV modules · inverters · transformers, out-of-gauge heavy machinery (injection machines, CNC, presses, excavators), and chemical materials / resins **with a valid 16-section MSDS + UN packaging docs**. Complete vehicles / EVs / turnkey plant projects are still **另询 / quoted separately**.
+- **TIR:** customs seal at origin + one carnet; no transit unsealing, no transloading, no escrow-bond delays across Kazakhstan / Turkmenistan. TIR does **not** by itself fix the freight rate.
+- **The 0.4%:** a **tax, not freight** — 0.4% of invoice value — and it applies **only on the Irkeshtam (Kyrgyzstan) secondary routing**. The primary Khorgos–Kazakhstan corridor does **not** add it. Keep it as a footnote-level detail, never a headline.
+- **Pricing:** **no published rates.** Always "quote on request" / 运价单询 / کرایه استعلام.
+- **To get a quote, three things:** origin hub; destination customs (Tehran West Customs / Aprin / Mashhad); cargo data (HS code · gross weight KG · volume CBM).
+- **Clearance:** buyer's licensed broker, at Tehran Customs. This company does **not** do Iran customs clearance.
 - **CKU railway (中吉乌铁路):** under construction, **not open**. Iran cargo is still road. Do not present it as a timeline or use it to argue price.
 - This site does **not** quote sea or rail.
 
@@ -60,8 +68,8 @@ If new operational data arrives (real transit days per city, rate bands, border-
 - Terse, declarative, factual. Short sentences. No marketing fluff, no clickbait, no "震惊体".
 - Headings name real entities (`Wuqia vs Khorgos: the 0.4%`), not vague ones (`How to choose`).
 - No "I think / obviously". State facts; label estimates as estimates.
-- Persian digits (`۲۲ روز`, `۰٫۴٪`) for the recurring site numbers in `fa`; Western digits for quoted statistics.
-- CJK place-name pairs are kept as brand (`乌恰 Wuqia`, `霍尔果斯 Khorgos`) in all languages.
+- Persian digits (`۱۴ تا ۱۸ روز`, `۰٫۴٪`) for the recurring site numbers in `fa`; Western digits for quoted statistics.
+- CJK place-name pairs are kept as brand (`霍尔果斯 Khorgos`, `萨拉赫斯 Sarakhs`, `德黑兰西关 Gomrok Gharb`) in all languages.
 - The **operator's first-hand voice** beats AI draft prose. AI is draft labor, not the published voice. A real About page with a named person is still TODO (see `/docs` / project notes).
 
 ---
