@@ -12,7 +12,7 @@ Trilingual. Audience: Iranian importers and their customs brokers (Persian, the 
 - **Stack:** hand-written static HTML + one CSS file. No framework, no build step, no JS app. `.nojekyll` is present so files starting with `_` are served.
 - **Host:** GitHub Pages, "deploy from branch", source = `main` / root. `CNAME` = `chinairantrucks.com` (apex, no `www` — `www` 301s to apex).
 - **Analytics:** GoatCounter (`js/count.js`), plus an inline CTA-click event script on every page (tags clicks `wa` / `tg` / `email`).
-- **Contact everywhere:** WhatsApp `https://wa.me/8613237401856` (+86 132 3740 1856) is the primary channel — it's the nav "contact" link (`class="wa contact"`) and the gold CTA button site-wide. `exim@isacogroup.com` is the secondary ghost button everywhere. Telegram `https://t.me/Aliboby88` is kept only as a secondary ghost button in the **quote strip of the 3 homepages** and in the Organization `sameAs`. (There is also `brand/telegram-qr.png` for `t.me/uarmside` — an offline asset, **not** linked from any page. Do not swap site Telegram links to it.)
+- **Contact everywhere:** WhatsApp `https://wa.me/8613237401856` (+86 132 3740 1856) is the primary channel — it's the nav "contact" link (`class="wa contact"`) and the gold CTA button site-wide. `sales@chinairantrucks.com` is the secondary ghost button everywhere. Telegram `https://t.me/Aliboby88` is kept only as a secondary ghost button in the **quote strip of the 3 homepages** and in the Organization `sameAs`. (There is also `brand/telegram-qr.png` for `t.me/uarmside` — an offline asset, **not** linked from any page. Do not swap site Telegram links to it.)
 - **Organization JSON-LD** (homepages) carries `telephone` `+8613237401856`, a WhatsApp `sameAs`, and a phone `contactPoint`.
 
 ---
