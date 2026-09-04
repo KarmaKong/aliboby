@@ -1070,3 +1070,13 @@ body.fa .home-hero .hero-copy { max-width: 30rem; }
 @media (max-width: 720px) {
   .caps { grid-template-columns: 1fr; }
 }
+
+/* Footer legal links — own row, inline-end aligned */
+.site-footer .footer-legal {
+  flex-basis: 100%;
+  margin: 2px 0 0;
+  text-align: end;
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+.site-footer .footer-legal a { color: inherit; }
