@@ -20,6 +20,47 @@
 
 ---
 
+## 0b. 搜索引擎站长工具（GSC + Bing）— 最优先，一次性
+
+两个都提交**同一个 sitemap**：`https://chinairantrucks.com/sitemap.xml`（75 条 URL，三语全覆盖）。
+
+### Google Search Console — https://search.google.com/search-console
+
+1. 选 **域名属性（Domain property）**，填：
+   ```
+   chinairantrucks.com
+   ```
+   （不带 `https://`、不带 `www`、不带斜杠）
+2. 验证：在域名 DNS 里加一条 **TXT 记录**（跟加 Zoho MX 记录同一个地方），值 GSC 会给。
+3. 验证通过 → 左侧 **Sitemaps** → 输入 `sitemap.xml` → 提交。
+4. 几天后看 **页面 / Pages** 报告和 **体验 / hreflang**（旧版"International Targeting"）有没有报错。
+
+> 一个域名属性覆盖三语，不要建 URL 前缀属性、不要单独加 `www` / `zh.html` / `en/`。
+
+### Bing Webmaster Tools — https://www.bing.com/webmasters
+
+- **最省事**：做完 GSC 后用 **"Import from Google Search Console"** 一键导入（自动验证 + 带 sitemap）。
+- 手动：添加站点填 `https://chinairantrucks.com`（带 `https://`，不带 www）→ 验证（XML 文件 / meta 标签 / DNS）→ **Sitemaps** 提交 `https://chinairantrucks.com/sitemap.xml`。
+- URL 提交不用管：IndexNow 已接好，每次合并到 `main` 自动推送 Bing / Yandex（key 文件 `132ea0186220b34b6e12ad5428d0620433d1d80513cb2148.txt` 已验证返回 200）。
+
+### 不用做
+
+- ❌ `www.chinairantrucks.com`（301 跳 apex）
+- ❌ 逐个提交页面 URL（sitemap 全覆盖）
+- ❌ Baidu（已定放弃）
+- ➕ 可选：**Yandex Webmaster**（中亚 / 俄语走廊，IndexNow 已在推），填法同 Bing
+
+### 提交后的验证节奏
+
+| 时间 | 看什么 |
+|---|---|
+| 提交当天 | sitemap 状态 = "成功 / Success"，已发现 75 个 URL |
+| 3–7 天 | GSC "已编入索引的网页" 开始 > 0；Bing "已编入索引的网页" 开始 > 0 |
+| 2–4 周 | GSC "效果 / Performance" 出现展示量（impressions）；开始有品牌词 + 长尾词曝光 |
+| 持续 | 每周扫一眼"未编入索引"原因；hreflang / 结构化数据报告无红色错误 |
+
+---
+
 ## 1. NAP 标准资料块（全网保持逐字一致）
 
 > **NAP = Name / Address / Phone。** 在每一个平台粘一模一样的字段——不一致会削弱实体信号。
