@@ -81,14 +81,14 @@ Company size:       << 你提供 >>
 ```
 
 ### 一句话简介（tagline，各语言 ≤ 60 字符）
-- EN: `China–Iran TIR road freight — hub to Tehran Customs in 14–18 days`
-- ZH: `中国到伊朗 TIR 卡航干线 · 14–18 天直达德黑兰海关`
-- FA: `ترانزیت تیر چین به ایران — ۱۴ تا ۱۸ روز تا گمرک تهران`
+- EN: `China–Iran TIR road freight — Wuqia to Tehran Customs in 21–23 days`
+- ZH: `中国到伊朗 TIR 卡航干线 · 自乌恰口岸起算 21–23 天到德黑兰海关`
+- FA: `ترانزیت تیر چین به ایران — از مرز ووچیا ۲۱ تا ۲۳ روز تا گمرک تهران`
 
 ### 短简介（~160 字符，用于黄页 meta / 目录卡片）
-- EN: `First-hand cross-border TIR road-freight carrier from China consolidation hubs (Yiwu, Shenzhen, Guangzhou) to Tehran West Customs. 14–18 days, CPT/DAP, weekly departures. Lithium batteries, OOG machinery, FCL/LCL.`
-- ZH: `一手中伊跨境 TIR 卡航庄家。义乌 / 深圳 / 广州集货，经霍尔果斯直出，14–18 天到德黑兰西关海关。CPT/DAP，每周二五发车。承运锂电、超限大件、整车 / 拼箱。`
-- FA: `حمل‌کنندهٔ دست‌اول ترانزیت تیر از انبارهای چین (ایوو، شنژن، گوانگژو) به گمرک غرب تهران. ۱۴ تا ۱۸ روز، CPT/DAP، حرکت هفتگی. باتری لیتیومی، بار فوق‌سنگین، کانتینری و خرده‌بار.`
+- EN: `First-hand cross-border TIR road-freight carrier from China consolidation hubs (Yiwu, Shenzhen, Guangzhou) to Tehran West Customs via the Wuqia and Khorgos lines. Currently 21–23 days from the Wuqia crossing, CPT/DAP, weekly departures. Lithium batteries, OOG machinery, FCL/LCL.`
+- ZH: `一手中伊跨境 TIR 卡航庄家。义乌 / 深圳 / 广州集货，走乌恰线或霍尔果斯线，自乌恰口岸起算 21–23 天到德黑兰西关海关。CPT/DAP，每周二五发车。承运锂电、超限大件、整车 / 拼箱。`
+- FA: `حمل‌کنندهٔ دست‌اول ترانزیت تیر از انبارهای چین (ایوو، شنژن، گوانگژو) به گمرک غرب تهران از خطوط ووچیا و هورگوس. از مرز ووچیا ۲۱ تا ۲۳ روز، CPT/DAP، حرکت هفتگی. باتری لیتیومی، بار فوق‌سنگین، کانتینری و خرده‌بار.`
 
 ### 长简介（~600 字符，用于 LinkedIn About / Crunchbase / Kompass 详情）
 - EN:
@@ -98,15 +98,15 @@ consolidation hubs in China — Yiwu (Suxi), Shenzhen (Pinghu), Guangzhou (Baiyu
 to the bonded customs yards of Tehran: Tehran West Customs (Gomrok Gharb), Shahriyar Customs and
 Aprin Dry Port.
 
-Trailers are sealed once at Khorgos under a TIR carnet and run straight through Kazakhstan and
-Turkmenistan with no unsealing and no transloading, entering Iran at Sarakhs. Transit is 14–18
-calendar days, hub to bonded warehouse, on CPT / DAP terms — the consignee's licensed broker clears
+Trailers are sealed at the exit gateway under a TIR carnet, which keeps unsealings and transloads to a
+minimum — a direct truck is transloaded once, at Bukhara — before entering Iran at Sarakhs. Transit is
+currently 21–23 days from the Wuqia crossing to the bonded warehouse (plus a domestic leg within about
+7 days), on CPT / DAP terms — the consignee's licensed broker clears
 the cargo in Iran's ASYCUDA system against the warehouse entry receipt (Ghabz-e Anbar).
 
 Core services: general FTL and LCL cargo (from 1 CBM / 100 kg), Class 9 lithium batteries
 (UN 3480 / 3481), solar and BESS equipment, out-of-gauge machinery on step-frame low-beds, and
-chemical materials with a valid MSDS. Fleet of 45+ Scania and Volvo tractors with curtainsider
-trailers, Beidou-3 + GPS telematics, electronic door seals, and CMR transit insurance up to
+chemical materials with a valid MSDS. Fleet of 45+ owned and contracted 480–540 HP curtainsider tractor-trailers, Beidou-3 + GPS telematics, electronic door seals, and CMR transit insurance up to
 USD 250,000 per trailer. Registered TIR international road-transport operator with dispatch teams
 stationed at Khorgos and in Tehran. No subcontracting layer.
 
@@ -178,7 +178,7 @@ Kazakhstan Turkmenistan transit · CPT DAP customs delivery · 中伊卡航 · �
 | Industry | `Truck Transportation` 或 `Freight and Package Transportation` |
 | Company size | << 你提供 >> |
 | Company type | `Privately Held` |
-| Tagline | `China–Iran TIR road freight — hub to Tehran Customs in 14–18 days` |
+| Tagline | `China–Iran TIR road freight — Wuqia to Tehran Customs in 21–23 days` |
 | Logo | `brand/lockup.png`（正方形版另裁，300×300 起） |
 
 ### 3.2 About（粘贴 EN 长简介，第 1 节）
@@ -191,9 +191,9 @@ Kazakhstan Turkmenistan transit · CPT DAP customs delivery · 中伊卡航 · �
 ```
 We run one thing: sealed TIR trailers from China to Tehran Customs.
 
-Consolidation at Yiwu, Shenzhen and Guangzhou → out through Khorgos under a TIR carnet →
-straight across Kazakhstan and Turkmenistan, no transloading → into the bonded warehouse at
-Tehran West Customs in 14–18 days.
+Consolidation at Yiwu, Shenzhen and Guangzhou → out through the Wuqia or Khorgos line under a TIR
+carnet → across Central Asia with one transload at Bukhara → into the bonded warehouse at
+Tehran West Customs, currently 21–23 days from the Wuqia crossing.
 
 Hub-to-customs, not door-to-door. Your broker clears in ASYCUDA against the Ghabz-e Anbar.
 
@@ -212,12 +212,12 @@ Send origin hub + destination customs + HS code / weight / volume for a rate.
 
 **Post 3 — 路线科普**
 ```
-The route, stage by stage:
-Day 1–2  origin consolidation
-Day 3–4  Khorgos: China export clearance, TIR seal + electronic lock
-Day 5–11 Kazakhstan (Almaty–Shymkent) and Turkmenistan (Farap–Mary), sealed, no unsealing
-Day 12–14 Sarakhs: entry, ASYCUDA record, bonded transit permit
-Day 15–18 Tehran West Customs bonded warehouse, Ghabz-e Anbar issued
+The route, leg by leg (the two legs are quoted separately, never added):
+- Domestic: origin consolidation → the exit gateway, typically within about 7 days
+- Exit gateway: China export clearance, TIR seal + electronic lock — the transit count starts here
+- Wuqia line: Kyrgyzstan (0.4% transit tax), then Uzbekistan; a direct truck is transloaded once, at Bukhara
+- Turkmenistan (Farap–Mary), then entry at Sarakhs: ASYCUDA record, bonded transit permit
+- Tehran West Customs bonded warehouse, Ghabz-e Anbar issued — currently 21–23 days from the Wuqia crossing (direct truck)
 
 #SupplyChain #TIR #CentralAsia
 ```
@@ -234,7 +234,7 @@ Requirement: a full 16-section MSDS and UN packaging documents, stated up front.
 **Post 5 — 对比海运**
 ```
 Road vs sea to Iran, plainly:
-Road (TIR): 14–18 days to the Tehran customs bonded warehouse, sealed end to end.
+Road (TIR): currently 21–23 days from the Wuqia crossing to the Tehran customs bonded warehouse, one transload at Bukhara.
 Sea (Bandar Abbas): 35–55 days to the container yard, then a separate inland leg.
 
 For batteries, chemicals and out-of-gauge, road is usually the only workable mode.
@@ -262,7 +262,7 @@ sales@chinairantrucks.com
 
 **Post 8 — 常见误区**
 ```
-"14–18 days" is to the Tehran customs bonded warehouse — not your door, not DDP.
+The transit figure is to the Tehran customs bonded warehouse — not your door, not DDP.
 Import duty, clearance and local delivery are the consignee's licensed broker.
 We hand over the Ghabz-e Anbar; the broker takes it from there.
 
