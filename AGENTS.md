@@ -37,7 +37,7 @@ Trilingual. Audience: Iranian importers and their customs brokers (Persian, the 
 
 Cross-page consistency of these facts is a search-ranking and AI-citation signal. Never contradict them, never "improve" the numbers, never invent new ones.
 
-> **2026-09-07 canon revision (supersedes the earlier 2026-09 "Khorgos TIR, no transloading, 14–18 days" canon).** Operator-supplied line data replaced the previous transit and transloading claims. Any page still saying "14–18 days / 14–18 天 / ۱۴ تا ۱۸ روز", "no transloading / 免倒装 / بدون تخلیه", "22 天", or Incheboron as the Iran entry is **stale**, not canon. Reconciliation is tracked page-by-page; the three homepages are converted first.
+> **2026-09-07 canon revision (supersedes the earlier 2026-09 "Khorgos TIR, no transloading, 14–18 days" canon).** Operator-supplied line data replaced the previous transit and transloading claims. Any page still saying "14–18 days / 14–18 天 / ۱۴ تا ۱۸ روز", "no transloading / 免倒装 / بدون تخلیه", "22 天", or naming Incheboron is **stale**, not canon. Reconciliation is tracked page-by-page; the three homepages are converted first.
 
 - **Business model:** **hub-to-customs / warehouse-to-customs (仓到关 / 站到关 / انبار به گمرک).** NOT door-to-door, NOT DDP, NOT by sea. Trade terms **CPT / DAP**; the consignee's licensed broker pays duty and releases the cargo. This company does **not** do Iran customs clearance.
 - **Origin consolidation hubs:** Yiwu 义乌（苏溪）· Shenzhen 深圳（平湖）· Guangzhou 广州（白云）· Shanghai 上海. Cargo can also be handed over at a supervised zone (CY / CFS) at the exit gateway.
@@ -67,18 +67,18 @@ Wuqia line, current ("目前 / currently / معمولاً" — never "guaranteed
 
 | Destination | Direct 直达 | Transshipment 换装 |
 |---|---|---|
-| Sarakhs 萨拉赫斯 / Lotfabad 洛特法巴德 (Iran border customs) | 15–18 days | 21–24 days |
 | Mashhad 马什哈德 | 18–21 days | 24–28 days |
 | Tehran 德黑兰 | 21–23 days | 26–30 days |
 
-- **The count starts at Wuqia.** The domestic leg (origin hub → Wuqia) is **not** included and is **not yet quantified** — quote it separately, never fold it into these numbers, and never present these as hub-to-destination figures.
+- **The count starts at Wuqia.** The domestic leg (origin hub → Wuqia) is **within about 7 days** (operator estimate, 2026-09-07 — hedge it as an estimate, never a committed figure) and is **not** included in the table above. Legs are published **separately**; do not add them into a single headline figure without an explicit decision.
+- **Border customs (Sarakhs / Lotfabad) are NOT published as sellable destinations.** The internal figures exist (direct 15–18 / transshipment 21–24 days) but must not appear on the site or in bot content. Published destinations are **Mashhad and Tehran only**.
 - Khorgos line: **no transit-day figure exists.** Answer "quote on request".
 - Every published day range must carry a hedge word: 目前 / currently / typical / معمولاً. No "guaranteed", no "保证".
 
 ### 3.4 Iran entry and destinations
 
-- **Iran clearance gateways:** **Sarakhs 萨拉赫斯 / سرخس** or **Lotfabad 洛特法巴德 / لطف‌آباد**. (Incheboron 因切布伦 is **out of canon** — remove wherever it appears.)
-- **Sellable destinations:** Sarakhs / Lotfabad border customs · Mashhad Customs 马什哈德 · Tehran 德黑兰 (Tehran West Customs / Gomrok Gharb / گمرک غرب تهران · Shahriyar · Aprin Dry Port). Iran customs system: **ASYCUDA**; a warehouse entry receipt (Ghabz-e Anbar / قبض انبار / 海关入库单) is issued to the consignee's broker.
+- **Iran entry:** **Sarakhs 萨拉赫斯 / سرخس** — keep the existing site descriptions of it as the entry / transit gateway. **Lotfabad 洛特法巴德 is an internal fact only** and is not to be added to the site or bot content for now. **Incheboron 因切布伦 is out of canon — delete wherever it appears, with no replacement named.**
+- **Published (sellable) destinations:** **Mashhad Customs 马什哈德** · **Tehran 德黑兰** (Tehran West Customs / Gomrok Gharb / گمرک غرب تهران · Shahriyar · Aprin Dry Port). Border-customs delivery is not offered publicly. Iran customs system: **ASYCUDA**; a warehouse entry receipt (Ghabz-e Anbar / قبض انبار / 海关入库单) is issued to the consignee's broker.
 
 ### 3.5 Load limits
 
@@ -99,7 +99,7 @@ Wuqia line, current ("目前 / currently / معمولاً" — never "guaranteed
 
 - **The 0.4%:** a **tax, not freight** — 0.4% of cargo-invoice value — **only on the Wuqia (Kyrgyzstan) line.** The Khorgos–Kazakhstan corridor never adds it. Footnote-level detail, never a headline.
 - **Pricing:** **no published rates.** Always "quote on request" / 运价单询 / کرایه استعلام. Rates are **revalidated weekly**; every formal quotation carries a validity date and an `RFQ-<date>-<seq>` reference.
-- **To get a quote, three things:** origin hub; destination (Sarakhs/Lotfabad · Mashhad · Tehran); cargo data (HS code · gross weight KG · volume CBM).
+- **To get a quote, three things:** origin hub; destination (Mashhad · Tehran); cargo data (HS code · gross weight KG · volume CBM).
 
 ### 3.8 Operator assertions (unchanged, not derived from line data)
 
@@ -114,9 +114,15 @@ Wuqia line, current ("目前 / currently / معمولاً" — never "guaranteed
 
 ### 3.9 Open items — do not invent values for these
 
-- Domestic leg (origin hub → Wuqia) day count.
 - Khorgos line transit times and transloading structure.
 - Whether the 96 CBM / 25 T limit differs by direct vs transshipment.
+- Whether to publish a combined hub → destination figure (domestic ≤7 days + Wuqia-origin table would put Tehran at roughly 28–30 days direct). **Not published until decided.**
+
+### 3.10 Internal-only facts — never publish, never give to bots
+
+- Lotfabad 洛特法巴德 as a clearance gateway.
+- Border-customs (Sarakhs / Lotfabad) transit times: direct 15–18 days, transshipment 21–24 days.
+- Any freight rate.
 
 If new operational data arrives (real transit days per city, rate bands, border-wait ranges), it is added only with a clear source/date and applied to **all three languages at once**.
 
