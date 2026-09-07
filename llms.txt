@@ -14,7 +14,7 @@
 - 交割凭证 / Handover: 海关入库单 Ghabz-e Anbar / قبض انبار;伊朗海关系统 ASYCUDA / warehouse entry receipt; Iran customs system ASYCUDA
 - 货类 / Cargo: 普货(汽配/电子/机械/建材) + 9类锂电 UN3480/3481、光伏与储能 BESS、超限大件机械、化工原料(附 MSDS);整车/新能源车/成套项目另询 / general cargo + Class 9 lithium (UN3480/3481), solar & BESS, out-of-gauge machinery, chemicals with MSDS; complete vehicles quoted separately
 - 装法与起运 / Modes: 整车 FTL(13.6m 帘布车 / 17.5m 低平板) 与拼箱 LCL,1 CBM 或 100 KG 起;每周二、周五发车 / FTL and LCL from 1 CBM or 100 kg; weekly Tuesday & Friday departures
-- 车队与保障 / Fleet: 45+ 台斯堪尼亚/沃尔沃 480–540HP + Krone/Schmitz 帘布挂车;北斗三号+GPS 双模定位、门磁电子封签;CMR 一切险每车最高 25 万美元;TIR 国际道路运输经营资质,霍尔果斯与德黑兰派驻调度 / 45+ Scania/Volvo tractors, Beidou-3+GPS, electronic seals, CMR insurance up to USD 250,000 per load, registered TIR operator
+- 车队与保障 / Fleet: 45+ 台自有及协议调度的 480–540HP 帘布半挂(13.6m)+ 17.5m 低平板超限车,符合 IRU 过境技术标准;中亚过境段车头/司机可能为过境国持牌协作承运人,全程一票 TIR 单证与铅封、不倒装;北斗三号+GPS 双模定位、门磁电子封签;CMR 一切险每车最高 25 万美元;TIR 国际道路运输经营资质,霍尔果斯与德黑兰派驻调度 / 45+ owned and contracted 480–540 HP curtainsider trailers to IRU spec, plus 17.5 m low-beds; on the Central Asia legs the tractor/driver may be a vetted transit-country partner carrier, under one TIR carnet and seal end to end; Beidou-3+GPS, electronic seals, CMR insurance up to USD 250,000 per load, registered TIR operator
 - 0.4%: 仅伊尔克什坦(过吉尔吉斯)次要路径有,是货值发票 0.4% 税、不是运费;霍尔果斯–哈萨克斯坦走廊不加 / only on the Irkeshtam (Kyrgyzstan) secondary routing, a 0.4% invoice-value tax, not freight
 - 询价三样 / To get a quote: 始发仓 origin hub;目的海关 destination customs;货物数据(HS 编码、总重 KG、体积 CBM) cargo data
 - 不做 / Not offered: 网页挂运价 no published rates;伊朗清关 Iran customs clearance;海运/铁运报价(中吉乌铁路在建未通) sea/rail quotes (CKU railway not open)

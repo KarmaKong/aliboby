@@ -47,9 +47,9 @@ Cross-page consistency of these facts is a search-ranking and AI-citation signal
 - **Destination customs / entities:** **Tehran West Customs / Gomrok Gharb / گمرک غرب تهران** (primary) · Shahriyar Customs (شهریار) · Aprin Dry Port (بندر خشک آپرین) · Mashhad Customs. On arrival the goods enter the bonded warehouse and a **warehouse entry receipt — Ghabz-e Anbar / قبض انبار / 海关入库单** — is issued to the consignee's broker. Iran customs system: **ASYCUDA**.
 - **Departures:** weekly, **Tuesday & Friday**, from the Yiwu and Shenzhen (Pinghu) facilities.
 - **LCL:** consolidation from **1 CBM or 100 kg**.
-- **Fleet (operator-asserted, 2026-09):** 45+ owned / contracted **Scania & Volvo 480–540 HP** tractors with **Krone / Schmitz curtainsider trailers** to IRU transit spec; 17.5 m step-frame low-beds for OOG. Do not inflate these numbers.
+- **Fleet (operator-asserted, 2026-09):** 45+ owned and contracted **480–540 HP curtainsider tractor-trailers** (13.6 m tilt) to IRU transit spec, plus 17.5 m step-frame low-beds for OOG. On the Central Asia transit legs the tractor and driver may be a vetted **partner carrier registered in the transit country**. Do **not** name specific truck makes/brands (no "Scania / Volvo / Krone / Schmitz") and do not inflate the count.
 - **Telematics:** Beidou-3 + GPS dual-mode, hourly position logs; door **e-lock (electronic seal)** open/close status.
-- **Licensing / presence:** TIR international road-transport operator; own dispatch teams stationed at **Khorgos** and **Tehran**; no subcontracting layer.
+- **Licensing / presence:** TIR international road-transport operator; own dispatch coordination at **Khorgos** and in **Tehran**, working with vetted transit-country partner carriers on the through-movement. The load stays under **one TIR carnet and seal end to end** — no transloading, single point of contact. (Do not claim "no subcontracting" or "100% own fleet".)
 - **Insurance:** CMR transit insurance, liability cover **up to USD 250,000 per trailer load**, origin loading → Tehran Customs unloading.
 - **Cargo — core services now:** general FTL / LCL cargo **plus** Class 9 lithium batteries (**UN3480 / UN3481**, incl. BESS / LiFePO4), solar PV modules · inverters · transformers, out-of-gauge heavy machinery (injection machines, CNC, presses, excavators), and chemical materials / resins **with a valid 16-section MSDS + UN packaging docs**. Complete vehicles / EVs are handled **on a project basis**, three ways: road TIR on flatbed / frame trailers (same corridor, ~14–18 days to Tehran West Customs), or an arranged car-carrier block train (JSQ) / ro-ro, or brokered to a dedicated vehicle line. EVs carry a traction battery and are declared as **Class 9 special cargo** with an MSDS. Turnkey plant projects: quoted separately. Auto **parts** remain core general cargo.
 - **TIR:** customs seal at origin + one carnet; no transit unsealing, no transloading, no escrow-bond delays across Kazakhstan / Turkmenistan. TIR does **not** by itself fix the freight rate.
@@ -124,8 +124,8 @@ Flat `<urlset>`, regenerated whenever pages are added/removed. Priorities:
 
 ## 7. Assets
 
-- `img/` — real operation photos. In use: `yard-dsab-loading.jpg` (1600×1067), `ftl-crates-rear-tm-plate.jpg` (1600×931), `tractor.jpg` / `warehouse.jpg` / `crate-marks.jpg` / `forklift.jpg` (1600×1000). Compress to ~q80 progressive JPEG, strip EXIF, **no readable licence plates, no watermarks, no sensitive documents** — blur or crop first.
-- `trucks/hero-cutout.png` — the Scania cut-out on the homepage diagonal. Design element; do not replace with a rectangular photo without CSS work.
+- `img/` — real operation photos. In use: `yard-dsab-loading.jpg` (1600×1067), `ftl-crates-rear-tm-plate.jpg` (1600×931), `tractor.jpg` / `warehouse.jpg` / `crate-marks.jpg` / `forklift.jpg` (1600×1000), `ftl-bagged-cargo.jpg` (1600×552), `pallets-strapped.jpg` (1279×1406). Compress to ~q80 progressive JPEG, strip EXIF, **no readable licence plates, no faces, no watermarks, no sensitive documents** — blur or crop first.
+- `trucks/hero-cutout.png` — the tractor-unit cut-out on the homepage diagonal (generic silhouette, no brand). Design element; do not replace with a rectangular photo without CSS work.
 - `brand/lockup.png` — the wordmark logo (raster). `brand/mark.png` — the circular mark, source for favicons. `og.png` — the default 1200×630 share card.
 - `favicon.ico` / `favicon-32.png` / `favicon.svg` / `apple-touch-180.png` — all derived from `brand/mark.png`. Keep them in sync if the mark changes.
 - Fonts self-hosted in `fonts/` (IBM Plex Sans, Outfit). CDN loads are not used.
@@ -159,7 +159,7 @@ Do not push directly to `main`. Do not force-push shared branches.
 - Break hreflang symmetry (every language version of a slug must list all the others + `x-default`).
 - Add tracking params to internal links, or use JS redirects instead of real links.
 - Auto-redirect by IP or force a language switch.
-- Replace the homepage Scania cut-out, or restyle the header/diagonal, without a deliberate design pass.
+- Replace the homepage tractor cut-out, or restyle the header/diagonal, without a deliberate design pass.
 - Swap the site's Telegram links (`Aliboby88`) or the `#org` JSON-LD `@id` (`https://chinairantrucks.com/#org`).
 - Mass-produce near-duplicate articles that only re-slice the same facts by keyword — new pages need real information gain.
 - Modify `js/count.js` (GoatCounter's own file), `CNAME`, `.nojekyll`, the IndexNow key file, or `google869b982389a5864a.html`.
