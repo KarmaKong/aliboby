@@ -2,6 +2,8 @@
 
 Operating manual for anyone (human or AI) editing this site. Read before changing anything.
 
+`<important if="…">` blocks are task gates (humanlayer/skills `improve-claude-md`): follow a block when its condition matches the current task. §§1–3 (what this is, URL map, fact canon) stay always-on.
+
 ---
 
 ## 1. What this is
@@ -27,9 +29,12 @@ Trilingual. Audience: Iranian importers and their customs brokers (Persian, the 
 
 - One URL = one language-locale document. No `?lang=`, no query params, no aliases.
 - `<body>` class carries the language: `fa` / `zh` / `en`, plus `home` on the three homepages.
+
+<important if="you are changing URLs, directories, redirects, language-path layout, or proposing a /zh/ or /fa/ move">
 - Redirect stubs (old slugs) exist under `zh/articles/` (`first-central-asia`, `lcl-traps`, `uzbekistan-quote`) and `zh/index.html`. They use `<meta http-equiv="refresh">` + a real `<a>`. Leave them; do not add new ones — pick the final slug the first time.
 - `x-default` hreflang points to the **Persian** version site-wide (matches the homepage).
 - The 2026-09 copywriting guide proposed moving to `/zh/` and `/fa/` directories (Apple/Canva pattern). **Deferred** — 40+ file moves, no real 301s on GitHub Pages, ~2 weeks of lost fresh-index equity. Revisit only on an explicit decision; if done, `x-default` also moves to `/en/` per that guide.
+</important>
 
 ---
 
@@ -66,17 +71,20 @@ If new operational data arrives (real transit days per city, rate bands, border-
 
 ## 4. House style
 
+<important if="you are writing or editing page copy in any language">
 - Terse, declarative, factual. Short sentences. No marketing fluff, no clickbait, no "震惊体".
 - Headings name real entities (`Wuqia vs Khorgos: the 0.4%`), not vague ones (`How to choose`).
 - No "I think / obviously". State facts; label estimates as estimates.
 - Persian digits (`۱۴ تا ۱۸ روز`, `۰٫۴٪`) for the recurring site numbers in `fa`; Western digits for quoted statistics.
 - CJK place-name pairs are kept as brand (`霍尔果斯 Khorgos`, `萨拉赫斯 Sarakhs`, `德黑兰西关 Gomrok Gharb`) in all languages.
 - The **operator's first-hand voice** beats AI draft prose. AI is draft labor, not the published voice. A real About page with a named person is still TODO (see `/docs` / project notes).
+</important>
 
 ---
 
 ## 5. Adding or editing an article — checklist
 
+<important if="you are adding or editing an article page">
 Duplicate the language's `_post.html` template:
 `articles/_post.html` · `zh/articles/_post.html` · (for English, copy an existing `en/articles/*/index.html`).
 
@@ -106,11 +114,13 @@ Then:
 16. Add the URL(s) to `sitemap.xml` (see §6).
 17. If the article has genuine Q&A, add `FAQPage` JSON-LD; the `quote` pages carry `HowTo`.
 18. Update `llms.txt` — the per-language article lists are generated from `<title>` tags of non-stub pages.
+</important>
 
 ---
 
 ## 6. sitemap.xml
 
+<important if="you are adding, removing, or renaming pages, or editing sitemap.xml">
 Flat `<urlset>`, regenerated whenever pages are added/removed. Priorities:
 
 - `/` = 1.0 · `/zh.html` and `/en/` = 0.9
@@ -119,58 +129,89 @@ Flat `<urlset>`, regenerated whenever pages are added/removed. Priorities:
 - everything else = 0.6
 
 `lastmod` = the release date. Redirect stubs, `_post.html`, `404.html`, and the `google…​.html` verification file are **not** in the sitemap.
+</important>
 
 ---
 
 ## 7. Assets
 
+<important if="you are adding, replacing, or compressing images, logos, favicons, or fonts">
 - `img/` — real operation photos. In use: `yard-dsab-loading.jpg` (1600×1067), `ftl-crates-rear-tm-plate.jpg` (1600×931), `tractor.jpg` / `warehouse.jpg` / `crate-marks.jpg` / `forklift.jpg` (1600×1000). Compress to ~q80 progressive JPEG, strip EXIF, **no readable licence plates, no watermarks, no sensitive documents** — blur or crop first.
 - `trucks/hero-cutout.png` — the Scania cut-out on the homepage diagonal. Design element; do not replace with a rectangular photo without CSS work.
 - `brand/lockup.png` — the wordmark logo (raster). `brand/mark.png` — the circular mark, source for favicons. `og.png` — the default 1200×630 share card.
 - `favicon.ico` / `favicon-32.png` / `favicon.svg` / `apple-touch-180.png` — all derived from `brand/mark.png`. Keep them in sync if the mark changes.
 - Fonts self-hosted in `fonts/` (IBM Plex Sans, Outfit). CDN loads are not used.
+</important>
 
 ---
 
 ## 8. CSS
 
+<important if="you are editing CSS, layout, typography, or visual design">
 - `css/tokens.css` — colour + layout variables. `css/site.css` — everything else (imports tokens).
 - Palette: `--navy #0B1F3A` (dominant ink), `--gold / --brass #C4A35A` (accent — used only for "iran", numerals, CTAs, section stubs), `--paper / --cream #F5F2EB` (substrate).
 - Language body fonts: `body.fa` Tahoma stack, `body.zh` PingFang stack, `body.en` IBM Plex Sans stack.
 - Homepages: `body:has(.hero-cut)` makes the header a transparent overlay; `body.<lang> .home-hero` sets the paper/navy diagonal (fa mirrors the direction of zh/en). Article pages: `body:has(main.post)` gives the header the paper background.
 - Reusable article components: `.post-facts`, `.post-links`, `.post-kicker`, `.hero-photo`, `.way-row`.
+</important>
 
 ---
 
 ## 9. Deploy flow
 
+<important if="you are committing, opening a pull request, or verifying a deploy">
 1. Branch → change → open a PR against `main`. Commit messages in Chinese, describing what and why.
 2. Squash-merge. GitHub Pages redeploys from `main` in ~1–2 min.
 3. `.github/workflows/indexnow.yml` fires on push to `main` with HTML changes: it diffs changed pages and submits their URLs to `api.indexnow.org` (→ Bing, Yandex, Seznam, Naver). Google does **not** use IndexNow.
 4. Verify live: check `gh api repos/KarmaKong/aliboby/pages/builds/latest` is `built` with no error, then curl the changed URLs for `200`.
 
 Do not push directly to `main`. Do not force-push shared branches.
+</important>
 
 ---
 
 ## 10. Do NOT
 
-- Change any number in the fact canon (§3), or add transit-day / rate figures without a sourced first-hand basis.
-- Break hreflang symmetry (every language version of a slug must list all the others + `x-default`).
-- Add tracking params to internal links, or use JS redirects instead of real links.
-- Auto-redirect by IP or force a language switch.
-- Replace the homepage Scania cut-out, or restyle the header/diagonal, without a deliberate design pass.
-- Swap the site's Telegram links (`Aliboby88`) or the `#org` JSON-LD `@id` (`https://chinairantrucks.com/#org`).
-- Mass-produce near-duplicate articles that only re-slice the same facts by keyword — new pages need real information gain.
-- Modify `js/count.js` (GoatCounter's own file), `CNAME`, `.nojekyll`, the IndexNow key file, or `google869b982389a5864a.html`.
+Flat “never do this” list, split into task-gated blocks so the matching prohibition stays salient.
+
+<important if="you are writing, editing, or translating copy, schema, or any number that appears on a page">
+- Do not change any number in the fact canon (§3), or add transit-day / rate figures without a sourced first-hand basis.
+</important>
+
+<important if="you are adding or editing a language version of a page, or changing hreflang / nav language links">
+- Do not break hreflang symmetry (every language version of a slug must list all the others + `x-default`).
+</important>
+
+<important if="you are adding or editing links, redirects, or language-switching behavior">
+- Do not add tracking params to internal links, or use JS redirects instead of real links.
+- Do not auto-redirect by IP or force a language switch.
+</important>
+
+<important if="you are editing the homepage hero, header, or diagonal layout">
+- Do not replace the homepage Scania cut-out, or restyle the header/diagonal, without a deliberate design pass.
+</important>
+
+<important if="you are editing contact links, Telegram, WhatsApp, or Organization JSON-LD">
+- Do not swap the site's Telegram links (`Aliboby88`) or the `#org` JSON-LD `@id` (`https://chinairantrucks.com/#org`).
+</important>
+
+<important if="you are adding a new article or proposing a new slug">
+- Do not mass-produce near-duplicate articles that only re-slice the same facts by keyword — new pages need real information gain.
+</important>
+
+<important if="you are editing analytics, hosting, CNAME, or verification files">
+- Do not modify `js/count.js` (GoatCounter's own file), `CNAME`, `.nojekyll`, the IndexNow key file, or `google869b982389a5864a.html`.
+</important>
 
 ---
 
 ## 11. Off-repo, human-owned
 
+<important if="you are asked to submit a sitemap, use Search Console / Bing Webmaster, or reach Baidu or Brave">
 These are done in external consoles, not in the codebase:
 
 - **Google Search Console** — sitemap + URL inspection. Covers Google, AI Overviews, Gemini.
 - **Bing Webmaster Tools** — sitemap + URL submission. Covers ChatGPT, Copilot.
 - **Baidu** — intentionally skipped (no ICP filing, foreign host, GitHub Pages is slow from mainland). Chinese off-site reach goes via Xiaohongshu / 公众号 / 知乎 instead.
 - **Brave** — no console; it crawls the open web. `robots.txt` already allows it; the static HTML is fully readable.
+</important>
