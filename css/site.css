@@ -129,34 +129,30 @@ html[dir="rtl"] .site-header .wordmark {
   transform: none;
 }
 
-/* Homes: navy slab gone — paper + navy diagonal run under the nav */
+/* Homepages: solid warm-white header bar sitting above the photo hero */
 body:has(.hero-cut) .header,
 body:has(.hero-cut) .site-header,
 body:has(.home-hero) .header,
 body:has(.home-hero) .site-header {
-  background: transparent;
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  z-index: 20;
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--paper-2);
+  position: static;
 }
-body:has(.hero-cut) .wordmark,
-body:has(.hero-cut) .header a.wordmark,
-body:has(.hero-cut) .header a.wordmark:hover,
-body:has(.hero-cut) .site-header a.wordmark,
-body:has(.hero-cut) .site-header a.wordmark:hover,
-body:has(.hero-cut) .wordmark:hover,
-body:has(.home-hero) .wordmark,
-body:has(.home-hero) .header a.wordmark,
-body:has(.home-hero) .site-header a.wordmark,
-body:has(.home-hero) .wordmark:hover {
-  background-color: transparent;
-}
-body:has(.hero-cut) .hero-cut .hero-copy,
-body:has(.hero-cut) .home-hero .hero-copy,
-body:has(.home-hero) .hero-copy {
-  padding-top: 88px;
-}
+body:has(.hero-cut) .header-nav a,
+body:has(.hero-cut) .nav a,
+body:has(.home-hero) .header-nav a,
+body:has(.home-hero) .nav a { color: var(--ink); }
+body:has(.hero-cut) .header-nav a:hover,
+body:has(.hero-cut) .header-nav a[aria-current="page"],
+body:has(.hero-cut) .header-nav .contact,
+body:has(.hero-cut) .nav .wa,
+body:has(.home-hero) .header-nav a:hover,
+body:has(.home-hero) .header-nav a[aria-current="page"],
+body:has(.home-hero) .header-nav .contact,
+body:has(.home-hero) .nav .wa { color: var(--gold); }
+body:has(.hero-cut) .header-nav .lang-btn,
+body:has(.home-hero) .header-nav .lang-btn { color: var(--ink); }
 
 .header-nav,
 .nav {
@@ -247,108 +243,111 @@ body:has(main.post) .nav .wa {
   margin-bottom: 8px;
 }
 
-/* Object-hero — paper/navy diagonal + gold edge */
+/* v3 — full-bleed speed photo hero, navy readability wash on the text side */
 .home-hero {
   position: relative;
   overflow: hidden;
-  color: var(--navy);
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  background: var(--ink);
+  color: var(--white);
+  min-height: clamp(460px, 60vh, 720px);
 }
-
 body.zh .home-hero,
-body.en .home-hero {
-  background: linear-gradient(
-    104deg,
-    var(--paper) 0 46.4%,
-    var(--gold) 46.4% 47.35%,
-    var(--navy) 47.35% 100%
-  );
-}
+body.en .home-hero,
+body.fa .home-hero { background: var(--ink); }
 
-body.fa .home-hero {
-  background: linear-gradient(
-    104deg,
-    var(--navy) 0 46.4%,
-    var(--gold) 46.4% 47.35%,
-    var(--paper) 47.35% 100%
-  );
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 66% 50%;
+}
+body.fa .hero-bg img { object-position: 34% 50%; }
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to right,
+    rgba(20, 32, 57, 0.95) 0%,
+    rgba(20, 32, 57, 0.88) 24%,
+    rgba(20, 32, 57, 0.62) 46%,
+    rgba(20, 32, 57, 0.2) 64%,
+    rgba(20, 32, 57, 0) 78%);
+}
+body.fa .home-hero::after {
+  background: linear-gradient(to left,
+    rgba(20, 32, 57, 0.95) 0%,
+    rgba(20, 32, 57, 0.88) 24%,
+    rgba(20, 32, 57, 0.62) 46%,
+    rgba(20, 32, 57, 0.2) 64%,
+    rgba(20, 32, 57, 0) 78%);
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  align-items: end;
-  min-height: min(78vh, 680px);
-  gap: 12px 20px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  min-height: inherit;
+  padding-block: clamp(48px, 9vh, 92px);
 }
 
 .hero-copy {
-  padding: 48px 0 56px;
+  max-width: min(50%, 33rem);
+  color: var(--white);
+}
+body.fa .hero-copy {
+  max-width: min(54%, 36rem);
+  margin-inline-start: auto;
+}
+
+.home-hero h1 {
+  color: var(--white);
+  font-size: clamp(1.85rem, 3.6vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.22;
+  margin-bottom: 14px;
+  text-wrap: balance;
+}
+body.fa .home-hero h1 { font-size: clamp(1.6rem, 3vw, 2.5rem); }
+
+.home-hero .hero-tag {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  line-height: 1.6;
+  margin-bottom: 24px;
   max-width: 34rem;
 }
 
-body.zh .home-hero .kicker,
-body.en .home-hero .kicker,
-body.fa .home-hero .kicker { color: var(--gold); }
-
-.home-hero h1 {
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 16px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--paper-2);
+.home-hero .hero-actions {
+  align-items: center;
+  gap: 12px 16px;
+  margin-bottom: 0;
+}
+.home-hero .hero-actions .btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.home-hero .hero-actions .btn-ghost {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.55);
+  background: transparent;
+}
+.home-hero .hero-actions .btn-ghost:hover {
+  border-color: var(--white);
+  color: var(--white);
 }
 
-.home-hero .hero-stat {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 4px;
-}
-
-.home-hero .hero-stat .num {
-  font-size: clamp(4.2rem, 11vw, 6.8rem);
-  color: var(--gold);
-  line-height: 0.82;
-  letter-spacing: -0.03em;
-}
-
-.home-hero .hero-stat .unit {
-  font-size: 1.35rem;
-  color: var(--navy);
-}
-
-.home-hero .hero-sub {
-  font-size: 1.05rem;
-  margin-bottom: 14px;
-  color: var(--muted);
-}
-
-.hero-exits {
-  font-weight: 700;
-  margin-bottom: 22px;
-  font-size: 1.02rem;
-}
+.hero-exits { font-weight: 700; margin-bottom: 22px; font-size: 1.02rem; }
 .hero-exits .pair { unicode-bidi: isolate; }
-
-.hero-obj {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 8px;
-  min-height: 220px;
-}
-
-.hero-obj img {
-  width: min(100%, 580px);
-  max-height: min(70vh, 620px);
-  height: auto;
-  object-fit: contain;
-  object-position: center bottom;
-  filter: drop-shadow(0 18px 28px rgba(7, 21, 38, 0.38));
-}
 
 .btn {
   display: inline-block;
@@ -389,7 +388,8 @@ a:focus-visible {
 }
 
 /* Sections */
-.section { padding: 36px 0 44px; border-top: var(--rule); }
+.section { padding: 64px 0 60px; border-top: 1px solid var(--line); }
+@media (max-width: 720px) { .section { padding: 44px 0 40px; } }
 
 .sec-label {
   font-size: 0.78rem;
@@ -750,8 +750,15 @@ body:has(.home-hero) .site-footer .wordmark {
   gap: 14px;
 }
 .cargo-stats li {
-  border-inline-start: var(--stub) solid var(--gold);
-  padding-inline-start: 12px;
+  border-inline-start: 1px solid var(--line);
+  padding-inline-start: 18px;
+}
+.cargo-stats li:first-child {
+  border-inline-start: 0;
+  padding-inline-start: 0;
+}
+@media (max-width: 720px) {
+  .cargo-stats li:nth-child(odd) { border-inline-start: 0; padding-inline-start: 0; }
 }
 .cargo-stats .fig {
   display: block;
@@ -782,46 +789,23 @@ body:has(.home-hero) .site-footer .wordmark {
   .cargo-photos { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 1180px) {
-  body.zh .home-hero,
-  body.en .home-hero,
-  body.fa .home-hero {
-    background: linear-gradient(
-      180deg,
-      var(--paper) 0 56%,
-      var(--gold) 56% 57%,
-      var(--navy) 57% 100%
-    );
-  }
-  .hero-inner,
-  .home-hero .hero-inner {
-    grid-template-columns: 1fr;
+/* Stacked hero on tablet/phone: navy text block on top, photo band below */
+@media (max-width: 860px) {
+  .home-hero { min-height: 0; }
+  .home-hero::after { display: none; }
+  .hero-inner {
     min-height: 0;
+    padding-block: clamp(28px, 7vw, 44px) clamp(24px, 6vw, 36px);
   }
-  .hero-copy { padding: 32px 0 12px; }
-  body:has(.hero-cut) .hero-copy,
-  body:has(.home-hero) .hero-copy {
-    padding-top: 72px;
+  .hero-copy,
+  body.fa .hero-copy { max-width: none; margin-inline-start: 0; }
+  .hero-bg {
+    position: static;
+    order: 2;
+    height: clamp(220px, 62vw, 280px);
   }
-  .hero-obj { padding: 8px 0 28px; }
-  /* stacked paper-on-top: nav sits on paper, not navy */
-  body:has(.hero-cut) .header a,
-  body:has(.hero-cut) .site-header a,
-  body:has(.home-hero) .header a,
-  body:has(.home-hero) .site-header a {
-    color: var(--ink, #0B1F3A);
-  }
-  body:has(.hero-cut) .header-nav .lang,
-  body:has(.hero-cut) .header-nav a[lang],
-  body:has(.hero-cut) .nav a[lang],
-  body:has(.home-hero) .nav a[lang] {
-    color: rgba(11, 31, 58, 0.55);
-  }
-  body:has(.hero-cut) .header-nav .contact,
-  body:has(.hero-cut) .nav .wa,
-  body:has(.home-hero) .nav .wa {
-    color: var(--gold, #C4A35A);
-  }
+  .hero-bg img { object-position: 60% 46%; }
+  body.fa .hero-bg img { object-position: 40% 46%; }
 }
 
 @media (max-width: 720px) {
@@ -876,19 +860,9 @@ body:has(.home-hero) .site-footer .wordmark {
    TIR homepage — hub-to-customs rewrite components
    ============================================================ */
 
-/* The 2-column diagonal hero only runs at >=1180px (below that the hero
-   stacks — see the max-width:1180px block above). At >=1180px the copy
-   column is capped tight so the H1's first line always clears the pinched
-   top of the paper wedge; the full paragraph lives in .lead-brief below. */
-.home-hero .hero-copy { max-width: 22rem; }
-/* Persian sets wider text — its copy sits on the roomy side of the wedge. */
-body.fa .home-hero .hero-copy { max-width: 30rem; }
-.home-hero h1 { text-wrap: balance; }
-
-/* One-line positioning tag under the H1. */
+/* One-line positioning tag under the H1 (base; .home-hero .hero-tag styles the hero). */
 .hero-tag {
   font-weight: 700;
-  color: var(--navy);
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -903,10 +877,6 @@ body.fa .home-hero .hero-copy { max-width: 30rem; }
   margin-bottom: 26px;
 }
 .lead-brief strong { font-weight: 700; }
-
-@media (max-width: 1180px) {
-  .home-hero .hero-copy { max-width: none; }
-}
 
 /* 3.2 — decision comparison matrix */
 .compare-scroll {
@@ -1181,3 +1151,6 @@ body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
     max-width: min(70vw, 220px);
   }
 }
+
+/* short value+unit stays on one line inside headings */
+.nowrap { white-space: nowrap; }
