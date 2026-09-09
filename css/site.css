@@ -1093,12 +1093,20 @@ body.fa .home-hero .hero-copy { max-width: 30rem; }
   display: inline-flex; align-items: center; justify-content: center;
   width: 44px; height: 44px; margin-block: -10px; padding: 0;
   background: none; border: 0; cursor: pointer;
-  color: inherit; border-radius: var(--radius);
+  border-radius: var(--radius);
   -webkit-tap-highlight-color: transparent;
 }
-.lang-btn:hover { color: var(--gold); }
+/* the globe tracks the language-link colour in every header context */
+.header-nav .lang-btn { color: var(--cream); }
+body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
+.lang-btn:hover,
+.lang-btn:focus-visible { color: var(--gold); }
 .lang-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.lang-btn .i-globe { width: 22px; height: 22px; display: block; }
+/* the icon itself is a quiet secondary control — ghosted until interacted with */
+.lang-btn .i-globe { width: 24px; height: 24px; display: block; opacity: 0.6; transition: opacity 140ms ease; }
+.lang-btn:hover .i-globe,
+.lang-btn:focus-visible .i-globe,
+.lang-switch.js .lang-btn[aria-expanded="true"] .i-globe { opacity: 1; }
 
 /* before JS: menu is just the inline link row (unchanged look) */
 .lang-menu { display: inline-flex; align-items: center; gap: 8px 18px; }
@@ -1145,4 +1153,31 @@ body.fa .home-hero .hero-copy { max-width: 30rem; }
   height: 1px;
   margin: 4px 6px;
   background: var(--line);
+}
+
+/* v3 Stage 1 fixup — globe colour on the stacked (paper) homepage header */
+@media (max-width: 1180px) {
+  body:has(.hero-cut) .header-nav .lang-btn,
+  body:has(.home-hero) .header-nav .lang-btn { color: rgba(11, 31, 58, 0.62); }
+  body:has(.hero-cut) .header-nav .lang-btn:hover,
+  body:has(.hero-cut) .header-nav .lang-btn:focus-visible,
+  body:has(.home-hero) .header-nav .lang-btn:hover,
+  body:has(.home-hero) .header-nav .lang-btn:focus-visible { color: var(--gold); }
+}
+
+/* v3 Stage 1 fixup — on narrow screens anchor the language panel to the
+   header row (not the small switcher) so it never bleeds off the edge */
+@media (max-width: 480px) {
+  .site-header .wrap,
+  .header .wrap { position: relative; }
+  .lang-switch.js { position: static; }
+  .lang-switch.js .lang-menu {
+    position: absolute;
+    top: 100%;
+    margin-top: 6px;
+    inset-inline-end: 0;
+    inset-inline-start: auto;
+    min-width: 160px;
+    max-width: min(70vw, 220px);
+  }
 }
