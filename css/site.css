@@ -267,16 +267,16 @@ body.fa .home-hero { background: var(--ink); }
 }
 body.fa .hero-bg img { object-position: 38% 40%; }
 
-/* soften the bottom edge — photo dissolves into the paper section below */
+/* soften the top edge — the paper header dissolves into the hero photo */
 .home-hero::before {
   content: "";
   position: absolute;
   inset-inline: 0;
-  bottom: -1px;
-  height: clamp(70px, 13vh, 150px);
+  top: -1px;
+  height: clamp(56px, 10vh, 120px);
   z-index: 2;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(245, 242, 235, 0), var(--paper) 92%);
+  background: linear-gradient(to bottom, var(--paper), rgba(245, 242, 235, 0) 94%);
 }
 
 .home-hero::after {
@@ -807,7 +807,7 @@ body:has(.home-hero) .site-footer .wordmark {
 @media (max-width: 860px) {
   .home-hero { min-height: 0; }
   .home-hero::after { display: none; }
-  .home-hero::before { height: clamp(36px, 10vw, 64px); }
+  .home-hero::before { height: clamp(40px, 12vw, 72px); }
   .hero-inner {
     min-height: 0;
     padding-block: clamp(28px, 7vw, 44px) clamp(24px, 6vw, 36px);
