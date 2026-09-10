@@ -267,6 +267,18 @@ body.fa .home-hero { background: var(--ink); }
 }
 body.fa .hero-bg img { object-position: 38% 40%; }
 
+/* soften the bottom edge — photo dissolves into the paper section below */
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -1px;
+  height: clamp(70px, 13vh, 150px);
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(245, 242, 235, 0), var(--paper) 92%);
+}
+
 .home-hero::after {
   content: "";
   position: absolute;
@@ -795,6 +807,7 @@ body:has(.home-hero) .site-footer .wordmark {
 @media (max-width: 860px) {
   .home-hero { min-height: 0; }
   .home-hero::after { display: none; }
+  .home-hero::before { height: clamp(36px, 10vw, 64px); }
   .hero-inner {
     min-height: 0;
     padding-block: clamp(28px, 7vw, 44px) clamp(24px, 6vw, 36px);
