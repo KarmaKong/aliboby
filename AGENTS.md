@@ -237,3 +237,30 @@ These are done in external consoles, not in the codebase:
 - **Bing Webmaster Tools** — sitemap + URL submission. Covers ChatGPT, Copilot.
 - **Baidu** — intentionally skipped (no ICP filing, foreign host, GitHub Pages is slow from mainland). Chinese off-site reach goes via Xiaohongshu / 公众号 / 知乎 instead.
 - **Brave** — no console; it crawls the open web. `robots.txt` already allows it; the static HTML is fully readable.
+
+---
+
+## 12. Current status & open work (updated 2026-09-14)
+
+This section is a living status log for whoever (human or AI, any tool) picks this project up next. Keep it current — update it in the same PR as any work that changes what's listed here. Full rationale for any entry is in that PR's description; this section is the pointer, not the archive.
+
+### Shipped
+
+- **v3 "Swiss 速度感" redesign** — spec at `Claude-Code-速度感改版-v3.md` (design package, off-repo, on the operator's machine, not checked into this repo). Execution order is staged per the spec's §11:
+  - **Stage 1 (done):** shared `🌐` language-switcher (`.lang-switch` / `js/lang.js`, progressive enhancement) + v3 design tokens in `css/tokens.css`, rolled out site-wide (88 pages).
+  - **Stage 2 (done):** homepage hero rebuilt as a photo hero (`img/hero/`, responsive JPEG+WebP) replacing the old diagonal-gradient cutout, on all three homepages. Went through several rounds of framing/wash tuning (truck-cab visibility, readability gradient) — current `.home-hero` / `.hero-bg` / `::after` wash rules in `css/site.css` are the settled state; do not reopen this without a specific complaint.
+  - **Stage 3 (not started):** article index → 2-column layout, spec §8.2.
+  - **Stage 4 (not started):** article reading-template restyle, spec §8.3.
+  - **SVG icon set (not started):** 11 refined icons already copied into `assets/*.svg` (globe, truck, container, warehouse, map-node, seal, transload, 4 route diagrams) and xmllint-validated, but not yet referenced from any page. Integrating them is part of Stage 3/4, not a separate stage.
+- **`vehicle-carrier-loading` article** (PR #64) — new 三语 article on framed/cage vehicle-carrier trucks for complete-vehicle transport. Sourced from an operator-provided Word doc (route/transit content in that doc conflicted with §3 canon and was **not** used — only non-conflicting operational detail: truck types/capacity, loading/lashing procedure, pooling rules, documents, insurance).
+- **FAQ dedup + canon-consistency pass** (PR #65) — found and fixed ~8 clusters of the same fact repeated across pages with drifted wording (transit-time-from-Wuqia, LCL minimum, door-to-door delivery point, TIR carnet holder, Ghabz-e Anbar definition, lithium-in-LCL, "do you publish rates"); unified each to one canonical, byte-identical answer per language. Also caught and fixed a real stale-fact bug: `hub-to-customs-vs-ddp` had claimed "Mashhad is quote-only, no day count" in 5 spots, contradicting the Mashhad day-range already published on 6+ other pages — reconciled to the already-published numbers, no new figures introduced.
+
+### Verification pattern used for both of the above (reuse it)
+
+BeautifulSoup diff of `git show main:<file>` vs the working tree, on: sorted `<a href>` set, sorted `<img alt>` set, JSON-LD block contents, `<title>`, sorted body visible-text tokens, sorted meta name/property+content, all-heading text. Proves zero business-content drift on structural/content edits. Always edit target regions via exact-substring extraction/replacement — never re-serialize a whole page through bs4 (it silently changes quoting/entities/whitespace).
+
+### Open / not yet scoped
+
+- **Site-wide FAQ reorganization** — requested 2026-09-13, not yet scoped beyond the dedup pass above. Still open: whether to pull more FAQ content from the operator's Word doc (its §10 "询单 FAQ 模板" section — route/transit parts conflict with canon and would need the same non-conflicting-only filter as the vehicle-carrier-loading article), and whether to restructure the FAQ component visually (ties into v3 Stage 3/4). Ask before starting.
+- **Reddit as a traffic channel** — researched 2026-09-13, not pursued. Findings: nearly all "China + Iran" content on Reddit is geopolitics/sanctions news, not practical shipping questions; no dedicated Iran-trade subreddit exists; the closest industry subs (`r/freightforwarding`) explicitly ban self-promotion and cross-posting in their rules. Conclusion: low yield for this niche given the sanctions-sensitivity of the actual buyer demographic — don't invest here without a new reason to revisit.
+- **Distribution automation already in place, no action needed:** `.github/workflows/indexnow.yml` (see §9) auto-submits changed URLs to Bing/Yandex/Seznam/Naver/Yep on every push to `main`. Google has no equivalent push API for general content — it re-crawls `sitemap.xml` (declared in `robots.txt`) on its own schedule; use Search Console's manual "Request Indexing" for anything that needs to be seen by Google sooner.
