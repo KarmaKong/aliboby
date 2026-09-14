@@ -111,6 +111,7 @@ Wuqia line, current ("目前 / currently / معمولاً" — never "guaranteed
 - **Departures:** weekly, Tuesday & Friday, from the Yiwu and Shenzhen (Pinghu) facilities.
 - **CKU railway (中吉乌铁路):** under construction, **not open**. Iran cargo is still road. Do not present it as a timeline or use it to argue price.
 - This site does **not** quote sea or rail.
+- **Scale — the only volume language allowed** (operator-asserted, 2026-09-07, recovered from the closed PR #55): dozens of road shipments in transit year-round; monthly volume in the hundreds. No exact counts, no growth percentages, no "largest / No.1" claims.
 
 ### 3.9 Open items — do not invent values for these
 
@@ -123,6 +124,7 @@ Wuqia line, current ("目前 / currently / معمولاً" — never "guaranteed
 - Lotfabad 洛特法巴德 as a clearance gateway.
 - Border-customs (Sarakhs / Lotfabad) transit times: direct 15–18 days, transshipment 21–24 days.
 - Any freight rate.
+- **The ISACO / isacogroup name, and the `exim@isacogroup.com` address** (operator-asserted, 2026-09-07, recovered from the closed PR #55). The public brand is **chinairantrucks** only. Neither the name nor that address may appear on any public surface — page copy, JSON-LD, `llms.txt`, `sitemap.xml`, commit messages, or social / WhatsApp / Telegram text. The only published address is `sales@chinairantrucks.com`. Operator-supplied source documents do contain the ISACO address, so treat it as a live risk when copying from them rather than a historical note.
 
 If new operational data arrives (real transit days per city, rate bands, border-wait ranges), it is added only with a clear source/date and applied to **all three languages at once**.
 
@@ -188,7 +190,7 @@ Flat `<urlset>`, regenerated whenever pages are added/removed. Priorities:
 ## 7. Assets
 
 - `img/` — real operation photos. In use: `yard-dsab-loading.jpg` (1600×1067), `ftl-crates-rear-tm-plate.jpg` (1600×931), `tractor.jpg` / `warehouse.jpg` / `crate-marks.jpg` / `forklift.jpg` (1600×1000), `ftl-bagged-cargo.jpg` (1600×552), `pallets-strapped.jpg` (1279×1406). Compress to ~q80 progressive JPEG, strip EXIF, **no readable licence plates, no faces, no watermarks, no sensitive documents** — blur or crop first.
-- `trucks/hero-cutout.png` — the tractor-unit cut-out on the homepage diagonal (generic silhouette, no brand). Design element; do not replace with a rectangular photo without CSS work.
+- `trucks/hero-cutout.png` — **no longer used.** It was the tractor-unit cut-out on the old homepage diagonal; v3 Stage 2 replaced that hero with the `img/hero/` photo, and no page or stylesheet references this file any more. Kept on disk only in case the diagonal treatment is ever revisited.
 - `brand/lockup.png` — the wordmark logo (raster). `brand/mark.png` — the circular mark, source for favicons. `og.png` — the default 1200×630 share card.
 - `favicon.ico` / `favicon-32.png` / `favicon.svg` / `apple-touch-180.png` — all derived from `brand/mark.png`. Keep them in sync if the mark changes.
 - Fonts self-hosted in `fonts/` (IBM Plex Sans, Outfit). CDN loads are not used.
@@ -222,7 +224,7 @@ Do not push directly to `main`. Do not force-push shared branches.
 - Break hreflang symmetry (every language version of a slug must list all the others + `x-default`).
 - Add tracking params to internal links, or use JS redirects instead of real links.
 - Auto-redirect by IP or force a language switch.
-- Replace the homepage tractor cut-out, or restyle the header/diagonal, without a deliberate design pass.
+- Restyle the homepage hero or the header without a deliberate design pass — see §12 for the settled v3 Stage 2 photo-hero rules. (The old tractor cut-out this line used to protect is no longer in use; see §7.)
 - Swap the site's Telegram links (`Aliboby88`) or the `#org` JSON-LD `@id` (`https://chinairantrucks.com/#org`).
 - Mass-produce near-duplicate articles that only re-slice the same facts by keyword — new pages need real information gain.
 - Modify `js/count.js` (GoatCounter's own file), `CNAME`, `.nojekyll`, the IndexNow key file, or `google869b982389a5864a.html`.
@@ -256,6 +258,11 @@ This section is a living status log for whoever (human or AI, any tool) picks th
 - **`vehicle-carrier-loading` article** (PR #64) — new 三语 article on framed/cage vehicle-carrier trucks for complete-vehicle transport. Sourced from an operator-provided Word doc (route/transit content in that doc conflicted with §3 canon and was **not** used — only non-conflicting operational detail: truck types/capacity, loading/lashing procedure, pooling rules, documents, insurance).
 - **`x-default` hreflang reconciliation** (2026-09-14) — the code had drifted from §2: 85 pages pointed `x-default` at the English URL (including all three homepages), while §2 specifies the Persian version. Realigned every `x-default` to the page's own `hreflang="fa"` target, and added the missing `x-default` line to `articles/index.html`, `zh/articles/index.html`, and `articles/wuqia-irkeshtam/` (the one fa-only article, so it self-references). All 88 non-stub pages now verify as symmetric with `x-default` → Persian. The two `_post.html` templates already followed §2 and were left alone; note they carry no `en` hreflang line by design, since a new slug has no English version until one is written.
 - **FAQ dedup + canon-consistency pass** (PR #65) — found and fixed ~8 clusters of the same fact repeated across pages with drifted wording (transit-time-from-Wuqia, LCL minimum, door-to-door delivery point, TIR carnet holder, Ghabz-e Anbar definition, lithium-in-LCL, "do you publish rates"); unified each to one canonical, byte-identical answer per language. Also caught and fixed a real stale-fact bug: `hub-to-customs-vs-ddp` had claimed "Mashhad is quote-only, no day count" in 5 spots, contradicting the Mashhad day-range already published on 6+ other pages — reconciled to the already-published numbers, no new figures introduced.
+
+- **Stale pull-request cleanup** (2026-09-14) — PRs #49, #50 and #55 had sat open since early September and were all closed unmerged. Do not reopen them; if any of the ideas below is wanted, redo it against the current files.
+ - **#50** (`hub-to-customs-vs-ddp` 三语新文) — superseded. The article shipped via PR #51, got real photos in #53 and a stale-fact fix in #65. The #50 branch still carried "14–18 days", "Khorgos primary / Irkeshtam secondary" and "Mashhad quote-only". Nothing salvageable.
+ - **#55** (canon flip) — **not** superseded by #56; it was a rival version that contradicts the adopted canon in four places, and merging it would have broken §3.10. It wanted to publish the Sarakhs / Lotfabad day table and name Lotfabad as a public clearance port (both internal-only), reposition the business as "freight forwarder, warehouse-to-terminal" (canon says first-hand carrier, hub-to-customs), and add rail plus sea via Jebel Ali / Jeddah as operational facts (canon says this site does not quote sea or rail). Two things in it were **not** recorded anywhere else and were salvaged into this file before closing: the ISACO / isacogroup publication ban (now §3.10) and the allowed scale language (now §3.8).
+ - **#49** (`<important if>` conditional gates for the prohibition lists) — the idea is still unapplied and still arguably worth doing, but the diff had rotted: it was cut against a pre-2026-09-07 `AGENTS.md`, so merging it would have reverted §4 to the superseded `۱۴ تا ۱۸ روز` example, renamed the hero asset back to a "Scania cut-out", and dropped the `ftl-bagged-cargo` / `pallets-strapped` entries from §7. Only the structural idea is reusable, not the patch.
 
 ### Verification pattern used for both of the above (reuse it)
 
