@@ -88,7 +88,7 @@ Company size:       << 你提供 >>
 ### 短简介（~160 字符，用于黄页 meta / 目录卡片）
 - EN: `First-hand cross-border TIR road-freight carrier from China consolidation hubs (Yiwu, Shenzhen, Guangzhou) to Tehran West Customs via the Wuqia and Khorgos lines. Currently 21–23 days from the Wuqia crossing, CPT/DAP, weekly departures. Lithium batteries, OOG machinery, FCL/LCL.`
 - ZH: `一手中伊跨境 TIR 卡航庄家。义乌 / 深圳 / 广州集货，走乌恰线或霍尔果斯线，自乌恰口岸起算 21–23 天到德黑兰西关海关。CPT/DAP，每周二五发车。承运锂电、超限大件、整车 / 拼箱。`
-- FA: `حمل‌کنندهٔ دست‌اول ترانزیت تیر از انبارهای چین (ایوو، شنژن، گوانگژو) به گمرک غرب تهران از خطوط ووچیا و هورگوس. از مرز ووچیا ۲۱ تا ۲۳ روز، CPT/DAP، حرکت هفتگی. باتری لیتیومی، بار فوق‌سنگین، کانتینری و خرده‌بار.`
+- FA: `حمل‌کنندهٔ دست‌اول ترانزیت تیر از انبارهای چین (ایوو، شنژن، گوانگژو) به گمرک غرب تهران از خطوط ووچیا و خورگوس. از مرز ووچیا ۲۱ تا ۲۳ روز، CPT/DAP، حرکت هفتگی. باتری لیتیومی، بار فوق‌سنگین، کانتینری و خرده‌بار.`
 
 ### 长简介（~600 字符，用于 LinkedIn About / Crunchbase / Kompass 详情）
 - EN:
