@@ -22,7 +22,7 @@
 
 ## 0b. 搜索引擎站长工具（GSC + Bing）— 最优先，一次性
 
-两个都提交**同一个 sitemap**：`https://chinairantrucks.com/sitemap.xml`（75 条 URL，三语全覆盖）。
+两个都提交**同一个 sitemap**：`https://chinairantrucks.com/sitemap.xml`（91 条 URL，三语全覆盖）。
 
 ### Google Search Console — https://search.google.com/search-console
 
@@ -54,7 +54,7 @@
 
 | 时间 | 看什么 |
 |---|---|
-| 提交当天 | sitemap 状态 = "成功 / Success"，已发现 75 个 URL |
+| 提交当天 | sitemap 状态 = "成功 / Success"，已发现 91 个 URL |
 | 3–7 天 | GSC "已编入索引的网页" 开始 > 0；Bing "已编入索引的网页" 开始 > 0 |
 | 2–4 周 | GSC "效果 / Performance" 出现展示量（impressions）；开始有品牌词 + 长尾词曝光 |
 | 持续 | 每周扫一眼"未编入索引"原因；hreflang / 结构化数据报告无红色错误 |
@@ -108,7 +108,8 @@ Core services: general FTL and LCL cargo (from 1 CBM / 100 kg), Class 9 lithium 
 (UN 3480 / 3481), solar and BESS equipment, out-of-gauge machinery on step-frame low-beds, and
 chemical materials with a valid MSDS. Fleet of 45+ owned and contracted 480–540 HP curtainsider tractor-trailers, Beidou-3 + GPS telematics, electronic door seals, and CMR transit insurance up to
 USD 250,000 per trailer. Registered TIR international road-transport operator with dispatch teams
-stationed at Khorgos and in Tehran. No subcontracting layer.
+stationed at the exit gateway and in Tehran. On the Central Asia legs the tractor and driver may be a
+vetted partner carrier registered in the transit country.
 
 Weekly departures, Tuesday and Friday. Quote on request: sales@chinairantrucks.com /
 WhatsApp +86 132 3740 1856.
@@ -243,7 +244,7 @@ For batteries, chemicals and out-of-gauge, road is usually the only workable mod
 
 **Post 6 — 口岸实拍**（配霍尔果斯照片）
 ```
-Khorgos. Where the trailer is sealed once and doesn't get opened again until Tehran.
+Khorgos. Where the trailer is sealed under the carnet — which means fewer unsealings on the way, not none.
 [caption the photo: date, direction, what's on the truck — no faces / plates if sensitive]
 #Khorgos #BorderCrossing #Xinjiang
 ```
@@ -289,6 +290,143 @@ AND (Iran OR Tehran OR "تهران") AND (China OR "import from China")
 ### 3.5 节奏与 hashtag 池
 - 频率：每周 3 帖，持续。断更比不发更伤。
 - 轮换 hashtag（每帖 3 个）：`#ChinaIranTrade #TIRtransport #FreightForwarding #CrossBorderTrucking #Logistics #SupplyChain #Khorgos #Tehran #CentralAsia #DangerousGoods #LithiumBattery #OceanFreight #Incoterms #CustomsClearance`
+
+---
+
+## 3b. Telegram 频道（波斯语，面向伊朗——优先级仅次于 GSC/Bing）
+
+> 目标不同于 LinkedIn。LinkedIn 喂的是 Bing/Copilot 的**英文**实体图谱；Telegram 频道喂的是**伊朗买家的实际发现路径**，同时是一个能被搜索引擎收录的波斯语阵地。
+
+### 3b.0 先修：当前频道简介在发作废口径 ⚠️
+
+`t.me/Aliboby88` 已经是一个**频道**（不是个人号），但只有 2 个订阅者，且简介正在公开发布**已废止的旧 canon**：
+
+```
+حمل جاده‌ای مستقیم چین→ایران زیر پلمپ TIR. ... گمرک غرب تهران، ۱۴–۱۸ روز، CPT/DAP. ...
+```
+
+两个问题：`۱۴–۱۸ روز` 是 `AGENTS.md` §3 明确标为 stale 的数字；`مستقیم ... زیر پلمپ` 的连用贴近 §3.2 禁止的"全程封签 / 无换装"框架。这个频道被首页询价条和 Organization JSON-LD 的 `sameAs` 直接引用，**伊朗买家点过去第一眼看到的就是它**。站内口径修得再干净，这里不改等于白做。
+
+**替换文本**（Telegram 频道简介上限 255 字符，以下约 200）：
+
+```
+حمل جاده‌ای چین→ایران زیر پلمپ TIR. ایوو/شنژن/گوانگژو تا گمرک غرب تهران و مشهد. از مرز ووچیا فعلاً ۲۱ تا ۲۳ روز تا تهران، یک تعویض بار در بخارا. CPT/DAP. کانتینری و خرده‌بار از ۱ متر مکعب. 🌐 chinairantrucks.com
+```
+
+这一步**只能你在 Telegram 里改**，我改不了。
+
+### 3b.1 为什么 Telegram 值得投
+
+三个已核实的事实：
+
+| 事实 | 依据 |
+|---|---|
+| `t.me/s/<频道>` 是**服务端渲染**的可爬页面 | 实测抓取公开频道返回 146KB HTML、20 条消息正文可读 |
+| `t.me` **没有 robots.txt**（返回 404），未声明爬取限制 | 实测 |
+| Telegram 在伊朗渗透率约 **59%**，是当地**首要的企业沟通渠道** | 2026 行业统计；官方被过滤但普遍经 VPN 使用 |
+
+配合手册的"万物皆可排名"：一个持续更新的波斯语频道本身就是可排名文档，而不只是联系方式。
+
+> **发链接时用 `t.me/s/Aliboby88` 这个预览地址**（对外引用、给爬虫），`t.me/Aliboby88` 留给真人点击加入。
+
+### 3b.2 与 WhatsApp 的关系——一个需要你决策的数据点
+
+站点现在的设定（`AGENTS.md` §2）是 WhatsApp 全站主 CTA、Telegram 只在三个首页的询价条做次级按钮。但在伊朗，**Telegram 渗透率（约 59%）高于 WhatsApp（约 41%）**，两者都被过滤、都靠 VPN。
+
+这不构成"立刻改 CTA"的结论——B2B 进口商和清关行的习惯可能与大众分布不同，而且 WhatsApp 在国际贸易场景更通用。但**只针对波斯文页面**提升 Telegram 的权重，是值得单独评估的一件事。**需要你拍板**，不要我自行改动。
+
+### 3b.3 频道运营：8 条波斯语开篇帖
+
+> 每条配一张真实照片。短句，不用感叹号。所有数字严格走 §3 canon——**不要写 ۱۴–۱۸、不要写 بدون تخلیه（无换装）、不要写 تضمین（保证）**。
+
+**۱ — 定位**
+```
+ما یک کار می‌کنیم: تریلر پلمپ‌شده زیر کارنه تیر، از چین تا انبار گمرک تهران.
+
+تجمیع در ایوو، شنژن و گوانگژو ← خروج از خط ووچیا یا خورگوس ← عبور از آسیای میانه با یک تعویض بار در بخارا ← ورود از سرخس ← انبار گمرک غرب تهران.
+
+انبار به گمرک، نه درب به درب. ترخیص با حق‌العمل‌کار رسمی شماست.
+
+chinairantrucks.com
+```
+
+**۲ — عدد واقعی**
+```
+از مرز ووچیا، کامیون مستقیم در حال حاضر ۲۱ تا ۲۳ روز تا تهران و ۱۸ تا ۲۱ روز تا مشهد.
+کامیون با تعویض بار: ۲۶ تا ۳۰ و ۲۴ تا ۲۸ روز.
+
+مسیر داخلی چین تا ووچیا جداگانه است — معمولاً ظرف ۷ روز. این دو را با هم جمع نمی‌کنیم.
+
+برای خط خورگوس عددی منتشر نمی‌کنیم؛ استعلامی است.
+```
+
+**۳ — ۰٫۴٪ را کجا می‌بینید**
+```
+۰٫۴٪ ارزش فاکتور کالا، عوارض ترانزیت قرقیزستان است — مالیات، نه کرایه.
+فقط روی خط ووچیا. خط خورگوس (از قزاقستان) هرگز آن را ندارد.
+
+در نرخ لحاظ نشده و جداگانه صورت‌حساب می‌شود. پیش از رزرو به شما می‌گوییم بار از کدام خط می‌رود.
+```
+
+**۴ — کارنه تیر**
+```
+کارنه را حمل‌کننده تهیه می‌کند، نه صاحب کالا. کارنهٔ این خط سمت چین صادر می‌شود.
+
+کارنه یعنی باز شدن پلمپ و تعویض بار کمتر — نه هیچ. کامیون مستقیم یک بار در بخارا تعویض بار می‌شود.
+کارنه نه زمان حمل را تغییر می‌دهد و نه کرایه را، و معافیت از بازرسی هم نیست.
+```
+
+**۵ — خرده‌بار**
+```
+کنسول از ۱ متر مکعب یا ۱۰۰ کیلوگرم.
+دربست: تریلر ۱۳٫۶ متری؛ برای بار فوق‌سنگین کمرشکن ۱۷٫۵ متری.
+سقف هر دستگاه: ۹۶ متر مکعب و ۲۵ تن. مازاد جداگانه قیمت می‌خورد.
+```
+
+**۶ — باتری لیتیومی**
+```
+باتری لیتیومی کلاس ۹ (UN3480 / UN3481)، شامل BESS و LiFePO4، بار اصلی این خط است نه استثنا.
+شرط: MSDS کامل ۱۶ بخشی و مدارک بسته‌بندی UN، از همان ابتدا.
+```
+
+**۷ — استعلام با سه داده**
+```
+برای استعلام سه چیز لازم است:
+۱. انبار مبدأ — ایوو / شنژن / گوانگژو
+۲. گمرک مقصد — گمرک غرب تهران / آپرین / مشهد
+۳. مشخصات کالا — کد HS، وزن ناخالص (kg)، حجم (CBM)
+
+نرخ‌ها هفتگی بازبینی می‌شوند و هر استعلام رسمی تاریخ اعتبار دارد.
+```
+
+**۸ — یک سوءتفاهم رایج**
+```
+عددی که می‌دهیم تا انبار گمرک است، نه تا درب شما و نه DDP.
+حقوق ورودی، ترخیص و حمل داخلی بر عهدهٔ حق‌العمل‌کار رسمی صاحب کالاست.
+ما قبض انبار را تحویل می‌دهیم؛ ادامهٔ کار با حق‌العمل‌کار شماست.
+```
+
+### 3b.4 节奏
+
+- 每周 2 条，固定时间。**断更比不发更伤**——空频道比没有频道还差。
+- 每条结尾放 `chinairantrucks.com` 或对应文章的深链，别加 UTM（内链不带跟踪参数，站外引用也保持干净 URL）。
+- 新文章上线当天，频道同步发一条波斯语摘要 + 深链。
+- 不要转发未经核实的伊朗行业新闻数字（单证涨价百分比之类）——理由见 §3.8 的同一条约束。
+
+---
+
+## 3c. Instagram（定位不同，优先级更低）
+
+先把预期摆正：**Instagram 对"被搜到"这个目标几乎没有直接帮助。** Meta 对爬虫封锁很严，个人/企业主页在搜索引擎里基本拿不到有效收录，也不是 AI 的 grounding 来源。它是**转化与信任**渠道，不是 SEO/GEO 渠道——和 Telegram 是两个工种。
+
+背景：伊朗约 4400 万人（52%）在用，官方被过滤、靠 VPN，是当地最主要的企业**展示**平台。
+
+因此建议：
+
+- **排在 Telegram 与 LinkedIn 之后**。目前站上没有 Instagram 账号，先不急着开。
+- 真要开，定位为相册：装车、口岸、封签、到仓照片，波斯语短文案，主页链接指向 `chinairantrucks.com`。
+- 照片纪律沿用 §7：不出现可读车牌、人脸、水印、敏感单据。
+- 不要把它当询价入口——询价仍走 WhatsApp / Telegram / 邮箱。
 
 ---
 
