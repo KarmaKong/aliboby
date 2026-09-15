@@ -89,6 +89,24 @@ class Bad(Exception):
     pass
 
 
+def photo_size(name):
+    """Read the JPEG's real dimensions, so <img> never carries a wrong aspect
+    ratio (photos in img/log/ are 1600 wide but vary between 4:3 and 16:9)."""
+    data = (ROOT / "img" / "log" / name).read_bytes()
+    i = 2
+    while i < len(data):
+        if data[i] != 0xFF:
+            raise Bad(f"{name} 不是合法 JPEG")
+        marker, seglen = data[i + 1], int.from_bytes(data[i + 2:i + 4], "big")
+        if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7,
+                      0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+            h = int.from_bytes(data[i + 5:i + 7], "big")
+            w = int.from_bytes(data[i + 7:i + 9], "big")
+            return w, h
+        i += 2 + seglen
+    raise Bad(f"{name} 读不出尺寸")
+
+
 def load():
     rows, force = [], False
     if not DATA.exists():
@@ -169,6 +187,9 @@ def sentence(d, lang):
 
 
 def block(rows, lang):
+    # fa lives at /articles/<slug>/, zh and en one level deeper at
+    # /<lang>/articles/<slug>/ — so the hop back to the site root differs.
+    up = "../../" if lang == "fa" else "../../../"
     out = ['<ul class="log-list">']
     for d in rows:
         date = d["date"] if lang != "fa" else fa_num(d["date"])
@@ -178,9 +199,9 @@ def block(rows, lang):
                    f' <span class="log-status">{badge}</span></p>')
         out.append(f"    <p>{sentence(d, lang)}</p>")
         if d["photo"] != "-":
-            up = "../../"
+            w, h = photo_size(d["photo"])
             out.append(f'    <figure class="log-photo"><img src="{up}img/log/{d["photo"]}"'
-                       f' width="1600" height="1200" loading="lazy" decoding="async" alt=""></figure>')
+                       f' width="{w}" height="{h}" loading="lazy" decoding="async" alt=""></figure>')
         out.append("  </li>")
     out.append("</ul>")
     return "\n".join(out)
