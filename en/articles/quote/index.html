@@ -26,7 +26,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="article:published_time" content="2026-09-01">
-<meta property="article:modified_time" content="2026-09-04">
+<meta property="article:modified_time" content="2026-09-16">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="How to request a China–Iran trucking quote | chinairantrucks">
 <meta name="twitter:description" content="No published rates. Send three things — origin hub, destination customs, and cargo data (HS code, gross weight in kg, volume in CBM). For lithium or chemicals add the MSDS; for out-of-gauge add a dimensioned drawing. The reply gives a rate and the next departure.">
@@ -81,6 +81,61 @@
       <li>Destination customs &mdash; Tehran West Customs (Gomrok Gharb), Aprin Dry Port, or Mashhad Customs</li>
       <li>Cargo data &mdash; HS code, gross weight in kg, and volume in CBM</li>
     </ol>
+    <form class="quote-form" data-quote-form action="mailto:sales@chinairantrucks.com" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>Request a quote</legend>
+        <div class="row">
+          <label for="hub">Origin hub</label>
+          <select id="hub" name="hub" required>
+            <option value="">Select</option>
+            <option value="Yiwu (Suxi)">Yiwu (Suxi)</option>
+            <option value="Shenzhen (Pinghu)">Shenzhen (Pinghu)</option>
+            <option value="Guangzhou (Baiyun)">Guangzhou (Baiyun)</option>
+            <option value="Shanghai">Shanghai</option>
+            <option value="Exit-gateway CY / CFS">Handover at the exit-gateway supervised zone</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="dest">Destination customs</label>
+          <select id="dest" name="dest" required>
+            <option value="">Select</option>
+            <option value="Tehran West Customs (Gomrok Gharb)">Tehran West Customs (Gomrok Gharb)</option>
+            <option value="Aprin Dry Port">Aprin Dry Port</option>
+            <option value="Mashhad Customs">Mashhad Customs</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="hs">HS code <span class="hint">(optional but speeds the reply)</span></label>
+          <input id="hs" name="hs" type="text" autocomplete="off" inputmode="numeric">
+        </div>
+        <div class="row">
+          <label for="kg">Gross weight, kg</label>
+          <input id="kg" name="kg" type="number" min="1" step="any" required>
+        </div>
+        <div class="row">
+          <label for="cbm">Volume, CBM</label>
+          <input id="cbm" name="cbm" type="number" min="0.01" step="any" required>
+        </div>
+        <div class="row checks">
+          <label><input type="checkbox" name="lithium" value="yes"> Class 9 lithium or chemicals — I will attach a 16-section MSDS</label>
+          <label><input type="checkbox" name="oog" value="yes"> Out-of-gauge machinery — I will attach a dimensioned drawing</label>
+        </div>
+        <div class="row">
+          <label for="contact">WhatsApp / Telegram / email</label>
+          <input id="contact" name="contact" type="text" autocomplete="email">
+        </div>
+        <div class="row">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn btn-gold" type="submit">Open email to sales@</button>
+          <a class="btn btn-ghost" href="https://wa.me/8613237401856" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <noscript><p>JavaScript is off. Use the button anyway — your mail app opens with a blank message — or write sales@chinairantrucks.com the three items directly.</p></noscript>
+      </fieldset>
+    </form>
+
     <h2>For special cargo</h2>
     <p>Class 9 lithium batteries and chemical cargo &mdash; attach a full 16-section MSDS and UN packaging details. Out-of-gauge machinery &mdash; attach a dimensioned weight drawing showing lifting points.</p>
     <figure class="hero-photo">
@@ -130,6 +185,7 @@
 </footer>
 <script data-goatcounter="https://chinairantrucks.goatcounter.com/count"
         async src="../../../js/count.js"></script>
+<script defer src="../../../js/quote-form.js"></script>
 <script defer src="../../../js/lang.js"></script>
 <script>addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a||!a.href)return;var t=a.href.indexOf("wa.me/")>-1?"wa":a.href.indexOf("t.me/")>-1?"tg":a.href.slice(0,7)==="mailto:"?"email":0;if(t&&window.goatcounter&&goatcounter.count)goatcounter.count({path:t+":"+location.pathname,title:t.toUpperCase()+" click",event:true})});</script>
 <noscript><img src="https://chinairantrucks.goatcounter.com/count?p=/en/articles/quote/" alt="" width="1" height="1"></noscript>
