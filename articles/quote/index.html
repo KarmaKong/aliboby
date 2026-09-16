@@ -25,7 +25,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="article:published_time" content="2026-08-27">
-<meta property="article:modified_time" content="2026-09-04">
+<meta property="article:modified_time" content="2026-09-16">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="چگونه برای حمل جاده‌ای چین به ایران استعلام بگیریم | chinairantrucks">
 <meta name="twitter:description" content="کرایه در صفحه نیست. سه مورد بفرستید — انبار مبدأ، گمرک مقصد و مشخصات کالا (کد تعرفهٔ HS، وزن ناخالص کیلوگرم، حجم مترمکعب). برای لیتیوم یا شیمیایی MSDS و برای بار فوق‌سنگین نقشهٔ ابعاد پیوست کنید. پاسخ شامل نرخ و نزدیک‌ترین حرکت است.">
@@ -81,6 +81,61 @@
       <li>گمرک مقصد — گمرک غرب تهران (Gomrok Gharb)، بندر خشک آپرین یا گمرک مشهد</li>
       <li>مشخصات کالا — کد تعرفهٔ HS، وزن ناخالص به کیلوگرم و حجم به مترمکعب</li>
     </ol>
+    <form class="quote-form" data-quote-form action="mailto:sales@chinairantrucks.com" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>درخواست استعلام</legend>
+        <div class="row">
+          <label for="hub">انبار مبدأ</label>
+          <select id="hub" name="hub" required>
+            <option value="">انتخاب</option>
+            <option value="Yiwu (Suxi)">ایوو (سوشی)</option>
+            <option value="Shenzhen (Pinghu)">شنژن (پینگ‌هو)</option>
+            <option value="Guangzhou (Baiyun)">گوانگژو (بایون)</option>
+            <option value="Shanghai">شانگهای</option>
+            <option value="Exit-gateway CY / CFS">تحویل در محوطهٔ نظارتی مرز خروجی</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="dest">گمرک مقصد</label>
+          <select id="dest" name="dest" required>
+            <option value="">انتخاب</option>
+            <option value="Tehran West Customs (Gomrok Gharb)">گمرک غرب تهران (Gomrok Gharb)</option>
+            <option value="Aprin Dry Port">بندر خشک آپرین</option>
+            <option value="Mashhad Customs">گمرک مشهد</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="hs">کد تعرفهٔ HS <span class="hint">(اختیاری؛ پاسخ را سریع‌تر می‌کند)</span></label>
+          <input id="hs" name="hs" type="text" autocomplete="off" inputmode="numeric">
+        </div>
+        <div class="row">
+          <label for="kg">وزن ناخالص، کیلوگرم</label>
+          <input id="kg" name="kg" type="number" min="1" step="any" required>
+        </div>
+        <div class="row">
+          <label for="cbm">حجم، مترمکعب</label>
+          <input id="cbm" name="cbm" type="number" min="0.01" step="any" required>
+        </div>
+        <div class="row checks">
+          <label><input type="checkbox" name="lithium" value="yes"> باتری لیتیومی کلاس ۹ یا مواد شیمیایی — برگهٔ MSDS شانزده‌بخشی را جدا می‌فرستم</label>
+          <label><input type="checkbox" name="oog" value="yes"> ماشین‌آلات ترافیکی — نقشهٔ ابعادی با نقاط بلند کردن را جدا می‌فرستم</label>
+        </div>
+        <div class="row">
+          <label for="contact">واتساپ / تلگرام / ایمیل</label>
+          <input id="contact" name="contact" type="text" autocomplete="email">
+        </div>
+        <div class="row">
+          <label for="notes">توضیح</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn btn-gold" type="submit">باز کردن ایمیل به sales@</button>
+          <a class="btn btn-ghost" href="https://wa.me/8613237401856" rel="noopener noreferrer">واتساپ</a>
+        </div>
+        <noscript><p>بدون جاوااسکریپت دکمه یک ایمیل خالی باز می‌کند. سه مورد را مستقیم به sales@chinairantrucks.com بفرستید.</p></noscript>
+      </fieldset>
+    </form>
+
     <h2>برای بار ویژه</h2>
     <p>باتری لیتیومی کلاس ۹ و بار شیمیایی — MSDS کامل ۱۶ بخشی و جزئیات بسته‌بندی UN را پیوست کنید. ماشین‌آلات فوق‌سنگین — نقشهٔ ابعاد و وزن با نقاط بالابری را پیوست کنید.</p>
     <figure class="hero-photo">
@@ -130,6 +185,7 @@
 </footer>
 <script data-goatcounter="https://chinairantrucks.goatcounter.com/count"
         async src="../../js/count.js"></script>
+<script defer src="../../js/quote-form.js"></script>
 <script defer src="../../js/lang.js"></script>
 <script>addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a||!a.href)return;var t=a.href.indexOf("wa.me/")>-1?"wa":a.href.indexOf("t.me/")>-1?"tg":a.href.slice(0,7)==="mailto:"?"email":0;if(t&&window.goatcounter&&goatcounter.count)goatcounter.count({path:t+":"+location.pathname,title:t.toUpperCase()+" click",event:true})});</script>
 <noscript><img src="https://chinairantrucks.goatcounter.com/count?p=/articles/quote/" alt="" width="1" height="1"></noscript>
