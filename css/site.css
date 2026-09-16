@@ -187,6 +187,8 @@ body:has(.home-hero) .header-nav .lang-btn { color: var(--ink); }
 
 .header-nav .contact,
 .nav .wa { color: var(--gold); font-weight: 700; }
+.header-nav .nav-quote,
+.nav .nav-quote { font-weight: 700; }
 
 /* Article pages: header takes the paper body colour so the wordmark plate
    (which is --cream == --paper) blends in instead of reading as a light box
@@ -1271,3 +1273,19 @@ body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
 }
 .quote-form button.btn { border: 1px solid var(--gold); cursor: pointer; }
 .quote-form noscript { color: var(--muted); font-size: 0.9rem; }
+
+.quote .quote-form {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(245,242,235,0.35);
+  color: var(--cream);
+}
+.quote .quote-form legend,
+.quote .quote-form label { color: var(--cream); }
+.quote .quote-form .hint { color: rgba(245,242,235,0.75); }
+.quote .quote-form input,
+.quote .quote-form select,
+.quote .quote-form textarea {
+  background: var(--navy-deep);
+  color: var(--cream);
+  border-color: rgba(245,242,235,0.45);
+}

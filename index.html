@@ -47,6 +47,7 @@
     <a class="wordmark" href="./">chinairantrucks</a>
     <nav class="nav header-nav" aria-label="ناوبری اصلی">
       <a href="articles/">مقالات</a>
+      <a class="nav-quote" href="articles/quote/">استعلام</a>
       <a class="wa contact" href="https://wa.me/8613237401856" rel="noopener noreferrer">تماس</a>
       <div class="lang-switch" data-lang-switch>
         <button type="button" class="lang-btn" hidden aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="انتخاب زبان">
@@ -68,7 +69,7 @@
       <div class="hero-copy">
         <h1>ترانزیت TIR از چین به گمرک تهران<br><span class="nowrap">۲۱ تا ۲۳ روز</span> از مرز ووچیا</h1>
         <p class="hero-tag">دو مرز ووچیا و خورگوس · یک بار تعویض بار در بخارا · تحویل به گمرک، نه درب</p>
-        <div class="hero-actions">
+      <div class="hero-actions">
           <a class="btn btn-gold" href="https://wa.me/8613237401856" rel="noopener noreferrer">تماس</a>
           <a class="btn btn-ghost" href="mailto:sales@chinairantrucks.com">sales@chinairantrucks.com</a>
         </div>
@@ -184,6 +185,60 @@
         <li>گمرک مقصد (گمرک غرب تهران / گمرک آپرین / گمرک مشهد)</li>
         <li>مشخصات کالا (کد تعرفه HS / وزن ناخالص کیلوگرم / حجم CBM)</li>
       </ol>
+      <form class="quote-form" data-quote-form action="mailto:sales@chinairantrucks.com" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>درخواست استعلام</legend>
+        <div class="row">
+          <label for="hub">انبار مبدأ</label>
+          <select id="hub" name="hub" required>
+            <option value="">انتخاب</option>
+            <option value="Yiwu (Suxi)">ایوو (سوشی)</option>
+            <option value="Shenzhen (Pinghu)">شنژن (پینگ‌هو)</option>
+            <option value="Guangzhou (Baiyun)">گوانگژو (بایون)</option>
+            <option value="Shanghai">شانگهای</option>
+            <option value="Exit-gateway CY / CFS">تحویل در محوطهٔ نظارتی مرز خروجی</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="dest">گمرک مقصد</label>
+          <select id="dest" name="dest" required>
+            <option value="">انتخاب</option>
+            <option value="Tehran West Customs (Gomrok Gharb)">گمرک غرب تهران (Gomrok Gharb)</option>
+            <option value="Aprin Dry Port">بندر خشک آپرین</option>
+            <option value="Mashhad Customs">گمرک مشهد</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="hs">کد تعرفهٔ HS <span class="hint">(اختیاری؛ پاسخ را سریع‌تر می‌کند)</span></label>
+          <input id="hs" name="hs" type="text" autocomplete="off" inputmode="numeric">
+        </div>
+        <div class="row">
+          <label for="kg">وزن ناخالص، کیلوگرم</label>
+          <input id="kg" name="kg" type="number" min="1" step="any" required>
+        </div>
+        <div class="row">
+          <label for="cbm">حجم، مترمکعب</label>
+          <input id="cbm" name="cbm" type="number" min="0.01" step="any" required>
+        </div>
+        <div class="row checks">
+          <label><input type="checkbox" name="lithium" value="yes"> باتری لیتیومی کلاس ۹ یا مواد شیمیایی — برگهٔ MSDS شانزده‌بخشی را جدا می‌فرستم</label>
+          <label><input type="checkbox" name="oog" value="yes"> ماشین‌آلات ترافیکی — نقشهٔ ابعادی با نقاط بلند کردن را جدا می‌فرستم</label>
+        </div>
+        <div class="row">
+          <label for="contact">واتساپ / تلگرام / ایمیل</label>
+          <input id="contact" name="contact" type="text" autocomplete="email">
+        </div>
+        <div class="row">
+          <label for="notes">توضیح</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn btn-gold" type="submit">باز کردن ایمیل به sales@</button>
+          <a class="btn btn-ghost" href="https://wa.me/8613237401856" rel="noopener noreferrer">واتساپ</a>
+        </div>
+        <noscript><p>بدون جاوااسکریپت دکمه یک ایمیل خالی باز می‌کند. سه مورد را مستقیم به sales@chinairantrucks.com بفرستید.</p></noscript>
+      </fieldset>
+    </form>
       <div class="hero-actions">
         <a class="btn btn-gold" href="https://wa.me/8613237401856" rel="noopener noreferrer">تماس</a>
           <a class="btn btn-ghost" href="https://t.me/Aliboby88" rel="noopener noreferrer">تلگرام</a>
@@ -221,11 +276,13 @@
   <div class="wrap">
     <span class="wordmark">chinairantrucks</span>
     <p>© 2026 · <a href="https://chinairantrucks.com/">chinairantrucks.com</a></p>
+    <p><a href="tel:+8613237401856">+86 132 3740 1856</a></p>
     <p class="footer-legal"><a href="legal/">اطلاعیهٔ حقوقی</a> &middot; <a href="privacy/">حریم خصوصی</a></p>
   </div>
 </footer>
 <script data-goatcounter="https://chinairantrucks.goatcounter.com/count"
         async src="js/count.js"></script>
+<script defer src="js/quote-form.js"></script>
 <script defer src="js/lang.js"></script>
 <script>addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a||!a.href)return;var t=a.href.indexOf("wa.me/")>-1?"wa":a.href.indexOf("t.me/")>-1?"tg":a.href.slice(0,7)==="mailto:"?"email":0;if(t&&window.goatcounter&&goatcounter.count)goatcounter.count({path:t+":"+location.pathname,title:t.toUpperCase()+" click",event:true})});</script>
 <noscript><img src="https://chinairantrucks.goatcounter.com/count?p=/" alt="" width="1" height="1"></noscript>
