@@ -47,6 +47,7 @@
     <a class="wordmark" href="zh.html">chinairantrucks</a>
     <nav class="nav header-nav" aria-label="主导航">
       <a href="zh/articles/">文章</a>
+      <a class="nav-quote" href="zh/articles/quote/">询价</a>
       <a class="wa contact" href="https://wa.me/8613237401856" rel="noopener noreferrer">询价信使</a>
       <div class="lang-switch" data-lang-switch>
         <button type="button" class="lang-btn" hidden aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="语言选择">
@@ -68,7 +69,7 @@
       <div class="hero-copy">
         <h1>中国至伊朗 TIR 卡航专线<br>乌恰直达德黑兰 目前 <span class="nowrap">21–23 天</span></h1>
         <p class="hero-tag">乌恰 / 霍尔果斯双通道 · 直达车布哈拉一次换装 · 仓到关不到门</p>
-        <div class="hero-actions">
+      <div class="hero-actions">
           <a class="btn btn-gold" href="https://wa.me/8613237401856" rel="noopener noreferrer">询价信使</a>
           <a class="btn btn-ghost" href="mailto:sales@chinairantrucks.com">sales@chinairantrucks.com</a>
         </div>
@@ -184,6 +185,60 @@
         <li>目的地海关（德黑兰西关 / 阿普林陆港 / 马什哈德海关）</li>
         <li>货物数据（海关 HS 编码 / 总重 KG / 体积 CBM）</li>
       </ol>
+      <form class="quote-form" data-quote-form action="mailto:sales@chinairantrucks.com" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>询价</legend>
+        <div class="row">
+          <label for="hub">始发仓</label>
+          <select id="hub" name="hub" required>
+            <option value="">请选择</option>
+            <option value="Yiwu (Suxi)">义乌（苏溪）</option>
+            <option value="Shenzhen (Pinghu)">深圳（平湖）</option>
+            <option value="Guangzhou (Baiyun)">广州（白云）</option>
+            <option value="Shanghai">上海</option>
+            <option value="Exit-gateway CY / CFS">出境口岸监管区交接</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="dest">目的海关</label>
+          <select id="dest" name="dest" required>
+            <option value="">请选择</option>
+            <option value="Tehran West Customs (Gomrok Gharb)">德黑兰西关（Gomrok Gharb）</option>
+            <option value="Aprin Dry Port">阿普林陆港</option>
+            <option value="Mashhad Customs">马什哈德海关</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="hs">HS 编码 <span class="hint">（选填，有则回复更快）</span></label>
+          <input id="hs" name="hs" type="text" autocomplete="off" inputmode="numeric">
+        </div>
+        <div class="row">
+          <label for="kg">总重，公斤</label>
+          <input id="kg" name="kg" type="number" min="1" step="any" required>
+        </div>
+        <div class="row">
+          <label for="cbm">体积，立方米</label>
+          <input id="cbm" name="cbm" type="number" min="0.01" step="any" required>
+        </div>
+        <div class="row checks">
+          <label><input type="checkbox" name="lithium" value="yes"> 9 类锂电或化工 — 我会另附 16 项 MSDS</label>
+          <label><input type="checkbox" name="oog" value="yes"> 超限设备 — 我会另附带吊点的尺寸图</label>
+        </div>
+        <div class="row">
+          <label for="contact">WhatsApp / Telegram / 邮箱</label>
+          <input id="contact" name="contact" type="text" autocomplete="email">
+        </div>
+        <div class="row">
+          <label for="notes">备注</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn btn-gold" type="submit">打开邮件发给 sales@</button>
+          <a class="btn btn-ghost" href="https://wa.me/8613237401856" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <noscript><p>未启用脚本时，按钮会打开空白邮件。也可直接把三项发到 sales@chinairantrucks.com。</p></noscript>
+      </fieldset>
+    </form>
       <div class="hero-actions">
         <a class="btn btn-gold" href="https://wa.me/8613237401856" rel="noopener noreferrer">询价信使</a>
           <a class="btn btn-ghost" href="https://t.me/Aliboby88" rel="noopener noreferrer">Telegram</a>
@@ -221,11 +276,13 @@
   <div class="wrap">
     <span class="wordmark">chinairantrucks</span>
     <p>© 2026 · <a href="https://chinairantrucks.com/">chinairantrucks.com</a></p>
+    <p><a href="tel:+8613237401856">+86 132 3740 1856</a></p>
     <p class="footer-legal"><a href="zh/legal/">法律声明</a> &middot; <a href="zh/privacy/">隐私条款</a></p>
   </div>
 </footer>
 <script data-goatcounter="https://chinairantrucks.goatcounter.com/count"
         async src="js/count.js"></script>
+<script defer src="js/quote-form.js"></script>
 <script defer src="js/lang.js"></script>
 <script>addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a||!a.href)return;var t=a.href.indexOf("wa.me/")>-1?"wa":a.href.indexOf("t.me/")>-1?"tg":a.href.slice(0,7)==="mailto:"?"email":0;if(t&&window.goatcounter&&goatcounter.count)goatcounter.count({path:t+":"+location.pathname,title:t.toUpperCase()+" click",event:true})});</script>
 <noscript><img src="https://chinairantrucks.goatcounter.com/count?p=/zh.html" alt="" width="1" height="1"></noscript>

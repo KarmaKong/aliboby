@@ -47,6 +47,7 @@
     <a class="wordmark" href="./">chinairantrucks</a>
     <nav class="nav header-nav" aria-label="Primary">
       <a href="articles/">Articles</a>
+      <a class="nav-quote" href="articles/quote/">Quote</a>
       <a class="wa contact" href="https://wa.me/8613237401856" rel="noopener noreferrer">Contact</a>
       <div class="lang-switch" data-lang-switch>
         <button type="button" class="lang-btn" hidden aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Language">
@@ -68,7 +69,7 @@
       <div class="hero-copy">
         <h1>China–Iran TIR Road Freight<br><span class="nowrap">21–23 days</span> Wuqia to Tehran Customs</h1>
         <p class="hero-tag">Wuqia &amp; Khorgos gateways · one transload at Bukhara · hub-to-customs</p>
-        <div class="hero-actions">
+      <div class="hero-actions">
           <a class="btn btn-gold" href="https://wa.me/8613237401856" rel="noopener noreferrer">Contact</a>
           <a class="btn btn-ghost" href="mailto:sales@chinairantrucks.com">sales@chinairantrucks.com</a>
         </div>
@@ -150,9 +151,9 @@
     <div class="wrap">
       <h2 class="sec-label">Authorized Cargo Classifications &amp; Handling Protocols</h2>
       <div class="cargo-photos">
-        <img src="../img/cargo-loaded.jpg" width="900" height="640" alt="Loading" loading="lazy" decoding="async">
-        <img src="../img/cargo-forklift.jpg" width="900" height="640" alt="Forklift loading" loading="lazy" decoding="async">
-        <img src="../img/cargo-crates.jpg" width="900" height="640" alt="Palletized crates" loading="lazy" decoding="async">
+        <img src="../img/cargo-loaded.jpg" srcset="../img/w960/cargo-loaded.jpg 960w, ../img/cargo-loaded.jpg 900w" sizes="(max-width: 960px) 100vw, 760px" width="900" height="640" alt="Loading" loading="lazy" decoding="async">
+        <img src="../img/cargo-forklift.jpg" srcset="../img/w960/cargo-forklift.jpg 960w, ../img/cargo-forklift.jpg 900w" sizes="(max-width: 960px) 100vw, 760px" width="900" height="640" alt="Forklift loading" loading="lazy" decoding="async">
+        <img src="../img/cargo-crates.jpg" srcset="../img/w960/cargo-crates.jpg 960w, ../img/cargo-crates.jpg 900w" sizes="(max-width: 960px) 100vw, 760px" width="900" height="640" alt="Palletized crates" loading="lazy" decoding="async">
       </div>
       <ul class="caps">
       <li><h3>Lithium battery &amp; energy storage systems</h3><p>UN 3480 (lithium-ion cells/packs), UN 3481 (batteries packed with equipment), industrial BESS containers, and solar LiFePO4 packs. Trailers with fire-retardant partitions to ADR safety standards.</p></li>
@@ -184,6 +185,60 @@
         <li>Destination customs (Tehran West Customs / Aprin Dry Port / Mashhad Customs)</li>
         <li>Cargo details (HS code / gross weight kg / volume CBM)</li>
       </ol>
+      <form class="quote-form" data-quote-form action="mailto:sales@chinairantrucks.com" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>Request a quote</legend>
+        <div class="row">
+          <label for="hub">Origin hub</label>
+          <select id="hub" name="hub" required>
+            <option value="">Select</option>
+            <option value="Yiwu (Suxi)">Yiwu (Suxi)</option>
+            <option value="Shenzhen (Pinghu)">Shenzhen (Pinghu)</option>
+            <option value="Guangzhou (Baiyun)">Guangzhou (Baiyun)</option>
+            <option value="Shanghai">Shanghai</option>
+            <option value="Exit-gateway CY / CFS">Handover at the exit-gateway supervised zone</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="dest">Destination customs</label>
+          <select id="dest" name="dest" required>
+            <option value="">Select</option>
+            <option value="Tehran West Customs (Gomrok Gharb)">Tehran West Customs (Gomrok Gharb)</option>
+            <option value="Aprin Dry Port">Aprin Dry Port</option>
+            <option value="Mashhad Customs">Mashhad Customs</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="hs">HS code <span class="hint">(optional but speeds the reply)</span></label>
+          <input id="hs" name="hs" type="text" autocomplete="off" inputmode="numeric">
+        </div>
+        <div class="row">
+          <label for="kg">Gross weight, kg</label>
+          <input id="kg" name="kg" type="number" min="1" step="any" required>
+        </div>
+        <div class="row">
+          <label for="cbm">Volume, CBM</label>
+          <input id="cbm" name="cbm" type="number" min="0.01" step="any" required>
+        </div>
+        <div class="row checks">
+          <label><input type="checkbox" name="lithium" value="yes"> Class 9 lithium or chemicals — I will attach a 16-section MSDS</label>
+          <label><input type="checkbox" name="oog" value="yes"> Out-of-gauge machinery — I will attach a dimensioned drawing</label>
+        </div>
+        <div class="row">
+          <label for="contact">WhatsApp / Telegram / email</label>
+          <input id="contact" name="contact" type="text" autocomplete="email">
+        </div>
+        <div class="row">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn btn-gold" type="submit">Open email to sales@</button>
+          <a class="btn btn-ghost" href="https://wa.me/8613237401856" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <noscript><p>JavaScript is off. Use the button anyway — your mail app opens with a blank message — or write sales@chinairantrucks.com the three items directly.</p></noscript>
+      </fieldset>
+    </form>
       <div class="hero-actions">
         <a class="btn btn-gold" href="https://wa.me/8613237401856" rel="noopener noreferrer">Contact</a>
           <a class="btn btn-ghost" href="https://t.me/Aliboby88" rel="noopener noreferrer">Telegram</a>
@@ -221,11 +276,13 @@
   <div class="wrap">
     <span class="wordmark">chinairantrucks</span>
     <p>© 2026 · <a href="https://chinairantrucks.com/">chinairantrucks.com</a></p>
+    <p><a href="tel:+8613237401856">+86 132 3740 1856</a></p>
     <p class="footer-legal"><a href="legal/">Legal notice</a> &middot; <a href="privacy/">Privacy</a></p>
   </div>
 </footer>
 <script data-goatcounter="https://chinairantrucks.goatcounter.com/count"
         async src="../js/count.js"></script>
+<script defer src="../js/quote-form.js"></script>
 <script defer src="../js/lang.js"></script>
 <script>addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a||!a.href)return;var t=a.href.indexOf("wa.me/")>-1?"wa":a.href.indexOf("t.me/")>-1?"tg":a.href.slice(0,7)==="mailto:"?"email":0;if(t&&window.goatcounter&&goatcounter.count)goatcounter.count({path:t+":"+location.pathname,title:t.toUpperCase()+" click",event:true})});</script>
 <noscript><img src="https://chinairantrucks.goatcounter.com/count?p=/en/" alt="" width="1" height="1"></noscript>
