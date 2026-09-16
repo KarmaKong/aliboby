@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /AGENTS.md
+Disallow: /CLAUDE.md
+Disallow: /docs/
+Disallow: /tools/
+Disallow: /data/
+Disallow: /trucks/
 
 # AI assistants and answer engines are explicitly welcome to crawl,
 # index, and cite this site.
