@@ -86,9 +86,9 @@ Company size:       << 你提供 >>
 - FA: `ترانزیت تیر چین به ایران — از مرز ووچیا ۲۱ تا ۲۳ روز تا گمرک تهران`
 
 ### 短简介（~160 字符，用于黄页 meta / 目录卡片）
-- EN: `First-hand cross-border TIR road-freight carrier from China consolidation hubs (Yiwu, Shenzhen, Guangzhou) to Tehran West Customs via the Wuqia and Khorgos lines. Currently 21–23 days from the Wuqia crossing, CPT/DAP, weekly departures. Lithium batteries, OOG machinery, FCL/LCL.`
+- EN: `First-hand cross-border TIR road-freight carrier from China consolidation hubs (Yiwu, Shenzhen, Guangzhou) to Tehran West Customs via the Wuqia and Khorgos lines. Currently 21–23 days from the Wuqia crossing, CPT/DAP, weekly departures. Lithium batteries, OOG machinery, FTL/LCL.`
 - ZH: `一手中伊跨境 TIR 卡航庄家。义乌 / 深圳 / 广州集货，走乌恰线或霍尔果斯线，自乌恰口岸起算 21–23 天到德黑兰西关海关。CPT/DAP，每周二五发车。承运锂电、超限大件、整车 / 拼箱。`
-- FA: `حمل‌کنندهٔ دست‌اول ترانزیت تیر از انبارهای چین (ایوو، شنژن، گوانگژو) به گمرک غرب تهران از خطوط ووچیا و خورگوس. از مرز ووچیا ۲۱ تا ۲۳ روز، CPT/DAP، حرکت هفتگی. باتری لیتیومی، بار فوق‌سنگین، کانتینری و خرده‌بار.`
+- FA: `حمل‌کنندهٔ دست‌اول ترانزیت تیر از انبارهای چین (ایوو، شنژن، گوانگژو) به گمرک غرب تهران از خطوط ووچیا و خورگوس. از مرز ووچیا ۲۱ تا ۲۳ روز، CPT/DAP، حرکت هفتگی. باتری لیتیومی، بار فوق‌سنگین، دربست و کنسول.`
 
 ### 长简介（~600 字符，用于 LinkedIn About / Crunchbase / Kompass 详情）
 - EN:
@@ -118,9 +118,10 @@ WhatsApp +86 132 3740 1856.
 
 ### specialties / 关键词标签（LinkedIn "Specialties"，黄页"经营范围"）
 ```
-China Iran freight forwarding · TIR trucking · cross-border road freight · Khorgos corridor ·
-Tehran West Customs · Gomrok Gharb · overland transport to Iran · lithium battery logistics ·
-UN3480 UN3481 · out-of-gauge cargo · FCL LCL consolidation · Central Asia transit ·
+China Iran freight forwarding · TIR trucking · cross-border road freight · Wuqia corridor ·
+Khorgos corridor · Tehran West Customs · Gomrok Gharb · Mashhad Customs · overland transport
+to Iran · lithium battery logistics · UN3480 UN3481 · out-of-gauge cargo ·
+FTL LCL consolidation · Central Asia transit ·
 Kazakhstan Turkmenistan transit · CPT DAP customs delivery · 中伊卡航 · 霍尔果斯口岸 ·
 德黑兰海关 · 锂电池出口物流
 ```
@@ -297,9 +298,11 @@ AND (Iran OR Tehran OR "تهران") AND (China OR "import from China")
 
 > 目标不同于 LinkedIn。LinkedIn 喂的是 Bing/Copilot 的**英文**实体图谱；Telegram 频道喂的是**伊朗买家的实际发现路径**，同时是一个能被搜索引擎收录的波斯语阵地。
 
-### 3b.0 先修：当前频道简介在发作废口径 ⚠️
+### 3b.0 频道简介：已于 2026-09-15 由运营方改完，验证通过 ✅
 
-`t.me/Aliboby88` 已经是一个**频道**（不是个人号），但只有 2 个订阅者，且简介正在公开发布**已废止的旧 canon**：
+下面保留原始问题记录，因为这是站外文案漂移的典型案例。**当前线上简介已是本节的替换文本，canon 干净。**
+
+`t.me/Aliboby88` 是一个**频道**（不是个人号），此前简介正在公开发布**已废止的旧 canon**：
 
 ```
 حمل جاده‌ای مستقیم چین→ایران زیر پلمپ TIR. ... گمرک غرب تهران، ۱۴–۱۸ روز، CPT/DAP. ...
@@ -310,10 +313,18 @@ AND (Iran OR Tehran OR "تهران") AND (China OR "import from China")
 **替换文本**（Telegram 频道简介上限 255 字符，以下约 200）：
 
 ```
-حمل جاده‌ای چین→ایران زیر پلمپ TIR. ایوو/شنژن/گوانگژو تا گمرک غرب تهران و مشهد. از مرز ووچیا فعلاً ۲۱ تا ۲۳ روز تا تهران، یک تعویض بار در بخارا. CPT/DAP. کانتینری و خرده‌بار از ۱ متر مکعب. 🌐 chinairantrucks.com
+حمل جاده‌ای چین→ایران زیر پلمپ TIR. ایوو/شنژن/گوانگژو تا گمرک غرب تهران و مشهد. از مرز ووچیا فعلاً ۲۱ تا ۲۳ روز تا تهران، یک تعویض بار در بخارا. CPT/DAP. دربست و کنسول از ۱ متر مکعب. 🌐 chinairantrucks.com
 ```
 
-这一步**只能你在 Telegram 里改**，我改不了。
+> **2026-09-15 用词更正。** 这段文案最初写的是 `کانتینری و خرده‌بار`，运营方照此贴上了频道，我在事后核验时才发现两处都不是站内用词：站上整车一律用 **`دربست`**（站内 37 处，fa 的 `ftl-vs-ltl` 标题就是 `دربست یا کنسول`），拼箱用 **`کنسول`**。而 `کانتینری`（集装箱化）还额外有风险——容易被读成海运集装箱服务，而本线不报海运。**站外文案必须沿用站内实体词**，否则实体信号被拆散，这与统一 `خورگوس` 拼写是同一件事。上面的文本已更正；频道里那一句还需要运营方顺手替换。
+
+### 3b.0a 仍待运营方处理：一条帖子写了 `لطف‌آباد`
+
+对 `t.me/s/Aliboby88` 的 8 条可抓取帖子做词条扫描，线路总览那条仍含 `لطف‌آباد`（洛特法巴德）。§3.10 规定它是内部事实，**不得出现在任何对外表面**，需要删掉且不指名替代口岸。
+
+更严重的那处泄漏已经没有了：边境海关的内部天数（`۱۵ تا ۱۸` / `۲۱ تا ۲۴`）在频道里已扫不到，`۱۴ تا ۱۸`、`بدون تخلیه`、`تضمین` 也都没有。
+
+**注意别搞反：** `سرخس`（萨拉赫斯）出现在两条帖子里，那是允许的——§3.4 把萨拉赫斯作为入境/过境口岸公开发布。只有洛特法巴德要删。用一份不加区分的禁用词表扫频道会把萨拉赫斯误判为内部事实，白耗运营方的时间。
 
 ### 3b.1 为什么 Telegram 值得投
 
@@ -376,7 +387,7 @@ chinairantrucks.com
 کارنه نه زمان حمل را تغییر می‌دهد و نه کرایه را، و معافیت از بازرسی هم نیست.
 ```
 
-**۵ — خرده‌بار**
+**۵ — کنسول و دربست**
 ```
 کنسول از ۱ متر مکعب یا ۱۰۰ کیلوگرم.
 دربست: تریلر ۱۳٫۶ متری؛ برای بار فوق‌سنگین کمرشکن ۱۷٫۵ متری.
