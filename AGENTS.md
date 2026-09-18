@@ -202,7 +202,7 @@ Flat `<urlset>`, regenerated whenever pages are added/removed. Priorities:
 
 ## 8. CSS
 
-- `css/tokens.css` — colour + layout variables. `css/site.css` — everything else (imports tokens).
+- `css/tokens.css` — colour + layout variables (source of truth for the palette). `css/site.css` inlines the same `:root` block so the homepage does not wait on a second CSS request. If you change a token, update **both** files.
 - Palette: `--navy #0B1F3A` (dominant ink), `--gold / --brass #C4A35A` (accent — used only for "iran", numerals, CTAs, section stubs), `--paper / --cream #F5F2EB` (substrate).
 - Language body fonts: `body.fa` Tahoma stack, `body.zh` PingFang stack, `body.en` IBM Plex Sans stack.
 - Homepages: `body:has(.hero-cut)` makes the header a transparent overlay; `body.<lang> .home-hero` sets the paper/navy diagonal (fa mirrors the direction of zh/en). Article pages: `body:has(main.post)` gives the header the paper background.
