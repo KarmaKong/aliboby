@@ -6,6 +6,18 @@ Disallow: /docs/
 Disallow: /tools/
 Disallow: /data/
 Disallow: /trucks/
+Disallow: /quote/
+Disallow: /contact/
+Disallow: /en/quote/
+Disallow: /en/contact/
+Disallow: /zh/quote/
+Disallow: /zh/contact/
+Disallow: /zh/index.html
+Disallow: /zh/articles/lcl-traps/
+Disallow: /zh/articles/first-central-asia/
+Disallow: /zh/articles/uzbekistan-quote/
+Disallow: /index.html
+Disallow: /en/index.html
 
 # AI assistants and answer engines are explicitly welcome to crawl,
 # index, and cite this site.
