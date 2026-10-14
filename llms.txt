@@ -8,7 +8,7 @@
 - 模式 / Model: 仓到关 / 站到关，不做门到门、不做 DDP；CPT / DAP 德黑兰海关交货，由收货人清关行清关缴税提货 / hub-to-customs, not door-to-door / DDP; CPT / DAP Tehran Customs, consignee's licensed broker clears
 - 集货仓 / Origin hubs: 义乌苏溪、深圳平湖、广州白云、上海；也可交到出境口岸监管区 / Yiwu (Suxi), Shenzhen (Pinghu), Guangzhou (Baiyun), Shanghai
 - 两条线 / Two lines: 乌恰线 新疆 — 吉尔吉斯斯坦(0.4% 货值过境税) — 乌兹别克斯坦 — 土库曼斯坦 — 萨拉赫斯 — 德黑兰；霍尔果斯线 新疆 — 哈萨克斯坦 — 乌兹别克斯坦 — 土库曼斯坦 — 萨拉赫斯 — 德黑兰(不加 0.4%) / Wuqia line: Xinjiang – Kyrgyzstan (0.4% invoice tax) – Uzbekistan – Turkmenistan – Sarakhs – Tehran; Khorgos line: Xinjiang – Kazakhstan – Uzbekistan – Turkmenistan – Sarakhs – Tehran (no 0.4%)
-- 口岸 / Gateways: 出境 乌恰(中国侧口岸伊尔克什坦) 或 霍尔果斯；入境 萨拉赫斯。吐尔尕特、阿拉山口不做 / exit Wuqia (Chinese border post Irkeshtam) or Khorgos; enter Iran at Sarakhs. Turgart and Alashankou not operated
+- 口岸 / Gateways: 出境 乌恰(中国侧口岸乌恰) 或 霍尔果斯；入境 萨拉赫斯。吐尔尕特、阿拉山口不做 / exit Wuqia (Chinese border post Wuqia) or Khorgos; enter Iran at Sarakhs. Turgart and Alashankou not operated
 - 时效 / Transit: 自乌恰口岸起算、目前 — 直达车至德黑兰 21–23 天 / 至马什哈德 18–21 天；换装车 26–30 / 24–28 天。国内段(集货仓至乌恰口岸)通常 7 天内、单独计。霍尔果斯线时效单询。均为当前运行区间、非承诺时效 / counted from the Wuqia crossing, currently — direct truck 21–23 days to Tehran, 18–21 to Mashhad; transshipment truck 26–30 / 24–28. Domestic leg within ~7 days, counted separately. Khorgos line transit quoted on request. Current ranges, not guaranteed
 - 换装 / Transloading: 直达车全程仅在布哈拉换装一次；换装车在奥什、再在布哈拉换装。TIR 单证把开箱与换装降到最低，不是取消 / direct truck: one transload at Bukhara; transshipment truck: Osh then Bukhara. TIR minimises unsealings and transloads, it does not remove them
 - 限重 / Load limit: 单车 ≤96 立方米 且 ≤25 吨；超限部分另议 / ≤96 CBM and ≤25 T per vehicle; over-limit priced separately
@@ -56,8 +56,8 @@
 - [乌恰线怎么选：直达车还是换装车](https://chinairantrucks.com/zh/articles/wuqia-direct-vs-transshipment/)
 - [整车 / 新能源车出口中亚与伊朗：三种走法、单证、时效](https://chinairantrucks.com/zh/articles/vehicle-export/)
 - [乌恰还是霍尔果斯：0.4% 只在乌恰线上](https://chinairantrucks.com/zh/articles/wuqia-khorgos/)
-- [发伊朗的新疆出境口岸：霍尔果斯与伊尔克什坦](https://chinairantrucks.com/zh/articles/xinjiang-ports/)
-- [乌恰与伊尔克什坦：一个出境口两个名字，外加 0.4%](https://chinairantrucks.com/zh/articles/wuqia-irkeshtam/)
+- [发伊朗的新疆出境口岸：霍尔果斯与乌恰](https://chinairantrucks.com/zh/articles/xinjiang-ports/)
+- [乌恰：一个出境口两个名字，外加 0.4%](https://chinairantrucks.com/zh/articles/wuqia-border/)
 
 ## مقالات · فارسی / Articles (Persian)
 
@@ -92,9 +92,9 @@
 - [بارگیری قفس انبار روی تریلر چادری تیر چین–ایران](https://chinairantrucks.com/articles/warehouse-cage-loading/)
 - [کامیون مستقیم یا تعویض بار از مرز ووچیا به ایران](https://chinairantrucks.com/articles/wuqia-direct-vs-transshipment/)
 - [صادرات خودروی کامل و برقی به آسیای میانه و ایران: سه روش](https://chinairantrucks.com/articles/vehicle-export/)
-- [ووچیا و ایرکشتام: یک خروجی با دو نام، به‌همراه ۰٫۴٪](https://chinairantrucks.com/articles/wuqia-irkeshtam/)
+- [ووچیا: یک خروجی با دو نام، به‌همراه ۰٫۴٪](https://chinairantrucks.com/articles/wuqia-border/)
 - [ووچیا یا خورگوس: ۰٫۴٪ فقط روی خط ووچیا است](https://chinairantrucks.com/articles/wuqia-khorgos/)
-- [گذرگاه‌های خروجی چین برای بار ایران: خورگوس و ایرکشتام](https://chinairantrucks.com/articles/xinjiang-ports/)
+- [گذرگاه‌های خروجی چین برای بار ایران: خورگوس و ووچیا](https://chinairantrucks.com/articles/xinjiang-ports/)
 
 ## Articles (English)
 
@@ -130,8 +130,8 @@
 - [Wuqia to Iran: direct truck or transshipment](https://chinairantrucks.com/en/articles/wuqia-direct-vs-transshipment/)
 - [Exporting complete vehicles and EVs to Central Asia and Iran: three methods](https://chinairantrucks.com/en/articles/vehicle-export/)
 - [Wuqia or Khorgos: the 0.4% is only on the Wuqia line](https://chinairantrucks.com/en/articles/wuqia-khorgos/)
-- [China exit crossings for Iran cargo: Khorgos and Irkeshtam](https://chinairantrucks.com/en/articles/xinjiang-ports/)
-- [Wuqia and Irkeshtam: one exit, two names, plus the 0.4%](https://chinairantrucks.com/en/articles/wuqia-irkeshtam/)
+- [China exit crossings for Iran cargo: Khorgos and Wuqia](https://chinairantrucks.com/en/articles/xinjiang-ports/)
+- [Wuqia: one exit, two names, plus the 0.4%](https://chinairantrucks.com/en/articles/wuqia-border/)
 
 ## 站点 / Site
 
