@@ -70,7 +70,7 @@ Business name:      chinairantrucks
 Website:            https://chinairantrucks.com
 Primary phone:      +86 132 3740 1856   (WhatsApp)
 Email:              sales@chinairantrucks.com
-Also on:            Telegram https://t.me/Aliboby88
+Also on:            Telegram https://t.me/chinairantrucks
 Category:           International road freight forwarding / Cross-border TIR trucking
 Origin countries:   China
 Destination:        Iran (via Kazakhstan & Turkmenistan)
@@ -299,7 +299,7 @@ AND (Iran OR Tehran OR "تهران") AND (China OR "import from China")
 
 ### 3b.0 先修：当前频道简介在发作废口径 ⚠️
 
-`t.me/Aliboby88` 已经是一个**频道**（不是个人号），但只有 2 个订阅者，且简介正在公开发布**已废止的旧 canon**：
+`t.me/chinairantrucks` 已经是一个**频道**（不是个人号），但只有 2 个订阅者，且简介正在公开发布**已废止的旧 canon**：
 
 ```
 حمل جاده‌ای مستقیم چین→ایران زیر پلمپ TIR. ... گمرک غرب تهران، ۱۴–۱۸ روز، CPT/DAP. ...
@@ -327,7 +327,7 @@ AND (Iran OR Tehran OR "تهران") AND (China OR "import from China")
 
 配合手册的"万物皆可排名"：一个持续更新的波斯语频道本身就是可排名文档，而不只是联系方式。
 
-> **发链接时用 `t.me/s/Aliboby88` 这个预览地址**（对外引用、给爬虫），`t.me/Aliboby88` 留给真人点击加入。
+> **发链接时用 `t.me/s/chinairantrucks` 这个预览地址**（对外引用、给爬虫），`t.me/chinairantrucks` 留给真人点击加入。
 
 ### 3b.2 与 WhatsApp 的关系——一个需要你决策的数据点
 
