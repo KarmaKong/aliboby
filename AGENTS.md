@@ -82,7 +82,7 @@ Wuqia line, current ("目前 / currently / معمولاً" — never "guaranteed
 
 ### 3.5 Load limits
 
-- **≤96 CBM and ≤25 T per vehicle.** Over-limit portions are not covered by the quote and are priced separately.
+- **≤80 CBM and ≤22 T per vehicle.** Over-limit portions are not covered by the quote and are priced separately.
 - Do not publish the older 85 CBM / 23 T figures, and do not split the limit by direct vs transshipment.
 
 ### 3.6 Cargo
@@ -117,7 +117,7 @@ Wuqia line, current ("目前 / currently / معمولاً" — never "guaranteed
 ### 3.9 Open items — do not invent values for these
 
 - Khorgos line transit times and transloading structure.
-- Whether the 96 CBM / 25 T limit differs by direct vs transshipment.
+- Whether the 80 CBM / 22 T limit differs by direct vs transshipment.
 - Whether to publish a combined hub → destination figure (domestic ≤7 days + Wuqia-origin table would put Tehran at roughly 28–30 days direct). **Not published until decided.**
 
 ### 3.10 Internal-only facts — never publish, never give to bots
@@ -135,7 +135,7 @@ If new operational data arrives (real transit days per city, rate bands, border-
 - Terse, declarative, factual. Short sentences. No marketing fluff, no clickbait, no "震惊体".
 - Headings name real entities (`Wuqia vs Khorgos: the 0.4%`), not vague ones (`How to choose`).
 - No "I think / obviously". State facts; label estimates as estimates.
-- Persian digits (`۲۱ تا ۲۳ روز`, `۹۶ متر مکعب`, `۰٫۴٪`) for the recurring site numbers in `fa`; Western digits for quoted statistics.
+- Persian digits (`۲۱ تا ۲۳ روز`, `۸۰ متر مکعب`, `۰٫۴٪`) for the recurring site numbers in `fa`; Western digits for quoted statistics.
 - CJK place-name pairs are kept as brand (`霍尔果斯 Khorgos`, `萨拉赫斯 Sarakhs`, `德黑兰西关 Gomrok Gharb`) in all languages.
 - The **operator's first-hand voice** beats AI draft prose. AI is draft labor, not the published voice. A real About page with a named person is still TODO (see `/docs` / project notes).
 
@@ -251,7 +251,7 @@ This section is a living status log for whoever (human or AI, any tool) picks th
 
 ### Shipped
 
-- **`warehouse-cage-loading` 三语**（2026-10-06）— 仓储/物流笼车上 13.6 米帘布车的交接页，不是整车出口用的中置轴车辆运输车（那篇仍是 `vehicle-carrier-loading`）。只复述已有 canon：96 CBM / 25 T、换装结构、LCL 1 CBM 或 100 kg、锂电 UN3480/3481 + 16 项 MSDS、加固绑扎另计、仓到关 CPT/DAP、CMR 每车最高 25 万美元。没有公布笼车额定尺寸或承重。三语索引、sitemap（+3 URL）、`llms.txt`，以及从 `vehicle-carrier-loading` 和 `lcl` 各一条内链，避免新页成孤儿。
+- **`warehouse-cage-loading` 三语**（2026-10-06）— 仓储/物流笼车上 13.6 米帘布车的交接页，不是整车出口用的中置轴车辆运输车（那篇仍是 `vehicle-carrier-loading`）。只复述已有 canon：80 CBM / 22 T、换装结构、LCL 1 CBM 或 100 kg、锂电 UN3480/3481 + 16 项 MSDS、加固绑扎另计、仓到关 CPT/DAP、CMR 每车最高 25 万美元。没有公布笼车额定尺寸或承重。三语索引、sitemap（+3 URL）、`llms.txt`，以及从 `vehicle-carrier-loading` 和 `lcl` 各一条内链，避免新页成孤儿。
 - **发车日志 `departures` — 三语证据型内容 + 生成器**（2026-09-15）— the first content type on this site that is *evidence* rather than *explanation*, and the first one designed to be maintained by the operator rather than by an agent.
  - **How it works.** `data/departures.tsv` is the only file a human touches: one row per load, all enum fields (`hub` / `cargo` / `line` / `dest` / `mode` / `status`) plus a date, a day count and an optional photo. `tools/build-departures.py` turns those rows into all three languages and rewrites only the region between the `DEPARTURES:BEGIN` / `DEPARTURES:END` markers on the three pages, per the §12 exact-substring rule. **No prose is ever hand-written per entry**, which is the whole point — the operator physically cannot type a banned phrase, and does not have to hand-set Persian digits.
  - **Canon guards are in the generator, not in review.** It refuses to build if `dest` is anything but `tehran` / `mashhad` (so Sarakhs and Lotfabad cannot leak in from §3.10), if a `khorgos` row carries a day count (§3.3 has no published figure for that line), or if fewer than 3 entries exist. A day count outside the published range is a warning, not a hard error — real single loads do vary — and is overridden by appending `!force` to the row, which forces a deliberate decision instead of a silent publish. All four were tested.
