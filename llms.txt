@@ -15,7 +15,7 @@
 - 目的海关 / Destination customs: 可售目的地 马什哈德、德黑兰(德黑兰西关 Gomrok Gharb / 沙赫里亚尔 Shahriyar / 阿普林陆港 Aprin)。萨拉赫斯是入境口岸、非可售目的地 / sellable destinations: Mashhad, Tehran (West Customs / Shahriyar / Aprin). Sarakhs is the entry gateway, not a sellable destination
 - 交割凭证 / Handover: 海关入库单 Ghabz-e Anbar / قبض انبار；伊朗海关系统 ASYCUDA / warehouse entry receipt; Iran customs system ASYCUDA
 - 货类 / Cargo: 普货(汽配/电子/机械/建材) + 9类锂电 UN3480/3481、光伏与储能 BESS、超限大件机械、化工原料(附 16 项 MSDS)；整车/新能源车按项目、成套项目另询；法检货缺商检手续价格另议 / general cargo + Class 9 lithium (UN3480/3481), solar & BESS, out-of-gauge machinery, chemicals with a 16-section MSDS; complete vehicles / EVs on a project basis; statutory-inspection cargo without paperwork priced case by case
-- 装法与起运 / Modes: 整车 FTL(13.6m 帘布车 / 17.5m 低平板) 与拼箱 LCL，1 CBM 或 100 KG 起；每周二、周五发车 / FTL and LCL from 1 CBM or 100 kg; weekly Tuesday & Friday departures
+- 装法与起运 / Modes: 整车 FTL(13.6m 帘布车 / 17.5m 低平板)，不接拼箱/LCL；发车按批次安排、不公布固定班期 / FTL only (13.6 m curtainsider / 17.5 m low-bed), no LCL; departures arranged per batch, no published fixed schedule
 - 车队与保障 / Fleet: 45+ 台自有及协议调度的 480–540HP 帘布半挂(13.6m) + 17.5m 低平板超限车，符合 IRU 过境技术标准；中亚过境段车头/司机可能为过境国持牌协作承运人；北斗三号+GPS 双模定位、门磁电子封签；CMR 一切险每车最高 25 万美元；TIR 国际道路运输经营资质，出境口岸与德黑兰派驻调度 / 45+ owned and contracted 480–540 HP curtainsider trailers to IRU spec, plus 17.5 m low-beds; on the Central Asia legs the tractor/driver may be a vetted transit-country partner carrier; Beidou-3+GPS, electronic seals, CMR insurance up to USD 250,000 per load, registered TIR operator
 - 0.4%: 仅乌恰线(过吉尔吉斯)有，是货值发票 0.4% 税、不是运费、报价不含；霍尔果斯线不加 / only on the Wuqia (Kyrgyzstan) line, a 0.4% invoice-value tax, not freight, excluded from the quote; the Khorgos line does not add it
 - 询价三样 / To get a quote: 始发仓 origin hub；目的海关(马什哈德 / 德黑兰) destination customs；货物数据(HS 编码、总重 KG、体积 CBM) cargo data
@@ -64,6 +64,7 @@
 - [乌恰：一个出境口两个名字，外加 0.4%](https://chinairantrucks.com/zh/articles/wuqia-border/)
 - [中亚段谁在开车：车头、封签与定位记录](https://chinairantrucks.com/zh/articles/truck-driver-and-tracking/)
 - [平板家具发伊朗：先撞 80 立方上限](https://chinairantrucks.com/zh/articles/flat-pack-furniture/)
+- [篷车不是集装箱：中伊汽运的装载与换装](https://chinairantrucks.com/zh/articles/curtain-side-not-container/)
 
 ## مقالات · فارسی / Articles (Persian)
 
@@ -107,6 +108,7 @@
 - [گذرگاه‌های خروجی چین برای بار ایران: خورگوس و ووچیا](https://chinairantrucks.com/articles/xinjiang-ports/)
 - [کشنده و راننده در آسیای میانه: چه چیزی عوض می‌شود](https://chinairantrucks.com/articles/truck-driver-and-tracking/)
 - [مبلمان تخت‌بسته به ایران: سقف ۸۰ متر مکعب قبل از وزن پر می‌شود](https://chinairantrucks.com/articles/flat-pack-furniture/)
+- [تریلر چادری نه کانتینر: مهار، حجم و تعویض بار](https://chinairantrucks.com/articles/curtain-side-not-container/)
 
 ## Articles (English)
 
@@ -150,6 +152,7 @@
 - [Wuqia: one exit, two names, plus the 0.4%](https://chinairantrucks.com/en/articles/wuqia-border/)
 - [Who drives your trailer through Central Asia, and what you can verify](https://chinairantrucks.com/en/articles/truck-driver-and-tracking/)
 - [Flat-pack furniture to Iran: the 80 CBM ceiling fills first](https://chinairantrucks.com/en/articles/flat-pack-furniture/)
+- [Not a container: how Iran cargo is loaded](https://chinairantrucks.com/en/articles/curtain-side-not-container/)
 
 ## 站点 / Site
 
