@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBM 计算:一车装得下吗 | chinairantrucks</title>
+<meta name="description" content="输入每行的长宽高(厘米)和单件重量(公斤),自动累加总体积 CBM 与毛重,判断这票货是否装得下一辆篷车:目前每车上限 80 CBM、22 吨。">
+<link rel="canonical" href="https://chinairantrucks.com/zh/calculator/">
+<link rel="alternate" hreflang="fa" href="https://chinairantrucks.com/calculator/">
+<link rel="alternate" hreflang="en" href="https://chinairantrucks.com/en/calculator/">
+<link rel="alternate" hreflang="zh-Hans" href="https://chinairantrucks.com/zh/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://chinairantrucks.com/calculator/">
+<link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-180.png" sizes="180x180">
+<link rel="stylesheet" href="../../css/site.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CBM 计算:一车装得下吗 | chinairantrucks">
+<meta property="og:description" content="输入每行的长宽高(厘米)和单件重量(公斤),自动累加总体积 CBM 与毛重,判断这票货是否装得下一辆篷车:目前每车上限 80 CBM、22 吨。">
+<meta property="og:url" content="https://chinairantrucks.com/zh/calculator/">
+<meta property="og:site_name" content="chinairantrucks">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chinairantrucks.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CBM 计算:一车装得下吗 | chinairantrucks">
+<meta name="twitter:description" content="输入每行的长宽高(厘米)和单件重量(公斤),自动累加总体积 CBM 与毛重,判断这票货是否装得下一辆篷车:目前每车上限 80 CBM、22 吨。">
+<meta name="twitter:image" content="https://chinairantrucks.com/og.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"体积与重量计算:这票货一车装得下吗","description":"按行累加体积与毛重,对照一辆篷车的上限(目前 ≤80 CBM 且 ≤22 吨),判断是否需要两辆车。","inLanguage":"zh-Hans","url":"https://chinairantrucks.com/zh/calculator/","isPartOf":{"@type":"WebSite","name":"chinairantrucks","url":"https://chinairantrucks.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"chinairantrucks","item":"https://chinairantrucks.com/zh.html"},{"@type":"ListItem","position":2,"name":"体积与重量计算","item":"https://chinairantrucks.com/zh/calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"zh-Hans","mainEntity":[{"@type":"Question","name":"CBM 是立方米吗?","acceptedAnswer":{"@type":"Answer","text":"是。1 CBM 就是 1 立方米:100×100×100 厘米的箱体,也就是 1,000,000 立方厘米。"}},{"@type":"Question","name":"能只订半车吗?","acceptedAnswer":{"@type":"Answer","text":"不能。这条线只接整车 FTL,不拼箱、不拼别家的货,半车拼装在这里不接。"}},{"@type":"Question","name":"托盘要单独一行吗?","acceptedAnswer":{"@type":"Answer","text":"带托盘的货按外廓尺寸量,高度含托盘本身,不拆开算。"}},{"@type":"Question","name":"货很重但体积小怎么算?","acceptedAnswer":{"@type":"Answer","text":"22 吨是一辆车的上限。重货往往体积没到、重量先到,所以看着不多的一票也可能算出两辆。"}},{"@type":"Question","name":"这个结果算确认订车吗?","acceptedAnswer":{"@type":"Answer","text":"不算。这只是按公布上限做的量算;实际装车以仓库码放和调度复核为准。"}}]}
+</script>
+<style>
+.calc { margin: 28px 0 8px; padding: 22px 20px; border: var(--rule); border-inline-start: var(--stub) solid var(--gold); background: #fffdf8; }
+.calc-head { display: grid; gap: 8px; grid-template-columns: repeat(6, minmax(0, 1fr)); font-size: 0.78rem; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+.calc-row { display: grid; gap: 8px; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: end; margin-bottom: 10px; }
+.calc-row label { display: grid; gap: 3px; font-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.calc-row input { font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--paper); border: 1px solid var(--navy); border-radius: var(--radius); padding: 7px 8px; width: 100%; }
+.calc-row button { font: inherit; font-size: 1.1rem; line-height: 1; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 0; cursor: pointer; }
+.calc-row button:hover { color: #8a2b1f; border-color: #8a2b1f; }
+.calc-out { margin-top: 14px; padding: 14px 16px; border: 1px solid var(--line); background: var(--paper); }
+.calc-out p { margin: 4px 0; }
+.calc-out .verdict { font-weight: 700; font-size: 1.05rem; }
+.calc-out .ok { color: #1f6b3a; }
+.calc-out .over { color: #8a2b1f; }
+.calc-note { font-size: 0.82rem; color: var(--muted); margin-top: 8px; }
+@media (min-width: 761px) {
+  .calc-row label > span { display: none; }
+}
+@media (max-width: 760px) {
+  .calc-head { display: none; }
+  .calc-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+</style>
+</head>
+<body class="zh">
+<a class="skip" href="#main">跳到正文</a>
+<header class="site-header header">
+  <div class="wrap">
+    <a class="wordmark" href="../../zh.html">chinairantrucks</a>
+    <nav class="nav header-nav">
+      <a href="../articles/">文章</a>
+      <a class="wa contact" href="https://wa.me/8613237401856?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%83%B3%E8%AF%A2%E6%95%B4%E8%BD%A6FTL%EF%BC%88%E4%B8%8D%E5%81%9A%E6%8B%BC%E7%AE%B1%EF%BC%89%E3%80%82%E5%A7%8B%E5%8F%91%E4%BB%93%EF%BC%9A%EF%BC%9B%E7%9B%AE%E7%9A%84%E6%B5%B7%E5%85%B3%EF%BC%9A%EF%BC%9BHS%EF%BC%9A%EF%BC%9B%E6%AF%9B%E9%87%8DKG%EF%BC%9A%EF%BC%9B%E4%BD%93%E7%A7%AFCBM%EF%BC%9A" rel="noopener noreferrer">整车 FTL 询价（WhatsApp）</a>
+      <div class="lang-switch" data-lang-switch>
+        <button type="button" class="lang-btn" hidden aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="语言选择">
+          <svg class="i-globe" viewBox="0 0 64 64" width="22" height="22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="23" stroke-width="2"/><ellipse cx="32" cy="32" rx="10" ry="23" stroke-width="2"/><path d="M9 32h46" stroke-width="2"/><path d="M13 19c12 6 26 6 38 0M13 45c12-6 26-6 38 0" stroke-width="1.2"/></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu">
+          <a class="lang" href="../../calculator/" lang="fa" dir="rtl" hreflang="fa">فارسی</a>
+          <a class="lang" href="../../en/calculator/" lang="en" hreflang="en">EN</a>
+          <a href="./" aria-current="page">中文</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="main" class="post">
+  <div class="wrap">
+    <p class="post-kicker">工具</p>
+    <h1>体积与重量计算:这票货一车装得下吗</h1>
+    <p>判断一票货是一辆车还是两辆车,只看两个数:体积和毛重。下面按行填,工具会把各行加起来,再和一辆篷车的上限对一遍。运价和时效不在这一页。</p>
+    <ul class="post-facts" aria-label="要点">
+      <li>一辆车目前的上限:≤80 CBM 且 ≤22 吨,两个上限同时生效</li>
+      <li>用车是篷车(篷布半挂 / 侧帘车),不是集装箱</li>
+      <li>只接整车 FTL,这条线不做拼箱、不拼别人的货</li>
+      <li>超长、超宽的件逐票单独核,不在这个工具里</li>
+    </ul>
+    <div class="calc">
+      <div class="calc-head" aria-hidden="true">
+        <span>件数</span><span>长(cm)</span><span>宽(cm)</span><span>高(cm)</span><span>单件重量(kg)</span><span></span>
+      </div>
+      <div id="calc-rows"></div>
+      <p><button type="button" class="btn btn-ghost" id="calc-add">加一行</button></p>
+      <div class="calc-out" id="calc-out" role="status" aria-live="polite">
+        <p class="verdict">填入尺寸后这里出结果。</p>
+      </div>
+      <p class="calc-note">这是按一辆车上限做的量算,不是订车确认;体积能不能用满要看形状和码放。</p>
+    </div>
+    <h2>一行货怎么量</h2>
+    <p>同一尺寸、同一重量的一批纸箱算一行。单件按厘米量,长×宽×高,除以 1,000,000 得 CBM,再乘件数;单件过秤乘件数得毛重。带托盘的货连托盘一起量:托盘的长宽和整个高度都算在这一行里。</p>
+    <h2>一辆篷车装多少</h2>
+    <p>上限是 80 CBM 和 22 吨,哪个先到就按哪个算:抛货先撞体积,重货先撞重量。体积能不能用满还要看形状和码放——机台底座码不高,上面的空间就是空的。</p>
+    <h2>超过一辆怎么办</h2>
+    <p>结果超过一辆,就是两辆或更多。超长、超宽的件要按票单独核;这个工具只比体积和重量。</p>
+    <h2>常见问答</h2>
+    <div class="faq">
+      <details open>
+        <summary>CBM 是立方米吗?</summary>
+        <p>是。1 CBM 就是 1 立方米:100×100×100 厘米的箱体,也就是 1,000,000 立方厘米。</p>
+      </details>
+      <details>
+        <summary>能只订半车吗?</summary>
+        <p>不能。这条线只接整车 FTL,不拼箱、不拼别家的货,半车拼装在这里不接。</p>
+      </details>
+      <details>
+        <summary>托盘要单独一行吗?</summary>
+        <p>带托盘的货按外廓尺寸量,高度含托盘本身,不拆开算。</p>
+      </details>
+      <details>
+        <summary>货很重但体积小怎么算?</summary>
+        <p>22 吨是一辆车的上限。重货往往体积没到、重量先到,所以看着不多的一票也可能算出两辆。</p>
+      </details>
+      <details>
+        <summary>这个结果算确认订车吗?</summary>
+        <p>不算。这只是按公布上限做的量算;实际装车以仓库码放和调度复核为准。</p>
+      </details>
+    </div>
+    <p class="post-links">相关: <a href="../articles/quote/">询价要哪三样</a> &middot; <a href="../articles/freight-cost/">运费由什么决定</a> &middot; <a href="../articles/curtain-side-not-container/">篷车不是集装箱</a> &middot; <a href="../articles/machinery/">机械设备与重件</a></p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="mailto:sales@chinairantrucks.com">sales@chinairantrucks.com</a>
+      <a class="btn btn-ghost" href="https://wa.me/8613237401856?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%83%B3%E8%AF%A2%E6%95%B4%E8%BD%A6FTL%EF%BC%88%E4%B8%8D%E5%81%9A%E6%8B%BC%E7%AE%B1%EF%BC%89%E3%80%82%E5%A7%8B%E5%8F%91%E4%BB%93%EF%BC%9A%EF%BC%9B%E7%9B%AE%E7%9A%84%E6%B5%B7%E5%85%B3%EF%BC%9A%EF%BC%9BHS%EF%BC%9A%EF%BC%9B%E6%AF%9B%E9%87%8DKG%EF%BC%9A%EF%BC%9B%E4%BD%93%E7%A7%AFCBM%EF%BC%9A" rel="noopener noreferrer">整车 FTL 询价（WhatsApp）</a>
+      <a class="btn btn-ghost" href="https://t.me/chinairantrucks" rel="noopener noreferrer">Telegram</a>
+    </div>
+    <p class="post-back"><a href="../articles/">文章</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">chinairantrucks</span>
+    <p><a href="mailto:sales@chinairantrucks.com">sales@chinairantrucks.com</a></p>
+    <p class="footer-legal"><a href="../legal/">法律声明</a> &middot; <a href="../privacy/">隐私条款</a></p>
+  </div>
+</footer>
+<script data-goatcounter="https://chinairantrucks.goatcounter.com/count"
+        async src="../../js/count.js"></script>
+<script defer src="../../js/lang.js"></script>
+<script>
+(function(){
+  var CAP_CBM = 80, CAP_KG = 22000;
+  var box = document.getElementById('calc-rows');
+  var out = document.getElementById('calc-out');
+  var add = document.getElementById('calc-add');
+  var T = {
+    empty: '填入尺寸后这里出结果。',
+    cbm: '总体积', kg: '毛重', of: '/', 
+    ok: '一车装得下。', over: '超过一辆车的上限。',
+    need: '需要车辆数', liftCbm: '这一票是被体积上限卡住的',
+    liftKg: '这一票是被重量上限卡住的',
+    bad: '有一行填了重量但没填尺寸', remove: '删除这一行'
+  };
+  function num(v){ var x = parseFloat(String(v).replace(',', '.')); return isFinite(x) && x > 0 ? x : 0; }
+  function labels(){ return ['件数','长(cm)','宽(cm)','高(cm)','单件重量(kg)']; }
+  function row(){
+    var d = document.createElement('div');
+    d.className = 'calc-row';
+    ['q','l','w','h','m'].forEach(function(k, i){
+      var lab = document.createElement('label');
+      var span = document.createElement('span');
+      span.textContent = labels()[i];
+      var inp = document.createElement('input');
+      inp.type = 'number'; inp.min = '0'; inp.step = 'any'; inp.inputMode = 'decimal';
+      inp.className = k; inp.setAttribute('aria-label', span.textContent);
+      lab.appendChild(span); lab.appendChild(inp);
+      d.appendChild(lab);
+    });
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = '×'; b.setAttribute('aria-label', T.remove);
+    b.addEventListener('click', function(){ d.remove(); if (!box.children.length) addRow(); calc(); });
+    d.appendChild(b);
+    box.appendChild(d);
+    d.addEventListener('input', calc);
+    return d;
+  }
+  function addRow(){ var d = row(); d.querySelector('.q').value = '1'; return d; }
+  function fmtKg(n){ return Math.round(n).toLocaleString('en-US'); }
+  function calc(){
+    var cbm = 0, kg = 0, bad = 0;
+    Array.prototype.forEach.call(box.children, function(r){
+      var q = num(r.querySelector('.q').value) || 1;
+      var l = num(r.querySelector('.l').value), w = num(r.querySelector('.w').value),
+          h = num(r.querySelector('.h').value), m = num(r.querySelector('.m').value);
+      if (l && w && h) cbm += q * l * w * h / 1000000;
+      kg += q * m;
+      if (m && !(l && w && h)) bad++;
+    });
+    if (cbm === 0 && kg === 0) { out.innerHTML = '<p class="verdict">' + T.empty + '</p>'; return; }
+    var pc = cbm / CAP_CBM, pk = kg / CAP_KG;
+    var fits = pc <= 1 && pk <= 1;
+    var need = Math.max(Math.ceil(pc - 1e-9), Math.ceil(pk - 1e-9), 1);
+    var html = '';
+    html += '<p>' + T.cbm + ': <strong>' + cbm.toFixed(2) + '</strong> CBM ' + T.of + ' ' + CAP_CBM + ' — ' + Math.round(pc * 100) + '%</p>';
+    html += '<p>' + T.kg + ': <strong>' + fmtKg(kg) + '</strong> kg ' + T.of + ' ' + fmtKg(CAP_KG) + ' — ' + Math.round(pk * 100) + '%</p>';
+    html += '<p class="verdict ' + (fits ? 'ok' : 'over') + '">' + (fits ? '✔ ' + T.ok : '✖ ' + T.over) + '</p>';
+    if (!fits) html += '<p>' + T.need + ': <strong>' + need + '</strong></p>';
+    html += '<p class="calc-note">' + (pc >= pk ? T.liftCbm : T.liftKg) + '</p>';
+    if (bad) html += '<p class="calc-note">' + T.bad + '</p>';
+    out.innerHTML = html;
+  }
+  add.addEventListener('click', function(){ addRow(); calc(); });
+  addRow();
+  calc();
+})();
+</script>
+</body>
+</html>

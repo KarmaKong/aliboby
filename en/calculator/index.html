@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBM calculator: does it fit one trailer? | chinairantrucks</title>
+<meta name="description" content="Enter length, width, height and weight per line. The tool sums CBM and gross weight and says whether the load fits one tilt trailer: 80 CBM and 22 t.">
+<link rel="canonical" href="https://chinairantrucks.com/en/calculator/">
+<link rel="alternate" hreflang="fa" href="https://chinairantrucks.com/calculator/">
+<link rel="alternate" hreflang="en" href="https://chinairantrucks.com/en/calculator/">
+<link rel="alternate" hreflang="zh-Hans" href="https://chinairantrucks.com/zh/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://chinairantrucks.com/calculator/">
+<link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-180.png" sizes="180x180">
+<link rel="stylesheet" href="../../css/site.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CBM calculator: does it fit one trailer? | chinairantrucks">
+<meta property="og:description" content="Enter length, width, height and weight per line. The tool sums CBM and gross weight and says whether the load fits one tilt trailer: 80 CBM and 22 t.">
+<meta property="og:url" content="https://chinairantrucks.com/en/calculator/">
+<meta property="og:site_name" content="chinairantrucks">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://chinairantrucks.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CBM calculator: does it fit one trailer? | chinairantrucks">
+<meta name="twitter:description" content="Enter length, width, height and weight per line. The tool sums CBM and gross weight and says whether the load fits one tilt trailer: 80 CBM and 22 t.">
+<meta name="twitter:image" content="https://chinairantrucks.com/og.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"CBM and weight calculator: does your load fit one trailer?","description":"Sum cubic metres and gross weight and check them against one tilt trailer: up to 80 CBM and 22 tonnes per trailer.","inLanguage":"en","url":"https://chinairantrucks.com/en/calculator/","isPartOf":{"@type":"WebSite","name":"chinairantrucks","url":"https://chinairantrucks.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"chinairantrucks","item":"https://chinairantrucks.com/en/"},{"@type":"ListItem","position":2,"name":"CBM and weight calculator","item":"https://chinairantrucks.com/en/calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Is CBM the same as cubic metres?","acceptedAnswer":{"@type":"Answer","text":"Yes. One CBM is one cubic metre: a box 100 × 100 × 100 cm, or 1,000,000 cm³."}},{"@type":"Question","name":"Can I book part of a trailer?","acceptedAnswer":{"@type":"Answer","text":"No. This lane is FTL only — we do not consolidate cargo from several shippers, so a part-trailer booking is not offered here."}},{"@type":"Question","name":"Should a pallet be its own line?","acceptedAnswer":{"@type":"Answer","text":"A pallet is measured with the goods on it: outer dimensions and total height, pallet included."}},{"@type":"Question","name":"What if my cargo is heavy but small?","acceptedAnswer":{"@type":"Answer","text":"The 22-tonne limit is per trailer. Dense cargo reaches it before the volume limit, so the result may say two trailers for a load that looks small."}},{"@type":"Question","name":"Is the result a booking confirmation?","acceptedAnswer":{"@type":"Answer","text":"No. It is a planning check against the published trailer limit; final loading and the dispatcher's check happen at the warehouse."}}]}
+</script>
+<style>
+.calc { margin: 28px 0 8px; padding: 22px 20px; border: var(--rule); border-inline-start: var(--stub) solid var(--gold); background: #fffdf8; }
+.calc-head { display: grid; gap: 8px; grid-template-columns: repeat(6, minmax(0, 1fr)); font-size: 0.78rem; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+.calc-row { display: grid; gap: 8px; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: end; margin-bottom: 10px; }
+.calc-row label { display: grid; gap: 3px; font-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.calc-row input { font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--paper); border: 1px solid var(--navy); border-radius: var(--radius); padding: 7px 8px; width: 100%; }
+.calc-row button { font: inherit; font-size: 1.1rem; line-height: 1; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 0; cursor: pointer; }
+.calc-row button:hover { color: #8a2b1f; border-color: #8a2b1f; }
+.calc-out { margin-top: 14px; padding: 14px 16px; border: 1px solid var(--line); background: var(--paper); }
+.calc-out p { margin: 4px 0; }
+.calc-out .verdict { font-weight: 700; font-size: 1.05rem; }
+.calc-out .ok { color: #1f6b3a; }
+.calc-out .over { color: #8a2b1f; }
+.calc-note { font-size: 0.82rem; color: var(--muted); margin-top: 8px; }
+@media (min-width: 761px) {
+  .calc-row label > span { display: none; }
+}
+@media (max-width: 760px) {
+  .calc-head { display: none; }
+  .calc-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+</style>
+</head>
+<body class="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header header">
+  <div class="wrap">
+    <a class="wordmark" href="../../">chinairantrucks</a>
+    <nav class="nav header-nav">
+      <a href="../articles/">Articles</a>
+      <a class="wa contact" href="https://wa.me/8613237401856?text=Hello%20%E2%80%94%20FTL%20quote%20only%20%28no%20LCL%29.%20Origin%20hub%3A%20%3B%20Destination%20customs%3A%20%3B%20HS%3A%20%3B%20Gross%20kg%3A%20%3B%20CBM%3A%20" rel="noopener noreferrer">FTL quote on WhatsApp</a>
+      <div class="lang-switch" data-lang-switch>
+        <button type="button" class="lang-btn" hidden aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Language">
+          <svg class="i-globe" viewBox="0 0 64 64" width="22" height="22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="23" stroke-width="2"/><ellipse cx="32" cy="32" rx="10" ry="23" stroke-width="2"/><path d="M9 32h46" stroke-width="2"/><path d="M13 19c12 6 26 6 38 0M13 45c12-6 26-6 38 0" stroke-width="1.2"/></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu">
+          <a class="lang" href="../../calculator/" lang="fa" dir="rtl" hreflang="fa">فارسی</a>
+          <a class="lang" href="../../zh/calculator/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+          <a class="lang" href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="main" class="post">
+  <div class="wrap">
+    <p class="post-kicker">Tool</p>
+    <h1>CBM and weight calculator: does your load fit one trailer?</h1>
+    <p>Two numbers decide whether a shipment is one trailer or two: volume and gross weight. Enter each line of cargo below, and the tool adds them up and checks both against the per-trailer limit we run on this corridor. Rates and transit days are not on this page.</p>
+    <ul class="post-facts" aria-label="Key facts">
+      <li>Per trailer, currently: ≤80 CBM and ≤22 tonnes, both limits applying at once</li>
+      <li>The trailer on this lane is a tilt / curtain-side unit, not a container</li>
+      <li>FTL only: partial loads are not consolidated on this lane</li>
+      <li>Over-length or over-width pieces are reviewed per shipment, outside this tool</li>
+    </ul>
+    <div class="calc">
+      <div class="calc-head" aria-hidden="true">
+        <span>Qty</span><span>Length (cm)</span><span>Width (cm)</span><span>Height (cm)</span><span>Kg per unit</span><span></span>
+      </div>
+      <div id="calc-rows"></div>
+      <p><button type="button" class="btn btn-ghost" id="calc-add">Add a line</button></p>
+      <div class="calc-out" id="calc-out" role="status" aria-live="polite">
+        <p class="verdict">Enter dimensions to see the result.</p>
+      </div>
+      <p class="calc-note">This is a planning check against one trailer's limit, not a booking confirmation. Usable volume depends on shape and stacking.</p>
+    </div>
+    <h2>How to measure a line</h2>
+    <p>A few hundred cartons of the same size are one line. Measure one unit in centimetres, multiply length × width × height, divide by 1,000,000 to get CBM, then multiply by the quantity. Weigh one unit and multiply by the same quantity for gross weight. Goods on a pallet are measured with the pallet: its footprint and its full height are part of the unit.</p>
+    <h2>What one trailer takes</h2>
+    <p>Up to 80 CBM and 22 tonnes. Whichever limit is reached first decides: light bulky cargo runs out of volume, dense cargo runs out of weight. Volume is usable only as far as shape and stacking allow — a machine base too tall to stack wastes the space above it.</p>
+    <h2>If the total goes over</h2>
+    <p>A result above one trailer means two trailers or more. Anything over-length or over-width is checked and priced per shipment; this calculator only compares volume and weight with the trailer limit.</p>
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details open>
+        <summary>Is CBM the same as cubic metres?</summary>
+        <p>Yes. One CBM is one cubic metre: a box 100 × 100 × 100 cm, or 1,000,000 cm³.</p>
+      </details>
+      <details>
+        <summary>Can I book part of a trailer?</summary>
+        <p>No. This lane is FTL only — we do not consolidate cargo from several shippers, so a part-trailer booking is not offered here.</p>
+      </details>
+      <details>
+        <summary>Should a pallet be its own line?</summary>
+        <p>A pallet is measured with the goods on it: outer dimensions and total height, pallet included.</p>
+      </details>
+      <details>
+        <summary>What if my cargo is heavy but small?</summary>
+        <p>The 22-tonne limit is per trailer. Dense cargo reaches it before the volume limit, so the result may say two trailers for a load that looks small.</p>
+      </details>
+      <details>
+        <summary>Is the result a booking confirmation?</summary>
+        <p>No. It is a planning check against the published trailer limit; final loading and the dispatcher's check happen at the warehouse.</p>
+      </details>
+    </div>
+    <p class="post-links">Related: <a href="../articles/quote/">The three inputs a quote needs</a> &middot; <a href="../articles/freight-cost/">What the freight rate is built from</a> &middot; <a href="../articles/curtain-side-not-container/">Curtain-side trailer, not a container</a> &middot; <a href="../articles/machinery/">Machinery and heavy pieces</a></p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="mailto:sales@chinairantrucks.com">sales@chinairantrucks.com</a>
+      <a class="btn btn-ghost" href="https://wa.me/8613237401856?text=Hello%20%E2%80%94%20FTL%20quote%20only%20%28no%20LCL%29.%20Origin%20hub%3A%20%3B%20Destination%20customs%3A%20%3B%20HS%3A%20%3B%20Gross%20kg%3A%20%3B%20CBM%3A%20" rel="noopener noreferrer">FTL quote on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://t.me/chinairantrucks" rel="noopener noreferrer">Telegram</a>
+    </div>
+    <p class="post-back"><a href="../articles/">Articles</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">chinairantrucks</span>
+    <p><a href="mailto:sales@chinairantrucks.com">sales@chinairantrucks.com</a></p>
+    <p class="footer-legal"><a href="../legal/">Legal</a> &middot; <a href="../privacy/">Privacy</a></p>
+  </div>
+</footer>
+<script data-goatcounter="https://chinairantrucks.goatcounter.com/count"
+        async src="../../js/count.js"></script>
+<script defer src="../../js/lang.js"></script>
+<script>
+(function(){
+  var CAP_CBM = 80, CAP_KG = 22000;
+  var box = document.getElementById('calc-rows');
+  var out = document.getElementById('calc-out');
+  var add = document.getElementById('calc-add');
+  var T = {
+    empty: 'Enter dimensions to see the result.',
+    cbm: 'Total volume', kg: 'Gross weight', of: 'of', 
+    ok: 'Fits one trailer.', over: 'Over one trailer.',
+    need: 'Trailers needed', liftCbm: 'The volume limit is what caps this load',
+    liftKg: 'The weight limit is what caps this load',
+    bad: 'A line has weight but no dimensions', remove: 'Remove line'
+  };
+  function num(v){ var x = parseFloat(String(v).replace(',', '.')); return isFinite(x) && x > 0 ? x : 0; }
+  function labels(){ return ['Qty','Length (cm)','Width (cm)','Height (cm)','Kg per unit']; }
+  function row(){
+    var d = document.createElement('div');
+    d.className = 'calc-row';
+    ['q','l','w','h','m'].forEach(function(k, i){
+      var lab = document.createElement('label');
+      var span = document.createElement('span');
+      span.textContent = labels()[i];
+      var inp = document.createElement('input');
+      inp.type = 'number'; inp.min = '0'; inp.step = 'any'; inp.inputMode = 'decimal';
+      inp.className = k; inp.setAttribute('aria-label', span.textContent);
+      lab.appendChild(span); lab.appendChild(inp);
+      d.appendChild(lab);
+    });
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = '×'; b.setAttribute('aria-label', T.remove);
+    b.addEventListener('click', function(){ d.remove(); if (!box.children.length) addRow(); calc(); });
+    d.appendChild(b);
+    box.appendChild(d);
+    d.addEventListener('input', calc);
+    return d;
+  }
+  function addRow(){ var d = row(); d.querySelector('.q').value = '1'; return d; }
+  function fmt(n, d){ return d ? n.toFixed(d) : Math.round(n).toLocaleString('en-US'); }
+  function calc(){
+    var cbm = 0, kg = 0, bad = 0;
+    Array.prototype.forEach.call(box.children, function(r){
+      var q = num(r.querySelector('.q').value) || 1;
+      var l = num(r.querySelector('.l').value), w = num(r.querySelector('.w').value),
+          h = num(r.querySelector('.h').value), m = num(r.querySelector('.m').value);
+      if (l && w && h) cbm += q * l * w * h / 1000000;
+      kg += q * m;
+      if (m && !(l && w && h)) bad++;
+    });
+    if (cbm === 0 && kg === 0) { out.innerHTML = '<p class="verdict">' + T.empty + '</p>'; return; }
+    var pc = cbm / CAP_CBM, pk = kg / CAP_KG;
+    var fits = pc <= 1 && pk <= 1;
+    var need = Math.max(Math.ceil(pc - 1e-9), Math.ceil(pk - 1e-9), 1);
+    var html = '';
+    html += '<p>' + T.cbm + ': <strong>' + fmt(cbm, 2) + '</strong> CBM ' + T.of + ' ' + CAP_CBM + ' — ' + Math.round(pc * 100) + '%</p>';
+    html += '<p>' + T.kg + ': <strong>' + fmt(kg) + '</strong> kg ' + T.of + ' ' + fmt(CAP_KG) + ' — ' + Math.round(pk * 100) + '%</p>';
+    html += '<p class="verdict ' + (fits ? 'ok' : 'over') + '">' + (fits ? '✔ ' + T.ok : '✖ ' + T.over) + '</p>';
+    if (!fits) html += '<p>' + T.need + ': <strong>' + need + '</strong></p>';
+    html += '<p class="calc-note">' + (pc >= pk ? T.liftCbm : T.liftKg) + '</p>';
+    if (bad) html += '<p class="calc-note">' + T.bad + '</p>';
+    out.innerHTML = html;
+  }
+  add.addEventListener('click', function(){ addRow(); calc(); });
+  addRow();
+  calc();
+})();
+</script>
+</body>
+</html>
