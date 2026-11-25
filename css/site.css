@@ -108,7 +108,7 @@ body.fa.home .site-header .wrap {
   color: transparent;
   text-decoration: none;
   background-color: var(--cream, #F5F2EB);
-  background-image: url("../brand/lockup.png");
+  background-image: url("../brand/lockup.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -120,7 +120,7 @@ body.fa.home .site-header .wrap {
 .site-header a.wordmark:hover,
 .wordmark:hover {
   background-color: var(--cream, #F5F2EB);
-  background-image: url("../brand/lockup.png");
+  background-image: url("../brand/lockup.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
