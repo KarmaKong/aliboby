@@ -1,6 +1,9 @@
 /* v3 shared language switcher — progressive-enhancement disclosure.
-   With no JS the language links stay visible inline; this collapses
-   them behind the globe button. One switcher per page. */
+   With no JS the language links stay visible inline; with JS (html.js,
+   set inline in <head> before first paint) the CSS collapses them behind
+   the globe button. This script only wires the open/close interaction —
+   the initial collapsed state lives entirely in CSS so nothing shifts
+   after first paint. One switcher per page. */
 (function () {
   var sw = document.querySelector("[data-lang-switch]");
   if (!sw) return;
@@ -8,22 +11,16 @@
   var menu = sw.querySelector(".lang-menu");
   if (!btn || !menu) return;
 
-  sw.classList.add("js");
-  btn.hidden = false;
-  menu.hidden = true;
-  btn.setAttribute("aria-expanded", "false");
-
   function setOpen(open) {
-    menu.hidden = !open;
     btn.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
   btn.addEventListener("click", function () {
-    setOpen(menu.hidden);
+    setOpen(btn.getAttribute("aria-expanded") !== "true");
   });
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && !menu.hidden) {
+    if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") {
       setOpen(false);
       btn.focus();
     }

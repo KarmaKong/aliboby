@@ -1126,6 +1126,8 @@ h2.sec-label {
   border-radius: var(--radius);
   -webkit-tap-highlight-color: transparent;
 }
+.lang-btn[hidden] { display: none; }
+.js .lang-btn[hidden] { display: inline-flex; }
 /* the globe tracks the language-link colour in every header context */
 .header-nav .lang-btn { color: var(--cream); }
 body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
@@ -1136,7 +1138,7 @@ body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
 .lang-btn .i-globe { width: 24px; height: 24px; display: block; opacity: 0.6; transition: opacity 140ms ease; }
 .lang-btn:hover .i-globe,
 .lang-btn:focus-visible .i-globe,
-.lang-switch.js .lang-btn[aria-expanded="true"] .i-globe { opacity: 1; }
+.js .lang-switch .lang-btn[aria-expanded="true"] .i-globe { opacity: 1; }
 
 /* before JS: menu is just the inline link row (unchanged look) */
 .lang-menu { display: inline-flex; align-items: center; gap: 8px 18px; }
@@ -1144,7 +1146,8 @@ body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
 .lang-menu .lang-sep { display: none; }
 
 /* after JS init: the menu becomes a dropdown panel when open */
-.lang-switch.js .lang-menu {
+.js .lang-switch .lang-menu {
+  display: none;
   position: absolute;
   inset-inline-end: 0;
   top: calc(100% + 12px);
@@ -1160,25 +1163,26 @@ body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
   box-shadow: 0 8px 28px rgba(20, 32, 57, 0.14);
   z-index: 60;
 }
-.lang-switch.js .lang-menu a {
+.js .lang-switch .lang-btn[aria-expanded="true"] ~ .lang-menu { display: flex; }
+.js .lang-switch .lang-menu a {
   color: var(--ink);
   padding: 9px 10px;
   border-radius: 3px;
   white-space: nowrap;
   text-decoration: none;
 }
-.lang-switch.js .lang-menu a:hover {
+.js .lang-switch .lang-menu a:hover {
   background: rgba(20, 32, 57, 0.06);
   color: var(--ink);
   text-decoration: none;
 }
-.lang-switch.js .lang-menu a[aria-current="page"] { font-weight: 700; }
-.lang-switch.js .lang-menu a[aria-current="page"]::before {
+.js .lang-switch .lang-menu a[aria-current="page"] { font-weight: 700; }
+.js .lang-switch .lang-menu a[aria-current="page"]::before {
   content: "✓";
   margin-inline-end: 8px;
   color: var(--gold);
 }
-.lang-switch.js .lang-menu .lang-sep {
+.js .lang-switch .lang-menu .lang-sep {
   display: block;
   height: 1px;
   margin: 4px 6px;
@@ -1200,8 +1204,8 @@ body:has(main.post) .header-nav .lang-btn { color: var(--ink); }
 @media (max-width: 480px) {
   .site-header .wrap,
   .header .wrap { position: relative; }
-  .lang-switch.js { position: static; }
-  .lang-switch.js .lang-menu {
+  .js .lang-switch { position: static; }
+  .js .lang-switch .lang-menu {
     position: absolute;
     top: 100%;
     margin-top: 6px;
